@@ -1,0 +1,83 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+morocco_western_sahara_relationship = {
+	enable = {
+		tag = MOR
+		country_exists = WSH
+	}
+	abort = {
+		NOT = { country_exists = WSH }
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "WSH"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "WSH"
+		value = 200
+	}
+}
+
+morocco_algeria_WSH_relationship = {
+	enable = {
+		tag = MOR
+		country_exists = ALG
+		country_exists = WSH
+	}
+	abort = {
+		NOT = { country_exists = ALG }
+		NOT = { country_exists = WSH }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "ALG"
+		value = 200
+	}
+}
+
+morocco_france_relationship = {
+	enable = {
+		tag = MOR
+		country_exists = FRA
+	}
+	abort = {
+		NOT = { country_exists = FRA }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "FRA"
+		value = 200
+	}
+}
+
+morocco_us_relationship = {
+	enable = {
+		tag = MOR
+		country_exists = USA
+	}
+	abort = {
+		NOT = { country_exists = USA }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = 200
+	}
+}

@@ -1,0 +1,126 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+algeria_tunisia_relationship = {
+	enable = {
+		tag = ALG
+		country_exists = TUN
+	}
+	abort = {
+		NOT = { country_exists = TUN }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "TUN"
+		value = 200
+	}
+}
+
+algeria_morocco_western_sahara_relationship = {
+	enable = {
+		tag = ALG
+		country_exists = MOR
+		country_exists = WSH
+	}
+	abort = {
+		NOT = { country_exists = MOR }
+		NOT = { country_exists = WSH }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "MOR"
+		value = 200
+	}
+}
+
+algeria_western_sahara_relationship = {
+	enable = {
+		tag = ALG
+		country_exists = WSH
+	}
+	abort = {
+		NOT = { country_exists = WSH }
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "WSH"
+		value = 200
+	}
+}
+
+algeria_france_relationship = {
+	enable = {
+		tag = ALG
+		country_exists = FRA
+	}
+	abort = {
+		NOT = { country_exists = FRA }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "FRA"
+		value = 200
+	}
+}
+
+algeria_greece_relationship = {
+	enable = {
+		tag = ALG
+		country_exists = GRE
+	}
+	abort = {
+		NOT = { country_exists = GRE }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "GRE"
+		value = 200
+	}
+}
+
+algeria_pakistan_relationship = {
+	enable = {
+		tag = ALG
+		country_exists = PAK
+	}
+	abort = {
+		NOT = { country_exists = PAK }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "PAK"
+		value = 200
+	}
+}
+
+algeria_us_relationship = {
+	enable = {
+		tag = ALG
+		country_exists = USA
+		date > 2001.9.11
+	}
+	abort = {
+		NOT = { country_exists = USA }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = 200
+	}
+}

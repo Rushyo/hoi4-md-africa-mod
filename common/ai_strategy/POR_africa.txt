@@ -1,0 +1,53 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+portugese_angola_relationship = {
+	enable = {
+		tag = POR
+		POR = { has_democratic_form_of_government = yes }
+		country_exists = ANG
+		ANG = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = ANG }
+			ANG = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "ANG"
+		value = 200
+	}
+}
+
+portugese_mozambique_relationship = {
+	enable = {
+		tag = POR
+		POR = { has_democratic_form_of_government = yes }
+		country_exists = MOZ
+		MOZ = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = MOZ }
+			MOZ = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "MOZ"
+		value = 200
+	}
+}

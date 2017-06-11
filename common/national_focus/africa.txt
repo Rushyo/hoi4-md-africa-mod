@@ -1,0 +1,6947 @@
+focus_tree = {
+
+	id = african_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 17
+			OR = {
+				tag = AND # Andorra
+				tag = ANG # Angola
+				tag = ALG # Algeria
+				tag = BEN # Benin
+				tag = BOT # Botswana
+				tag = BUR # Burundi
+				tag = BKF # Burkina Faso
+				tag = CAB # Cape Verde
+				tag = CAF # Central Africa
+				tag = CAM # Cameroon
+				tag = COM # Comoros
+				tag = COG # Congo
+				tag = CHD # Chad
+				tag = DRC # CongoDR
+				tag = DJI # Djibouti
+				tag = EGY # Egypt
+				tag = ERI # Eritrea
+				tag = ETH # Ethiopia
+				tag = EQU # Equi. Guinea
+				tag = GAB # Gabon
+				tag = GAM # Gambia
+				tag = GHA # Ghana
+				tag = GUI # Guinea
+				tag = GBS # Guinea-Bissau
+				tag = IVO # Ivory Coast
+				tag = KEN # Kenya
+				tag = LIB # Liberia
+				tag = LES # Lesotho
+				tag = LBA # Libya
+				tag = MAD # Madagascar
+				tag = MAU # Mauritius
+				tag = MAL # Mali
+				tag = MRT # Mauritania
+				tag = MLW # Malawi
+				tag = MOR # Morocco
+				tag = MZB # Mozambique
+				tag = NAM # Namibia
+				tag = NIG # Niger
+				tag = NGR # Nigeria
+				tag = RWA # Rwanda
+				tag = SAF # South Africa
+				tag = SOM # Somalia
+				tag = SML # Somaliland
+				tag = SSD # South Sudan
+				tag = SUD # Sudan
+				tag = SWZ # Swaziland
+				tag = SAO # Sao Tome and Principe
+				tag = SEN # Senegal
+				tag = SEY # Seychelles
+				tag = SIE # Sierra Leone
+				tag = TNZ # Tanzania
+				tag = TOG # Togo
+				tag = TUN # Tunisia
+				tag = UGA # Uganda
+				tag = WSH # West Sahara
+				tag = ZAM # Zambia
+				tag = ZIM # Zimbabwe
+				tag = MLC # DRC MLC
+				tag = RCD # DRC RCD
+			}
+		}
+	}
+	
+	reset_on_civilwar = no
+	
+	@political_reform_cost = 10
+	@foreign_focuses_cost = 10
+	@foreign_ties_cost = 5
+	
+	@industrial_tree_very_far_left = 0
+	@industrial_tree_far_left = 1
+	@industrial_tree_left = 2
+	@industrial_tree_center = 3
+	@industrial_tree_right = 4
+	@industrial_tree_far_right = 5
+	@industrial_tree_very_far_right = 6
+	
+	@industrial_tree_focus = 5
+	@industrial_tree_foreign = 1
+	@industrial_tree_domestic = 9
+	@industrial_tree_foreign_left = 0
+	@industrial_tree_foreign_center = 1
+	@industrial_tree_foreign_right = 2
+	@industrial_tree_domestic_left = 8
+	@industrial_tree_domestic_general = 9
+	@industrial_tree_domestic_right = 10
+	@industrial_tree_shared_military = 4
+	@industrial_tree_shared_civilian = 6
+	
+	@birth_rate_tree_left = 12
+	@birth_rate_tree_center = 13
+	@birth_rate_tree_right = 14
+	@birth_rate_tree_far_right = 15
+	
+	@political_tree_very_far_left = 16
+	@political_tree_far_left = 17
+	@political_tree_left = 18
+	@political_tree_center = 19
+	@political_tree_right = 20
+	@political_tree_far_right = 21
+	@political_tree_very_far_right = 22
+	@political_tree_incredibly_far_right = 23
+	
+	@political_tree_volunteer_corps = 23
+	
+	@political_tree_intervention_center = 28
+	
+	@political_tree_african_union = 26
+	@political_tree_african_union_peacekeeping = 23
+	@political_tree_western_intervention = 30
+	@political_tree_united_nations_peacekeeping = 32
+	@political_tree_eastern_intervention = 34
+	
+	@economic_tree_african_union_left = 25
+	@economic_tree_african_union_center = 26
+	@economic_tree_african_union_right = 27
+	@economic_tree_african_union_alliance = 28
+	
+	@economic_tree_african_union_first = 4
+	@economic_tree_african_union_second = 5
+	@economic_tree_african_union_third = 6
+	@economic_tree_african_union_fourth = 7
+	@economic_tree_african_union_fifth = 8
+	@economic_tree_african_union_sixth = 9
+	@economic_tree_african_union_seventh = 10
+	
+	@ideology_tree_start = 16
+	@ideology_tree_individual_freedoms = 7
+	@ideology_tree_national_strength = 16
+	@ideology_tree_path_of_democratic_progress = 2
+	@ideology_tree_path_of_democratic_freedom = 7
+	@ideology_tree_path_of_democratic_values = 11
+	@ideology_tree_path_of_order = 16
+	@ideology_tree_fascist_nationalist_finisher = 15
+	@ideology_tree_path_of_security = 9
+	@ideology_tree_path_of_revolution = 23
+	
+	@ideology_tree_uncontested_reforms = 9
+	@ideology_tree_peacefully_contested_reforms = 11
+	@ideology_tree_violently_contested_reforms = 14
+	@ideology_tree_communist_opposition = 13
+	@ideology_tree_islamist_opposition = 15
+	
+	@ideology_tree_violently_contested_revolution = 20
+	@ideology_tree_republican_opposition = 19
+	@ideology_tree_reactionary_opposition = 21
+	
+	@ideology_tree_socialist = 0
+	@ideology_tree_progressive = 2
+	@ideology_tree_social_democrat = 4
+	@ideology_tree_social_liberal = 6
+	@ideology_tree_libertarian = 8
+	@ideology_tree_conservative = 10
+	@ideology_tree_reactionary = 12
+	@ideology_tree_communist_left = 20
+	@ideology_tree_communist = 22
+	@ideology_tree_fascist = 14
+	@ideology_tree_nationalist = 16
+	@ideology_tree_monarchist = 18
+	@ideology_tree_islamist = 24
+	@ideology_tree_islamist_right = 26
+	
+	@ideology_tree_first_row = 7
+	@ideology_tree_second_row = 8
+	@ideology_tree_third_row = 9
+	@ideology_tree_fourth_row = 10
+	@ideology_tree_fifth_row = 11
+	@ideology_tree_sixth_row = 12
+	@ideology_tree_seventh_row = 13
+	@ideology_tree_eighth_row = 14
+	@ideology_tree_ninth_row = 15
+	@ideology_tree_tenth_row = 16
+	@ideology_tree_eleventh_row = 17
+	@ideology_tree_twelth_row = 18
+	@ideology_tree_thirteenth_row = 19
+	@ideology_tree_fourteenth_row = 20
+	@ideology_tree_fifteenth_row = 21
+	
+	@military_tree_western_left = 29
+	@military_tree_western_center = 30
+	@military_tree_western_right = 31
+	
+	@military_tree_eastern_left = 33
+	@military_tree_eastern_center = 34
+	@military_tree_eastern_right = 35
+	
+	@army_tree_left = 37
+	@army_tree_center = 38
+	@army_tree_right = 39
+	@navy_tree_left = 41
+	@navy_tree_center = 42
+	@navy_tree_right = 43
+	@navy_tree_dockyards = 43
+	@air_tree_left = 45
+	@air_tree_center = 46
+	@air_tree_right = 47
+	@air_tree_very_far_right = 49
+	
+	focus = {
+		id = AFR_industrial_focus
+		icon = production
+		x = @industrial_tree_focus
+		y = 0
+		cost = 5
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.35
+				uses = 2
+				category = industry
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_political_focus
+		icon = demand_territory
+		x = @political_tree_center
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_focus
+		icon = propaganda
+		x = @ideology_tree_start
+		y = @ideology_tree_first_row
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+		
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	
+#	focus = {
+#		id = AFR_army_focus
+#		icon = infantry_allies
+#		x = @army_tree_center
+#		y = 0
+#		cost = 10
+#		
+#		completion_reward = {
+#			army_experience = 5
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+#	focus = {
+#		id = AFR_naval_focus
+#		icon = navy
+#		x = @navy_tree_center
+#		y = 1
+#		cost = 10
+#
+#		available = {
+#			any_state = {
+#				is_coastal = yes
+#				is_owned_by = ROOT
+#				is_controlled_by = ROOT
+#			}
+#		}
+#		
+#		completion_reward = {
+#			navy_experience = 5
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+#	focus = {
+#		id = AFR_air_focus
+#		icon = airforce
+#		x = @air_tree_center
+#		y = 0
+#		cost = 10
+#		
+#		completion_reward = {
+#			air_experience = 5
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+
+	focus = {
+		id = AFR_native_military_programs
+		icon = infantry_allies
+		x = @navy_tree_center
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			army_experience = 5
+		}
+	}
+	
+	focus = {
+		id = AFR_foreign_investment
+		icon = industry_civilian
+		x = @industrial_tree_foreign
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = AFR_industrial_focus
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_domestic_investment
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 30
+				has_war = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_domestic_investment
+		icon = industry_civilian
+		x = @industrial_tree_domestic
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = AFR_industrial_focus
+		}
+
+		mutually_exclusive = {
+			focus = AFR_foreign_investment
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 30
+				has_war = no
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_military_industry_1
+		icon = industry_military
+		x = @industrial_tree_shared_military
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_domestic_slots_1
+			focus = AFR_public_private
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_civilian_industry_1
+		icon = industry_civilian
+		x = @industrial_tree_shared_civilian
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_domestic_slots_1
+			focus = AFR_public_private
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+#	
+#	focus = {
+#		id = AFR_infrastructure_1
+#		icon = infrastructure
+#		x = @industrial_tree_right
+#		y = 1
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_industrial_focus
+#		}
+#		
+#		completion_reward = {
+#			random_owned_state = {
+#				add_building_construction = {
+#					type = infrastructure
+#					level = 2
+#					instant_build = yes
+#				}
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+#	
+#	focus = {
+#		id = AFR_resource_focus
+#		icon = construction2
+#		x = @industrial_tree_very_far_right
+#		y = 1
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_industrial_focus
+#		}
+#		
+#		completion_reward = {
+#			add_political_power = 25
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_internal_politics
+		icon = improve_relations
+		x = @political_tree_very_far_left
+		y = 1
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_political_focus
+		}
+		
+		completion_reward = {
+			add_political_power = 75
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_foreign_politics
+		icon = improve_relations
+		x = @political_tree_very_far_right
+		y = 1
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_political_focus
+		}
+		
+		completion_reward = {
+			add_political_power = 75
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_path_of_security
+		icon = intelligence_exchange
+		x = @ideology_tree_path_of_security
+		y = @ideology_tree_second_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_focus
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_path_of_revolution
+		}
+		
+		completion_reward = {
+			add_national_unity = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_path_of_revolution
+		icon = destroy_establishment
+		x = @ideology_tree_path_of_revolution
+		y = @ideology_tree_second_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_focus
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_path_of_security
+		}
+		
+		completion_reward = {
+			add_national_unity = -0.05
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	focus = {
+		id = AFR_violently_contested_reforms
+		icon = demand_territory
+		x = @ideology_tree_violently_contested_reforms
+		y = @ideology_tree_third_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_path_of_security
+		}
+		
+		available = {
+			OR = {
+				has_idea = stability_1
+				has_idea = stability_2
+				has_idea = stability_3
+				has_idea = stability_4
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_uncontested_reforms
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_peacefully_contested_reforms
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_violently_contested_reforms
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_communist_opposition
+		icon = communism
+		x = @ideology_tree_communist_opposition
+		y = @ideology_tree_fourth_row
+		cost = 5
+		
+		prerequisite = {
+			focus = AFR_violently_contested_reforms
+		}
+		
+		bypass = {
+			OR = {
+				islamist > 0.2
+				communist > 0.2
+			}
+		}
+		
+		available = {
+			has_idea = idea_focus_violently_contested_reforms
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_communist_opposition
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_islamist_opposition
+		icon = align_to_pakistan
+		x = @ideology_tree_islamist_opposition
+		y = @ideology_tree_fourth_row
+		cost = 5
+		
+		prerequisite = {
+			focus = AFR_violently_contested_reforms
+		}
+		
+		bypass = {
+			OR = {
+				islamist > 0.2
+				communist > 0.2
+			}
+		}
+		
+		available = {
+			has_idea = idea_focus_violently_contested_reforms
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_islamist_opposition
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_security_civil_war
+		icon = war
+		x = @ideology_tree_violently_contested_reforms
+		y = @ideology_tree_fifth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_communist_opposition
+			focus = AFR_islamist_opposition
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				islamist > 0.2
+				communist > 0.2
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = idea_focus_communist_opposition
+				}
+				remove_ideas = idea_focus_communist_opposition
+			}
+			if = {
+				limit = {
+					has_idea = idea_focus_islamist_opposition
+				}
+				remove_ideas = idea_focus_islamist_opposition
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { islamist > 0.2 }
+						communist > 0.2
+					}
+				}
+				start_civil_war = {
+					ideology = communist
+					size = 0.3
+				}
+				add_popularity = {
+					ideology = communist
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { communist > 0.2 }
+						islamist > 0.2
+					}
+				}
+				start_civil_war = {
+					ideology = islamist
+					size = 0.3
+				}
+				add_popularity = {
+					ideology = islamist
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						communist > 0.2
+						islamist > 0.2
+					}
+				}
+				start_civil_war = {
+					ideology = communist
+					size = 0.3
+				}
+				start_civil_war = {
+					ideology = islamist
+					size = 0.3
+				}
+				add_popularity = {
+					ideology = communist
+					popularity = -0.2
+				}
+				add_popularity = {
+					ideology = islamist
+					popularity = -0.2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_security_civil_war_victory
+		icon = territorial_claims
+		x = @ideology_tree_violently_contested_reforms
+		y = @ideology_tree_sixth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_security_civil_war
+		}
+		
+		available = {
+			has_civil_war = no
+		}
+		
+		completion_reward = {
+			remove_ideas = idea_focus_violently_contested_reforms
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	focus = {
+		id = AFR_extremist_crackdowns
+		icon = skull
+		x = @ideology_tree_violently_contested_reforms
+		y = @ideology_tree_seventh_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_security_civil_war_victory
+		}
+		
+		completion_reward = {
+			increase_stability_by_15 = yes
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_peacefully_contested_reforms
+		icon = political_pressure
+		x = @ideology_tree_peacefully_contested_reforms
+		y = @ideology_tree_third_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_path_of_security
+		}
+		
+		available = {
+			OR = {
+				has_idea = stability_4
+				has_idea = stability_5
+				has_idea = stability_6
+				has_idea = stability_7
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_uncontested_reforms
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_violently_contested_reforms
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+		
+	}
+	
+	focus = {
+		id = AFR_opposition_coalition
+		icon = major_alliance
+		x = @ideology_tree_peacefully_contested_reforms
+		y = @ideology_tree_fourth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_peacefully_contested_reforms
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_peacefully_contested_reforms
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_filibustering
+		icon = propaganda
+		x = @ideology_tree_peacefully_contested_reforms
+		y = @ideology_tree_fifth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_opposition_coalition
+		}
+		
+		completion_reward = {
+			add_political_power = -75
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_constitutional_strengthening
+		icon = dangerous_deal
+		x = @ideology_tree_peacefully_contested_reforms
+		y = @ideology_tree_sixth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_filibustering
+		}
+		
+		completion_reward = {
+			increase_stability_by_5 = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideological_unification
+		icon = alliance
+		x = @ideology_tree_peacefully_contested_reforms
+		y = @ideology_tree_seventh_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_constitutional_strengthening
+		}
+		
+		completion_reward = {
+			remove_ideas = idea_focus_peacefully_contested_reforms
+			increase_stability_by_5 = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	
+	focus = {
+		id = AFR_uncontested_reforms
+		icon = neutrality
+		x = @ideology_tree_uncontested_reforms
+		y = @ideology_tree_third_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_path_of_security
+		}
+		
+		available = {
+			OR = {
+				has_idea = stability_5
+				has_idea = stability_6
+				has_idea = stability_7
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_peacefully_contested_reforms
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_violently_contested_reforms
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_stable_regime
+		icon = major_alliance
+		x = @ideology_tree_path_of_security
+		y = @ideology_tree_eighth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_uncontested_reforms
+			focus = AFR_ideological_unification
+			focus = AFR_extremist_crackdowns
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			AND = {
+				OR =
+				{
+					has_idea = stability_4
+					has_idea = stability_5
+					has_idea = stability_6
+					has_idea = stability_7
+				}
+				NOT = {
+					OR = {
+						has_government = islamist
+						has_government = communist
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_national_unity = 0.05
+		}
+	}
+	
+	focus = {
+		id = AFR_peaceful_revolution
+		icon = neutrality
+		x = @ideology_tree_path_of_revolution
+		y = @ideology_tree_third_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_path_of_revolution
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_violently_contested_revolution
+		}
+		
+		available = {
+			OR =
+			{
+				has_idea = stability_5
+				has_idea = stability_6
+				has_idea = stability_7
+			}
+		}
+		
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	focus = {
+		id = AFR_revolutionary_plot
+		icon = diplomatic_treaty
+		x = @ideology_tree_path_of_revolution
+		y = @ideology_tree_fourth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_peaceful_revolution
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_peaceful_revolution
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_political_maneuvering
+		icon = army_officers
+		x = @ideology_tree_path_of_revolution
+		y = @ideology_tree_fifth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_revolutionary_plot
+		}
+		
+		completion_reward = {
+			add_political_power = -75
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_constitutional_weakening
+		icon = forceful_treaty
+		x = @ideology_tree_path_of_revolution
+		y = @ideology_tree_sixth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_political_maneuvering
+		}
+		
+		completion_reward = {
+			decrease_stability_by_5 = yes
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_bloodless_coup
+		icon = war2
+		x = @ideology_tree_path_of_revolution
+		y = @ideology_tree_seventh_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_constitutional_weakening
+		}
+		
+		completion_reward = {
+			decrease_stability_by_5 = yes
+			remove_ideas = idea_focus_peaceful_revolution
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_violently_contested_revolution
+		icon = attack_democracy2
+		x = @ideology_tree_violently_contested_revolution
+		y = @ideology_tree_third_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_path_of_revolution
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_peaceful_revolution
+		}
+		
+		available = {
+			OR =
+			{
+				has_idea = stability_1
+				has_idea = stability_2
+				has_idea = stability_3
+				has_idea = stability_4
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_violently_contested_revolution
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_liberal_opposition
+		icon = democracy
+		x = @ideology_tree_republican_opposition
+		y = @ideology_tree_fourth_row
+		cost = 5
+		
+		prerequisite = {
+			focus = AFR_violently_contested_revolution
+		}
+		
+		available = {
+			has_idea = idea_focus_violently_contested_revolution
+		}
+		
+		bypass = {
+			OR = {
+				social_liberal > 0.2
+				reactionary > 0.2
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_liberal_opposition
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_reactionary_opposition
+		icon = entente
+		x = @ideology_tree_reactionary_opposition
+		y = @ideology_tree_fourth_row
+		cost = 5
+		
+		prerequisite = {
+			focus = AFR_violently_contested_revolution
+		}
+		
+		available = {
+			has_idea = idea_focus_violently_contested_revolution
+		}
+		
+		bypass = {
+			OR = {
+				social_liberal > 0.2
+				reactionary > 0.2
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_reactionary_opposition
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_revolution_civil_war
+		icon = war3
+		x = @ideology_tree_violently_contested_revolution
+		y = @ideology_tree_fifth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_liberal_opposition
+			focus = AFR_reactionary_opposition
+		}
+		
+		available = {
+			OR = {
+				social_liberal > 0.2
+				reactionary > 0.2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = idea_focus_liberal_opposition
+				}
+				remove_ideas = idea_focus_liberal_opposition
+			}
+			if = {
+				limit = {
+					has_idea = idea_focus_reactionary_opposition
+				}
+				remove_ideas = idea_focus_reactionary_opposition
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { social_liberal > 0.2 }
+						reactionary > 0.2
+					}
+				}
+				start_civil_war = {
+					ideology = reactionary
+					size = 0.3
+				}
+				add_popularity = {
+					ideology = reactionary
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { reactionary > 0.2 }
+						social_liberal > 0.2
+					}
+				}
+				start_civil_war = {
+					ideology = social_liberal
+					size = 0.3
+				}
+				add_popularity = {
+					ideology = social_liberal
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						reactionary > 0.2
+						social_liberal > 0.2
+					}
+				}
+				start_civil_war = {
+					ideology = reactionary
+					size = 0.3
+				}
+				start_civil_war = {
+					ideology = social_liberal
+					size = 0.3
+				}
+				add_popularity = {
+					ideology = reactionary
+					popularity = -0.2
+				}
+				add_popularity = {
+					ideology = social_liberal
+					popularity = -0.2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_revolution_civil_war_victory
+		icon = national_unity
+		x = @ideology_tree_violently_contested_revolution
+		y = @ideology_tree_sixth_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_revolution_civil_war
+		}
+		
+		available = {
+			has_civil_war = no
+		}
+		
+		
+		completion_reward = {
+			remove_ideas = idea_focus_violently_contested_revolution
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	focus = {
+		id = AFR_the_purge
+		icon = skull
+		x = @ideology_tree_violently_contested_revolution
+		y = @ideology_tree_seventh_row
+		cost = @political_reform_cost
+		
+		prerequisite = {
+			focus = AFR_revolution_civil_war_victory
+		}
+		
+		completion_reward = {
+			decrease_stability_by_10 = yes
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_successful_revolution
+		icon = alliance
+		x = @ideology_tree_path_of_revolution
+		y = @ideology_tree_ninth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_bloodless_coup
+			focus = AFR_the_purge
+		}
+		
+		completion_reward = {
+			add_national_unity = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_individual_freedoms
+		icon = democracy
+		x = @ideology_tree_individual_freedoms
+		y = @ideology_tree_ninth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_stable_regime
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_national_strength
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = idea_focus_generic_individual_freedom
+				days = 365
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_national_strength
+		icon = political_pressure
+		x = @ideology_tree_national_strength
+		y = @ideology_tree_ninth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_stable_regime
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_individual_freedoms
+		}
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = idea_focus_generic_national_strength
+				days = 365
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_african_union_integration
+		icon = improve_relations
+		x = @economic_tree_african_union_center
+		y = @economic_tree_african_union_first
+		cost = @foreign_ties_cost
+		
+		prerequisite = {
+			focus = AFR_african_union_ties
+		}
+		
+		completion_reward = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = AFR_ECOSOCC
+		icon = trade_deal
+		x = @economic_tree_african_union_right
+		y = @economic_tree_african_union_second
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_african_union_integration
+		}
+		
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = synth_bonus
+				bonus = 0.2
+				uses = 2
+				category = synth_resources
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = AFR_african_central_bank
+		icon = consumer_goods
+		x = @economic_tree_african_union_right
+		y = @economic_tree_african_union_third
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_ECOSOCC
+		}
+		
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_central_bank
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = AFR_african_court_of_justice
+		icon = neutrality
+		x = @economic_tree_african_union_right
+		y = @economic_tree_african_union_fourth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_african_central_bank
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_court_of_justice
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = AFR_african_peace_and_security_council
+		icon = democracy
+		x = @economic_tree_african_union_right
+		y = @economic_tree_african_union_fifth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_african_court_of_justice
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_peace_and_security_council
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = AFR_african_union_military_collaboration
+		icon = small_arms
+		x = @economic_tree_african_union_left
+		y = @economic_tree_african_union_second
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_african_union_integration
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_african_union_military_collaboration
+				bonus = 0.15
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_collaboration
+				bonus = 0.15
+				uses = 2
+				category = light_mechanized
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_collaboration
+				bonus = 0.15
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_collaboration
+				bonus = 0.15
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	
+	
+	focus = {
+		id = AFR_african_union_light_vehicle_manufacturing
+		icon = motorized
+		x = @economic_tree_african_union_left
+		y = @economic_tree_african_union_third
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_african_union_military_collaboration
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_union_light_vehicle_manufacturing
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = AFR_african_union_heavy_vehicle_manufacturing
+		icon = tank
+		x = @economic_tree_african_union_left
+		y = @economic_tree_african_union_fourth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_african_union_light_vehicle_manufacturing
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_union_heavy_vehicle_manufacturing
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_african_union_military_modernisation
+		icon = air_doctrine
+		x = @economic_tree_african_union_left
+		y = @economic_tree_african_union_fifth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_african_union_heavy_vehicle_manufacturing
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_african_union_military_modernisation
+				bonus = 0.30
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_modernisation
+				bonus = 0.30
+				uses = 1
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_modernisation
+				bonus = 0.30
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_modernisation
+				bonus = 0.30
+				uses = 1
+				category = cas_bomber
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = AFR_african_union_military_alliance
+		icon = major_alliance
+		x = @economic_tree_african_union_alliance
+		y = @economic_tree_african_union_sixth
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_african_peace_and_security_council
+		}
+		
+		prerequisite = {
+			focus = AFR_african_union_military_modernisation
+		}
+		
+		prerequisite = {
+			focus = AFR_western_cyber_security
+			focus = AFR_western_tank_development
+			focus = AFR_eastern_cyber_warfare
+			focus = AFR_eastern_tank_development
+		}
+		
+		available = {
+			is_in_faction = no
+			num_of_military_factories > 10
+		}
+		
+		bypass = {
+			has_global_flag = african_union_formed
+		}
+		
+		completion_reward = {
+			create_faction = african_union_faction
+			set_global_flag = african_union_formed
+			every_country = {
+				limit = {
+					has_idea = african_union_member
+					NOT = { tag = PREV }
+				}
+				country_event = africa.3
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = AFR_western_military_programs
+		icon = align_to_nato
+		x = @military_tree_western_center
+		y = @economic_tree_african_union_first
+		cost = @foreign_ties_cost
+		
+		prerequisite = {
+			focus = AFR_western_ties
+		}
+		
+		completion_reward = {
+			army_experience = 10
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	focus = {
+		id = AFR_western_warfare_advisors
+		icon = army_doctrine
+		x = @military_tree_western_left
+		y = @economic_tree_african_union_second
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_western_military_programs
+		}
+		
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = AFR_western_warfare_advisors_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	focus = {
+		id = AFR_western_wargames
+		icon = army_doctrine
+		x = @military_tree_western_left
+		y = @economic_tree_african_union_third
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_western_warfare_advisors
+		}
+		
+		completion_reward = {
+			army_experience = 10
+			add_ideas = idea_focus_western_wargames
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	focus = {
+		id = AFR_western_special_forces_advisors
+		icon = special_forces
+		x = @military_tree_western_left
+		y = @economic_tree_african_union_fourth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_western_wargames
+		}
+		
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = AFR_western_special_forces_advisors_bonus
+				bonus = 0.5
+				uses = 1
+				technology = tech_recon
+				technology = tech_recon2
+				technology = tech_recon3
+				technology = tech_recon4
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	focus = {
+		id = AFR_western_cyber_security
+		icon = radar
+		x = @military_tree_western_left
+		y = @economic_tree_african_union_fifth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_western_special_forces_advisors
+		}
+		
+		completion_reward = {
+			add_ideas = { idea_focus_western_cyber_security }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_western_logistics
+		icon = army_doctrine
+		x = @military_tree_western_right
+		y = @economic_tree_african_union_second
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_western_military_programs
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_western_logistics
+				bonus = 0.2
+				uses = 4
+				category = support_tech
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	focus = {
+		id = AFR_western_firearm_development
+		icon = small_arms
+		x = @military_tree_western_right
+		y = @economic_tree_african_union_third
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_western_logistics
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_western_firearm_development
+				bonus = 0.2
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	focus = {
+		id = AFR_western_mech_development
+		icon = tank
+		x = @military_tree_western_right
+		y = @economic_tree_african_union_fourth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_western_firearm_development
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_western_mech_development
+				bonus = 0.4
+				uses = 1
+				category = heavy_mechanized
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	focus = {
+		id = AFR_western_tank_development
+		icon = tank
+		x = @military_tree_western_right
+		y = @economic_tree_african_union_fifth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_western_mech_development
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_western_tank_development
+				bonus = 0.3
+				uses = 1
+				category = armor
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = GER }
+		}
+	}
+	
+	focus = {
+		id = AFR_eastern_military_programs
+		icon = align_to_china
+		x = @military_tree_eastern_center
+		y = @economic_tree_african_union_first
+		cost = @foreign_ties_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_ties
+		}
+		
+		completion_reward = {
+			army_experience = 10
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_eastern_warfare_advisors
+		icon = army_doctrine
+		x = @military_tree_eastern_left
+		y = @economic_tree_african_union_second
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_military_programs
+		}
+		
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = AFR_eastern_warfare_advisors_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_eastern_wargames
+		icon = army_doctrine
+		x = @military_tree_eastern_left
+		y = @economic_tree_african_union_third
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_warfare_advisors
+		}
+		
+		completion_reward = {
+			army_experience = 10
+			add_ideas = idea_focus_eastern_wargames
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_eastern_special_forces_advisors
+		icon = special_forces
+		x = @military_tree_eastern_left
+		y = @economic_tree_african_union_fourth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_wargames
+		}
+		
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = AFR_eastern_special_forces_advisors_bonus
+				bonus = 0.2
+				uses = 3
+				technology = tech_recon
+				technology = tech_recon2
+				technology = tech_recon3
+				technology = tech_recon4
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_eastern_cyber_warfare
+		icon = radar
+		x = @military_tree_eastern_left
+		y = @economic_tree_african_union_fifth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_special_forces_advisors
+		}
+		
+		completion_reward = {
+			add_ideas = { idea_focus_eastern_cyber_warfare }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_eastern_logistics
+		icon = air_production
+		x = @military_tree_eastern_right
+		y = @economic_tree_african_union_second
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_military_programs
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_eastern_logistics
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+#	focus = {
+#		id = AFR_eastern_mech_development
+#		icon = tank
+#		x = @military_tree_eastern_right
+#		y = 2
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_eastern_logistics
+#		}
+#		
+#		completion_reward = {
+#			add_tech_bonus = {
+#				name = AFR_eastern_mech_development
+#				bonus = 0.2
+#				uses = 2
+#				category = heavy_mechanized
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#		
+#		available = {
+#			OR = {
+#				NOT = { has_war_with = SOV }
+#				NOT = { has_war_with = PRC }
+#			}
+#		}
+#	}
+#	
+	focus = {
+		id = AFR_eastern_air_development
+		icon = airforce
+		x = @military_tree_eastern_right
+		y = @economic_tree_african_union_third
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_logistics
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_eastern_air_development
+				bonus = 0.2
+				uses = 3
+				category = light_air
+				category = cas_bomber
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_eastern_firearm_development
+		icon = small_arms
+		x = @military_tree_eastern_right
+		y = @economic_tree_african_union_fourth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_air_development
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_eastern_firearm_development
+				bonus = 0.1
+				uses = 4
+				category = infantry_weapons
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_eastern_tank_development
+		icon = tank
+		x = @military_tree_eastern_right
+		y = @economic_tree_african_union_fifth
+		cost = @foreign_focuses_cost
+		
+		prerequisite = {
+			focus = AFR_eastern_firearm_development
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_eastern_tank_development
+				bonus = 0.2
+				uses = 2
+				category = armor
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				NOT = { has_war_with = PRC }
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = AFR_army_training_1
+		icon = infantry_allies
+		x = @army_tree_left
+		y = 1
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_native_military_programs
+		}
+		
+		completion_reward = {
+			army_experience = 10
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_military_officer_schools
+		icon = army_officers
+		x = @army_tree_right
+		y = 1
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_native_military_programs
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_army_officer_school
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_naval_training_1
+#		icon = navy2
+#		x = @navy_tree_left
+#		y = 1
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_naval_focus
+#		}
+#		
+#		completion_reward = {
+#			navy_experience = 10
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+#	focus = {
+#		id = AFR_small_ship_program
+#		icon = cruisers
+#		x = @navy_tree_right
+#		y = 1
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_naval_focus
+#		}
+#		
+#		completion_reward = {
+#			navy_experience = 10
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+
+	focus = {
+		id = AFR_coast_defense_program_1
+		icon = coastal_fort
+		x = @navy_tree_center
+		y = 1
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_native_military_programs
+		}
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_owned_by = ROOT
+				is_controlled_by = ROOT
+			}
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = corvette_bonus
+				bonus = 0.25
+				uses = 1
+				technology = corvette1
+				technology = corvette2
+				technology = corvette3
+				technology = corvette4
+				technology = corvette5
+				technology = corvette6
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_coast_defense_program_2
+		icon = coastal_fort
+		x = @navy_tree_left
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_coast_defense_program_1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = corvette_bonus
+				bonus = 0.25
+				uses = 2
+				technology = corvette1
+				technology = corvette2
+				technology = corvette3
+				technology = corvette4
+				technology = corvette5
+				technology = corvette6
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_frigate_program
+		icon = battleships
+		x = @navy_tree_left
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_coast_defense_program_2
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = frigate_bonus
+				bonus = 0.25
+				uses = 3
+				technology = frigate1
+				technology = frigate2
+				technology = frigate3
+				technology = frigate4
+				technology = frigate5
+				technology = frigate6
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_destroyer_program
+		icon = battleships
+		x = @navy_tree_left
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_frigate_program
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = destroyer_bonus
+				bonus = 0.25
+				uses = 3
+				technology = destroyer1
+				technology = destroyer2
+				technology = destroyer3
+				technology = destroyer4
+				technology = destroyer5
+				technology = destroyer6
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_dockyards_1
+		icon = naval_dockyards
+		x = @navy_tree_dockyards
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_coast_defense_program_1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = dockyard
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_fighter_production
+		icon = fighter
+		x = @air_tree_left
+		y = 1
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_native_military_programs
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_fighter_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_air_bases_1
+		icon = air_production
+		x = @air_tree_right
+		y = 1
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_native_military_programs
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_industrial_development
+#		icon = construction
+#		x = @industrial_tree_center
+#		y = 2
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_infrastructure_1
+#			focus = AFR_civilian_industry_1
+#			focus = AFR_military_industry_1
+#		}
+#		
+#		completion_reward = {
+#			add_ideas = idea_focus_industrial_development_program
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_demographic_studies
+		icon = consumer_goods
+		x = @birth_rate_tree_center
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_internal_politics
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			increase_stability_by_2 = yes
+		}
+	}
+	
+	focus = {
+		id = AFR_secure_national_unity
+		icon = national_unity
+		x = @birth_rate_tree_far_right
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_internal_politics
+		}
+		
+		completion_reward = {
+			add_national_unity = 0.05
+			increase_stability_by_5 = yes
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_recruit_more_administrators
+		icon = intelligence_exchange
+		x = @political_tree_far_left
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_internal_politics
+		}
+		
+		completion_reward = {
+			add_political_power = 15
+			add_national_unity = 0.05
+			ruling_party_support_+5 = yes
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_recruit_more_diplomats
+#		icon = intelligence_exchange
+#		x = @political_tree_far_right
+#		y = 2
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_foreign_politics
+#		}
+#		
+#		completion_reward = {
+#			add_political_power = 50
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+#	focus = {
+#		id = AFR_international_alliances
+#		icon = alliance
+#		x = @political_tree_incredibly_far_right
+#		y = 2
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_foreign_politics
+#		}
+#		
+#		completion_reward = {
+#			set_rule = { can_create_factions = yes }
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	
+	focus = {
+		id = AFR_path_of_democratic_progress
+		icon = diplomatic_treaty
+		x = @ideology_tree_path_of_democratic_progress
+		y = @ideology_tree_tenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_individual_freedoms
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_path_of_democratic_freedom
+		}
+		mutually_exclusive = {
+			focus = AFR_path_of_democratic_values
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic_socialist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = progressive
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_path_of_democratic_freedom
+		icon = alliance
+		x = @ideology_tree_path_of_democratic_freedom
+		y = @ideology_tree_tenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_individual_freedoms
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_path_of_democratic_progress
+		}
+		mutually_exclusive = {
+			focus = AFR_path_of_democratic_values
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.05
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_path_of_democratic_values
+		icon = neutrality
+		x = @ideology_tree_path_of_democratic_values
+		y = @ideology_tree_tenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_individual_freedoms
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_path_of_democratic_progress
+		}
+		mutually_exclusive = {
+			focus = AFR_path_of_democratic_freedom
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = conservative
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = reactionary
+				popularity = 0.05
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_path_of_equality
+		icon = communism4
+		x = @ideology_tree_communist
+		y = @ideology_tree_tenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_successful_revolution
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_path_of_religion
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_path_of_equality
+			add_popularity = {
+				ideology = communist
+				popularity = 0.05
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+		
+	focus = {
+		id = AFR_path_of_religion
+		icon = align_to_pakistan
+		x = @ideology_tree_islamist
+		y = @ideology_tree_tenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_successful_revolution
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_path_of_equality
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_path_of_religion
+			add_popularity = {
+				ideology = islamist
+				popularity = 0.05
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_path_of_order
+		icon = fascism
+		x = @ideology_tree_path_of_order
+		y = @ideology_tree_tenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_national_strength
+		}
+		
+		#mutually_exclusive = {
+		#	focus = AFR_path_of_equality
+		#}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_path_of_order
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = monarchist
+				popularity = 0.05
+			}
+			#if = {
+			#	limit = {
+			#		OR = {
+			#			islamist > 0.1
+			#			has_country_flag = dominant_religion_islam
+			#		}
+			#	}
+			#	add_popularity = {
+			#		ideology = islamist
+			#		popularity = 0.05
+			#	}
+			#}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_artillery_focus
+		icon = artillery
+		x = @army_tree_center
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_army_training_1
+			focus = AFR_military_officer_schools
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.25
+				uses = 3
+				category = artillery
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_naval_bases_1
+#		icon = navy
+#		x = @navy_tree_left
+#		y = 2
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_naval_training_1
+#		}
+#		
+#		completion_reward = {
+#			navy_experience = 10
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+#	focus = {
+#		id = AFR_destroyer_program
+#		icon = anti_submarine
+#		x = @navy_tree_center
+#		y = 2
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_naval_training_1
+#			focus = AFR_small_ship_program
+#			focus = AFR_dockyards_1
+#		}
+#		
+#		completion_reward = {
+#			navy_experience = 10
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_dockyards_2
+		icon = naval_dockyards
+		x = @navy_tree_dockyards
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_dockyards_1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = dockyard
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_bomber_production
+		icon = bomber
+		x = @air_tree_left
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_fighter_production
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_bomber_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_air_training_1
+		icon = airforce
+		x = @air_tree_right
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_air_bases_1
+		}
+		
+		completion_reward = {
+			air_experience = 15
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_air_bases_2
+		icon = air_production
+		x = @air_tree_very_far_right
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_air_bases_1
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_military_industry_2
+		icon = industry_military
+		x = @industrial_tree_shared_military
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_military_industry_1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_civilian_industry_2
+		icon = industry_civilian
+		x = @industrial_tree_shared_civilian
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_civilian_industry_1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+#	
+#	focus = {
+#		id = AFR_infrastructure_2
+#		icon = infrastructure
+#		x = @industrial_tree_right
+#		y = 3
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_industrial_development
+#		}
+#		
+#		completion_reward = {
+#			random_owned_state = {
+#				add_building_construction = {
+#					type = infrastructure
+#					level = 2
+#					instant_build = yes
+#				}
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_traditional_values
+		icon = demand_territory2
+		x = @birth_rate_tree_left
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_demographic_studies
+		}
+		
+		available = {
+			NOT = { has_government = social_democrat }
+			NOT = { has_government = progressive }
+			NOT = { has_government = democratic_socialist }
+			NOT = { has_government = communist }
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_female_workforce
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_male_workforce
+			add_national_unity = -0.05
+			if = {
+				limit = { has_democratic_form_of_government = yes }
+				add_popularity = {
+					ideology = conservative
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = reactionary
+					popularity = 0.04
+				}
+			}
+			if = {
+				limit = { has_democratic_form_of_government = no }
+				add_popularity = {
+					ideology = fascist
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = nationalist
+					popularity = 0.04
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_female_workforce
+		icon = national_unity
+		x = @birth_rate_tree_right
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_demographic_studies
+		}
+		prerequisite = {
+			focus = AFR_secure_national_unity
+		}
+		
+		available = {
+			NOT = { has_government = islamist }
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_traditional_values
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_equal_workforce
+			if = {
+				limit = { has_democratic_form_of_government = yes }
+				add_popularity = {
+					ideology = progressive
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = democratic_socialist
+					popularity = 0.04
+				}
+			}
+			if = {
+				limit = { has_democratic_form_of_government = no }
+				add_popularity = {
+					ideology = communist
+					popularity = 0.06
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_invest_in_public_service
+		icon = construction3
+		x = @political_tree_very_far_left
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_recruit_more_administrators
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_public_service_investment
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_education_reform
+		icon = construction2
+		x = @political_tree_left
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_recruit_more_administrators
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_education_reform
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_isolation
+		icon = neutrality
+		x = @political_tree_right
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_foreign_politics
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_intervention
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { 
+					has_idea = neutrality_idea 
+				}
+				add_political_power = 100
+				add_national_unity = 0.05
+			}
+			if = {
+				limit = { 
+					NOT = { has_idea = neutrality_idea }
+					NOT = { has_idea = austrian_neutrality }
+				}
+				add_ideas = neutrality_idea
+			}
+			if = {	#Pretty much specific to Austria.
+				limit = {
+					has_idea = austrian_neutrality
+				}
+				remove_ideas = austrian_neutrality
+				add_ideas = neutrality_idea
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_intervention
+		icon = forceful_treaty
+		x = @political_tree_intervention_center
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_foreign_politics
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_isolation
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { 
+					NOT = { has_idea = neutrality_idea } 
+					NOT = { has_idea = austrian_neutrality } 
+				}
+				add_political_power = 25
+				army_experience = 10
+				navy_experience = 10
+				air_experience = 10
+			}
+			if = {
+				limit = { has_idea = austrian_neutrality }
+				remove_ideas = austrian_neutrality
+				add_political_power = -20
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_socialist
+		icon = democracy
+		x = @ideology_tree_socialist
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_democratic_progress
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_progressive
+		}
+		mutually_exclusive = {
+			focus = AFR_ideology_social_democrat
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_leftist_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_progressive
+		icon = democracy
+		x = @ideology_tree_progressive
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_democratic_progress
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_socialist
+		}
+		mutually_exclusive = {
+			focus = AFR_ideology_social_democrat
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_progressive_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_social_democrat
+		icon = democracy
+		x = @ideology_tree_social_democrat
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_democratic_progress
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_socialist
+		}
+		mutually_exclusive = {
+			focus = AFR_ideology_progressive
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_social_democrat_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_social_liberal
+		icon = democracy
+		x = @ideology_tree_social_liberal
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_democratic_freedom
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_libertarian
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_liberal_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_libertarian
+		icon = democracy
+		x = @ideology_tree_libertarian
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_democratic_freedom
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_social_liberal
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_capitalist_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_conservative
+		icon = democracy
+		x = @ideology_tree_conservative
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_democratic_values
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_reactionary
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_conservative_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_reactionary
+		icon = democracy
+		x = @ideology_tree_reactionary
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_democratic_values
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_conservative
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_reactionary_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_communist
+		icon = communism
+		x = @ideology_tree_communist
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_equality
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_marxist_doctrine
+		}
+		
+		#mutually_exclusive = {
+		#	focus = AFR_ideology_islamist
+		#}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_fascist
+		icon = fascism
+		x = @ideology_tree_fascist
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_order
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_nationalist
+		}
+		mutually_exclusive = {
+			focus = AFR_ideology_monarchist
+		}
+		mutually_exclusive = {
+			focus = AFR_ideology_islamist
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_neo_fascist_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_nationalist
+		icon = fascism2
+		x = @ideology_tree_nationalist
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_order
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_fascist
+		}
+		mutually_exclusive = {
+			focus = AFR_ideology_monarchist
+		}
+		mutually_exclusive = {
+			focus = AFR_ideology_islamist
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_nationalist_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_monarchist
+		icon = monarchy
+		x = @ideology_tree_monarchist
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_order
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_ideology_fascist
+		}
+		mutually_exclusive = {
+			focus = AFR_ideology_nationalist
+		}
+		#mutually_exclusive = {
+		#	focus = AFR_ideology_islamist
+		#}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_royal_doctrine
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_ideology_islamist
+		icon = align_to_pakistan
+		x = @ideology_tree_islamist
+		y = @ideology_tree_eleventh_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_path_of_religion
+		}
+		
+		available = {
+			islamist > 0.15
+		}
+		
+		#mutually_exclusive = {
+		#	focus = AFR_ideology_fascist
+		#}
+		#mutually_exclusive = {
+		#	focus = AFR_ideology_nationalist
+		#}
+		#mutually_exclusive = {
+		#	focus = AFR_ideology_monarchist
+		#}
+		#mutually_exclusive = {
+		#	focus = AFR_ideology_communist
+		#}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_path_of_allah
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_army_training_2
+		icon = infantry_allies
+		x = @army_tree_left
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_army_training_1
+		}
+		
+		completion_reward = {
+			army_experience = 20
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_armor_focus
+#		icon = tank
+#		x = @army_tree_right
+#		y = 3
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_artillery_focus
+#		}
+#		
+#		completion_reward = {
+#			add_tech_bonus = {
+#				name = tank_bonus
+#				bonus = 0.25
+#				uses = 2
+#				category = armor
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+
+	focus = {
+		id = AFR_light_mechanised_focus
+		icon = tank
+		x = @army_tree_right
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_artillery_focus
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_mechanised_bonus
+				bonus = 0.25
+				uses = 2
+				category = light_mechanized
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_naval_training_2
+#		icon = navy2
+#		x = @navy_tree_left
+#		y = 3
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_naval_training_1
+#		}
+#		
+#		completion_reward = {
+#			navy_experience = 15
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+#	focus = {
+#		id = AFR_submarine_program
+#		icon = submarines
+#		x = @navy_tree_right
+#		y = 3
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_destroyer_program
+#		}
+#		
+#		completion_reward = {
+#			add_tech_bonus = {
+#				name = sub_bonus
+#				bonus = 0.4
+#				uses = 2
+#				category = ss_tech
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_dockyards_3
+		icon = naval_dockyards
+		x = @navy_tree_dockyards
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_dockyards_2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = dockyard
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_air_force_military_school
+		icon = air_defense
+		x = @air_tree_center
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_bomber_production
+			focus = AFR_air_training_1
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_air_force_military_school
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_military_industry_3
+		icon = industry_military
+		x = @industrial_tree_shared_military
+		y = 5
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_military_industry_2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_civilian_industry_3
+		icon = industry_civilian
+		x = @industrial_tree_shared_civilian
+		y = 5
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_civilian_industry_2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+#	
+#	focus = {
+#		id = AFR_infrastructure_3
+#		icon = infrastructure
+#		x = @industrial_tree_right
+#		y = 4
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_infrastructure_2
+#		}
+#		
+#		completion_reward = {
+#			random_owned_state = {
+#				add_building_construction = {
+#					type = infrastructure
+#					level = 2
+#					instant_build = yes
+#				}
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+#	
+#	focus = {
+#		id = AFR_steel_factories
+#		icon = production2
+#		x = @industrial_tree_very_far_right
+#		y = 4
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_resource_focus
+#		}
+#		
+#		available = {
+#			num_of_civilian_factories > 9
+#		}
+#		
+#		completion_reward = {
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories < 20 
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 2 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 19
+#					num_of_civilian_factories < 30
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 3 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 3 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 29
+#					num_of_civilian_factories < 40
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 4 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 39
+#					num_of_civilian_factories < 50
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 5 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 49
+#					num_of_civilian_factories < 60
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 6 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 59
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = steel amount = 7 }
+#				}
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_crackdown_on_contraceptives
+		icon = propaganda
+		x = @birth_rate_tree_left
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_traditional_values
+		}
+		
+		available = {
+			NOT = { has_idea = population_growth_explosion }
+		}
+		
+		completion_reward = {
+			increase_birth_rate = yes
+			add_national_unity = -0.05
+		}
+	}
+	
+	focus = {
+		id = AFR_birth_control_programs
+		icon = radar
+		x = @birth_rate_tree_right
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_female_workforce
+		}
+		
+		available = {
+			NOT = { has_idea = population_growth_decline }
+		}
+		
+		completion_reward = {
+			lower_birth_rate = yes
+			add_national_unity = 0.05
+		}
+	}
+	
+	focus = {
+		id = AFR_research_incentives
+		icon = research
+		x = @political_tree_very_far_left
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_invest_in_public_service
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_encouraged_private_research
+			add_ideas = idea_focus_generic_census_reform
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_expand_the_secret_services
+		icon = intelligence_exchange
+		x = @political_tree_left
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_education_reform
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_expanded_secret_services
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_destroy_foreign_influence
+		icon = destroy_establishment
+		x = @political_tree_right
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_isolation
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_destroyed_foreign_influence
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_volunteer_corps
+		icon = infantry_commonwealth
+		x = @political_tree_volunteer_corps
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_intervention
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_africa_volunteer_corps
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_african_union_ties
+		icon = improve_relations
+		x = @political_tree_african_union
+		y = 3
+		cost = @foreign_ties_cost
+		
+		prerequisite = {
+			focus = AFR_intervention
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = african_union_member }
+				}
+				add_ideas = african_union_member
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_african_union_assistance
+#		icon = army_doctrine
+#		x = @political_tree_african_union
+#		y = 4
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_african_union_ties
+#		}
+#		
+#		available = {
+#			has_idea = african_union_member
+#		}
+#		
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_african_union_peacekeeping
+		icon = infantry_commonwealth
+		x = @political_tree_african_union_peacekeeping
+		y = 6
+		cost = 10
+		
+		
+		prerequisite = {
+			focus = AFR_volunteer_corps
+		}
+		
+		prerequisite = {
+			focus = AFR_african_union_military_collaboration
+		}
+		
+		available = {
+			has_idea = african_union_member
+			#has_completed_focus = AFR_volunteer_corps
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_union_peacekeeping
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_western_ties
+		icon = align_to_nato
+		x = @political_tree_western_intervention
+		y = 3
+		cost = @foreign_ties_cost
+		
+		prerequisite = {
+			focus = AFR_intervention
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					modifier = declaration_of_friendship
+					target = FROM
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					modifier = declaration_of_friendship
+					target = FROM
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					modifier = declaration_of_friendship
+					target = FROM
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					modifier = declaration_of_friendship
+					target = FROM
+				}
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_eastern_ties
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_western_assistance
+#		icon = army_doctrine
+#		x = @political_tree_western_intervention
+#		y = 4
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_western_ties
+#		}
+#		
+#		available = {
+#			NOT = { has_war_with = ENG }
+#			NOT = { has_war_with = USA }
+#			NOT = { has_war_with = FRA }
+#			NOT = { has_war_with = GER }
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_eastern_ties
+		icon = align_to_china
+		x = @political_tree_eastern_intervention
+		y = 3
+		cost = @foreign_ties_cost
+		
+		prerequisite = {
+			focus = AFR_intervention
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = {
+					modifier = declaration_of_friendship
+					target = FROM
+				}
+			}
+			PRC = {
+				add_opinion_modifier = {
+					modifier = declaration_of_friendship
+					target = FROM
+				}
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_western_ties
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_eastern_assistance
+#		icon = army_doctrine
+#		x = @political_tree_eastern_intervention
+#		y = 4
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_eastern_ties
+#		}
+#		
+#		
+#		available = {
+#			OR = {
+#				NOT = { has_war_with = SOV }
+#				NOT = { has_war_with = PRC }
+#			}
+#		}
+#		
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_united_nations_peacekeeping
+		icon = infantry_commonwealth
+		x = @political_tree_united_nations_peacekeeping
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_western_ties
+			focus = AFR_eastern_ties
+		}
+		#prerequisite = {
+		#	focus = AFR_volunteer_corps
+		#}
+		
+		available = {
+			has_completed_focus = AFR_volunteer_corps
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_united_nations_peacekeeping
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_redistribution_of_wealth
+		icon = anti_comintern_pact
+		x = @ideology_tree_socialist
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_socialist
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = democratic_socialist } }
+				decrease_stability_by_5 = yes
+			}
+			add_popularity = {
+				ideology = democratic_socialist
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = democratic_socialist
+				elections_allowed = yes
+			}
+			add_ideas = idea_focus_redistribution_of_wealth
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_environmental_policy
+		icon = improve_relations
+		x = @ideology_tree_progressive
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_progressive
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = progressive } }
+				decrease_stability_by_5 = yes
+			}
+			add_popularity = {
+				ideology = progressive
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = progressive
+				elections_allowed = yes
+			}
+			add_ideas = idea_focus_environmental_policy
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_strengthen_unions
+		icon = tripartite_pact
+		x = @ideology_tree_social_democrat
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_social_democrat
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = social_democrat } }
+				decrease_stability_by_5 = yes
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = yes
+			}
+			add_ideas = idea_focus_strong_unions
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_personal_freedoms
+		icon = air_defense
+		x = @ideology_tree_social_liberal
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_social_liberal
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = social_liberal } }
+				decrease_stability_by_5 = yes
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = yes
+			}
+			add_ideas = idea_focus_personal_freedoms
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_economic_freedoms
+		icon = trade_deal
+		x = @ideology_tree_libertarian
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_libertarian
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = market_liberal } }
+				decrease_stability_by_5 = yes
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = yes
+			}
+			add_ideas = idea_focus_economic_freedoms
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_family_values
+		icon = diplomatic_treaty
+		x = @ideology_tree_conservative
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_conservative
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = conservative } }
+				decrease_stability_by_5 = yes
+			}
+			add_popularity = {
+				ideology = conservative
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = conservative
+				elections_allowed = yes
+			}
+			add_ideas = idea_focus_family_values
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_national_security
+		icon = entente
+		x = @ideology_tree_reactionary
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_reactionary
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = reactionary } }
+				decrease_stability_by_5 = yes
+			}
+			add_popularity = {
+				ideology = reactionary
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = reactionary
+				elections_allowed = yes
+			}
+			add_ideas = idea_focus_national_security
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_revolutionary_committee
+		icon = communism3
+		x = @ideology_tree_communist
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_communist
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = communist } }
+				decrease_stability_by_15 = yes
+			}
+			add_popularity = {
+				ideology = communist
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = communist
+				elections_allowed = no
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_racial_values
+		icon = fascism
+		x = @ideology_tree_fascist
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_fascist
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = fascist } }
+				decrease_stability_by_15 = yes
+			}
+			add_popularity = {
+				ideology = fascist
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = fascist
+				elections_allowed = no
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_national_restoration
+		icon = fascism2
+		x = @ideology_tree_nationalist
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_nationalist
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = nationalist } }
+				decrease_stability_by_15 = yes
+			}
+			add_national_unity = 0.05
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_empower_the_monarch
+		icon = monarchy
+		x = @ideology_tree_monarchist
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_monarchist
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = monarchist } }
+				decrease_stability_by_10 = yes
+			}
+			add_popularity = {
+				ideology = monarchist
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = monarchist
+				elections_allowed = no
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_shariah_lawcode
+		icon = align_to_pakistan
+		x = @ideology_tree_islamist
+		y = @ideology_tree_twelth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_ideology_islamist
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = islamist } }
+				decrease_stability_by_15 = yes
+			}
+			add_popularity = {
+				ideology = islamist
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = islamist
+				elections_allowed = no
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_land_doctrine_1
+		icon = army_doctrines
+		x = @army_tree_center
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_army_training_2
+			focus = AFR_light_mechanised_focus
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.3
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_cruiser_program
+#		icon = cruisers
+#		x = @navy_tree_center
+#		y = 4
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_naval_training_2
+#			focus = AFR_submarine_program
+#		}
+#		
+#		completion_reward = {
+#			add_tech_bonus = {
+#				name = carrier_bonus
+#				bonus = 0.4
+#				uses = 1
+#				category = ca_tech
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_air_doctrine_1
+		icon = air_doctrine
+		x = @air_tree_left
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_bomber_production
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.25
+				uses = 2
+				category = air_doctrine
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_air_safety_reforms
+		icon = bombs
+		x = @air_tree_right
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_air_training_1
+		}
+		
+		completion_reward = {
+			air_experience = 5
+			add_ideas = generic_air_force_safety_reforms
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_military_industry_4
+		icon = industry_military
+		x = @industrial_tree_domestic_left
+		y = 6
+		cost = 15
+		
+		prerequisite = {
+			focus = AFR_military_industry_3
+		}
+		
+		prerequisite = {
+			focus = AFR_domestic_slots_2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_civilian_industry_4
+		icon = industry_civilian
+		x = @industrial_tree_domestic_right
+		y = 6
+		cost = 15
+		
+		prerequisite = {
+			focus = AFR_civilian_industry_3
+		}
+		
+		prerequisite = {
+			focus = AFR_domestic_slots_2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+#	
+#	focus = {
+#		id = AFR_synthetic_oil
+#		icon = oil_production
+#		x = @industrial_tree_right
+#		y = 5
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_steel_factories
+#		}
+#		
+#		available = {
+#			num_of_civilian_factories > 9
+#		}
+#		
+#		completion_reward = {
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories < 20 
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 2 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 19
+#					num_of_civilian_factories < 30
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 3 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 3 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 29
+#					num_of_civilian_factories < 40
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 4 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 39
+#					num_of_civilian_factories < 50
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 5 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 49
+#					num_of_civilian_factories < 60
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 6 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 59
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = oil amount = 7 }
+#				}
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+#	
+#	focus = {
+#		id = AFR_aluminium_factories
+#		icon = production
+#		x = @industrial_tree_very_far_right
+#		y = 5
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_steel_factories
+#		}
+#		
+#		available = {
+#			num_of_civilian_factories > 9
+#		}
+#		
+#		completion_reward = {
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories < 20 
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 2 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 19
+#					num_of_civilian_factories < 30
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 3 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 3 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 29
+#					num_of_civilian_factories < 40
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 4 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 39
+#					num_of_civilian_factories < 50
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 5 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 5 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 49
+#					num_of_civilian_factories < 60
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 6 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 6 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 59
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 7 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = aluminium amount = 7 }
+#				}
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_extra_research_slot
+		icon = research
+		x = @political_tree_far_left
+		y = 5
+		cost = 25
+		
+		prerequisite = {
+			focus = AFR_research_incentives
+		}
+		prerequisite = {
+			focus = AFR_expand_the_secret_services
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_defensive_constructions
+		icon = defence
+		x = @political_tree_right
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_destroy_foreign_influence
+		}
+		
+		completion_reward = {
+			add_ideas = ENG_defensive_constructions_idea
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = AFR_self_sufficiency
+		icon = industry_military
+		x = @political_tree_right
+		y = 5
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_defensive_constructions
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_self_sufficiency
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_political_influence_abroad
+		icon = territorial_claims
+		x = @political_tree_very_far_right
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_volunteer_corps
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_government = islamist }
+				every_neighbor_country = {
+					add_popularity = { ideology = islamist popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = fascist }
+				every_neighbor_country = {
+					add_popularity = { ideology = fascist popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = nationalist }
+				every_neighbor_country = {
+					add_popularity = { ideology = nationalist popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = monarchist }
+				every_neighbor_country = {
+					add_popularity = { ideology = monarchist popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = reactionary }
+				every_neighbor_country = {
+					add_popularity = { ideology = reactionary popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = conservative }
+				every_neighbor_country = {
+					add_popularity = { ideology = conservative popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = market_liberal }
+				every_neighbor_country = {
+					add_popularity = { ideology = market_liberal popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = social_liberal }
+				every_neighbor_country = {
+					add_popularity = { ideology = social_liberal popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = social_democrat }
+				every_neighbor_country = {
+					add_popularity = { ideology = social_democrat popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = progressive }
+				every_neighbor_country = {
+					add_popularity = { ideology = progressive popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				every_neighbor_country = {
+					add_popularity = { ideology = democratic_socialist popularity = 0.05 }
+				}	
+			}
+			if = {
+				limit = { has_government = communist }
+				every_neighbor_country = {
+					add_popularity = { ideology = communist popularity = 0.05 }
+				}	
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_reckless_progress
+		icon = research
+		x = @ideology_tree_path_of_democratic_progress
+		y = @ideology_tree_thirteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_redistribution_of_wealth
+			focus = AFR_environmental_policy
+			focus = AFR_strengthen_unions
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_reckless_progress
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_commerce_efficiency
+		icon = industry_democratic
+		x = @ideology_tree_path_of_democratic_freedom
+		y = @ideology_tree_thirteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_personal_freedoms
+			focus = AFR_economic_freedoms
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_commerce_efficiency
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_realpolitik
+		icon = demand_sudetenland
+		x = @ideology_tree_path_of_democratic_values
+		y = @ideology_tree_thirteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_family_values
+			focus = AFR_national_security
+		}
+		
+		completion_reward = {
+			add_political_power = 250
+			add_ideas = idea_focus_generic_realpolitik
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_will_of_the_people
+		icon = communism4
+		x = @ideology_tree_communist
+		y = @ideology_tree_thirteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_revolutionary_committee
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_will_of_the_people
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_unity_and_nation
+		icon = entente
+		x = @ideology_tree_fascist_nationalist_finisher
+		y = @ideology_tree_thirteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_racial_values
+			focus = AFR_national_restoration
+		}
+		
+		completion_reward = {
+			add_national_unity = 0.05
+			add_ideas = idea_focus_generic_army_of_purity
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_the_values_of_old
+		icon = monarchy
+		x = @ideology_tree_monarchist
+		y = @ideology_tree_thirteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_empower_the_monarch
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_national_heritage
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_jihad
+		icon = align_to_pakistan
+		x = @ideology_tree_islamist
+		y = @ideology_tree_thirteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_shariah_lawcode
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_jihad
+			#Trigger the global news event.
+			news_event = news.2
+			#If the faction is not ideal, leave it.
+			if = {
+				limit = {
+					is_in_faction = yes
+					is_faction_leader = no
+					any_country = {
+						is_in_faction_with = ROOT
+						OR = {
+							NOT = { has_government = islamist }
+							islamist < 0.25
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						is_in_faction_with = ROOT
+						is_faction_leader = yes
+					}
+					remove_from_faction = ROOT
+				}
+			}
+			#Everybody should hate them; except for Islamists of their confession
+			if = {
+				limit = { 
+					OR = {
+						has_country_flag = sunni_islam 
+						AND = {	#The rare case of Ibadi or Bug.
+							NOT = { has_country_flag = sunni_islam }
+							NOT = { has_country_flag = shia_islam }
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							has_country_flag = shia_islam
+							NOT = { has_government = islamist }
+						}
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = terrorist_menace
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = terrorist_menace_trade
+					}
+				}
+			}
+			if = {
+				limit = { 
+					has_country_flag = shia_islam 
+				}
+				every_country = {
+					limit = {
+						OR = {
+							has_country_flag = sunni_islam
+							NOT = { has_government = islamist }
+						}
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = terrorist_menace
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = terrorist_menace_trade
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_army_training_3
+		icon = infantry_allies
+		x = @army_tree_left
+		y = 5
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_army_training_2
+		}
+		
+		completion_reward = {
+			army_experience = 25
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_recruitment_strategies
+		icon = infantry_japan
+		x = @army_tree_right
+		y = 5
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_land_doctrine_1
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_new_recruitment_strategies
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_naval_doctrine_focus
+#		icon = naval_doctrine
+#		x = @navy_tree_left
+#		y = 5
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_naval_training_2
+#		}
+#		
+#		completion_reward = {
+#			add_tech_bonus = {
+#				name = nav_doctrine_bonus
+#				bonus = 0.3
+#				uses = 2
+#				category = naval_doctrine
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+#	focus = {
+#		id = AFR_carrier_program
+#		icon = carriers
+#		x = @navy_tree_right
+#		y = 5
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_cruiser_program
+#		}
+#		
+#		completion_reward = {
+#			add_tech_bonus = {
+#				name = carrier_bonus
+#				bonus = 0.25
+#				uses = 1
+#				category = cv_tech
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_air_doctrine_2
+		icon = air_doctrine
+		x = @air_tree_left
+		y = 5
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_air_doctrine_1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.3
+				uses = 2
+				category = air_doctrine
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_military_industry_5
+		icon = industry_military
+		x = @industrial_tree_domestic_left
+		y = 7
+		cost = 20
+		
+		prerequisite = {
+			focus = AFR_military_industry_4
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_civilian_industry_5
+		icon = industry_civilian
+		x = @industrial_tree_domestic_right
+		y = 7
+		cost = 15
+		
+		prerequisite = {
+			focus = AFR_civilian_industry_4
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = AFR_synthetic_rubber
+#		icon = oil_production
+#		x = @industrial_tree_right
+#		y = 6
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_synthetic_oil
+#		}
+#		
+#		available = {
+#			num_of_civilian_factories > 14
+#		}
+#		
+#		completion_reward = {
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories < 20 
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = rubber amount = 2 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 19
+#					num_of_civilian_factories < 30
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = rubber amount = 3 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = rubber amount = 3 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 29
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = rubber amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = rubber amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = rubber amount = 4 }
+#				}
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+#	
+#	focus = {
+#		id = AFR_rare_metals
+#		icon = production2
+#		x = @industrial_tree_very_far_right
+#		y = 6
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = AFR_aluminium_factories
+#		}
+#		
+#		available = {
+#			num_of_civilian_factories > 14
+#		}
+#		
+#		completion_reward = {
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories < 20 
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = chromium amount = 2 }
+#					add_resource = { type = tungsten amount = 2 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 19
+#					num_of_civilian_factories < 30
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = chromium amount = 3 }
+#					add_resource = { type = tungsten amount = 3 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = chromium amount = 3 }
+#					add_resource = { type = tungsten amount = 3 }
+#				}
+#			}
+#			if = {
+#				limit = { 
+#					num_of_civilian_factories > 29
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = chromium amount = 4 }
+#					add_resource = { type = tungsten amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = chromium amount = 4 }
+#					add_resource = { type = tungsten amount = 4 }
+#				}
+#				random_owned_state = { 
+#					add_resource = { type = chromium amount = 4 }
+#					add_resource = { type = tungsten amount = 4 }
+#				}
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	focus = {
+		id = AFR_join_daesh
+		icon = align_to_pakistan
+		x = @ideology_tree_islamist
+		y = @ideology_tree_fourteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_jihad
+		}
+		
+		available = {
+			has_country_flag = sunni_islam
+			ISS = {
+				is_faction_leader = yes
+				has_government = islamist
+			}
+			has_government = islamist
+		}
+		
+		bypass = {
+		    is_in_faction_with = ISS
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_jihad_faction
+		}
+
+		completion_reward = {
+			ISS = { country_event = africa.2 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	focus = {
+		id = AFR_join_communist_russia
+		icon = communism
+		x = @ideology_tree_communist
+		y = @ideology_tree_fourteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_will_of_the_people
+		}
+		
+		available = {
+			has_government = communist
+			SOV = {
+				is_faction_leader = yes
+				has_government = communist
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_communist_faction
+		}
+		
+		bypass = {
+			is_in_faction_with = SOV
+		}
+
+		completion_reward = {
+			SOV = { country_event = africa.1 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	focus = {
+		id = AFR_join_fascist_germany
+		icon = fascism
+		x = @ideology_tree_fascist
+		y = @ideology_tree_fourteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_unity_and_nation
+		}
+		
+		prerequisite = {
+			focus = AFR_racial_values
+		}
+		
+		available = {
+			has_government = fascist
+			GER = {
+				is_faction_leader = yes
+				has_government = fascist
+			}
+		}
+		
+		bypass = {
+			is_in_faction_with = GER
+		}
+				
+		mutually_exclusive = {
+			focus = AFR_nationalist_faction
+		}
+
+		mutually_exclusive = {
+			focus = AFR_join_nationalist_italy
+		}
+		
+		
+		completion_reward = {
+			GER = { country_event = africa.1 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	focus = {
+		id = AFR_join_nationalist_italy
+		icon = italy_fascism
+		x = @ideology_tree_nationalist
+		y = @ideology_tree_fourteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_unity_and_nation
+		}
+		
+		available = {
+			OR = {
+				has_government = fascist
+				has_government = nationalist
+			}
+			ITA = {
+				is_faction_leader = yes
+				OR = {
+					has_government = fascist
+					has_government = nationalist
+				}
+			}
+		}
+		
+		bypass = {
+			is_in_faction_with = ITA
+		}
+				
+		mutually_exclusive = {
+			focus = AFR_nationalist_faction
+		}
+
+		mutually_exclusive = {
+			focus = AFR_join_fascist_germany
+		}
+		
+		completion_reward = {
+			ITA = { country_event = africa.1 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	focus = {
+		id = AFR_nationalist_faction
+		icon = fascism2
+		x = @ideology_tree_monarchist
+		y = @ideology_tree_fourteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_unity_and_nation
+			focus = AFR_the_values_of_old
+		}
+		
+		available = {
+			num_of_military_factories > 10
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_join_fascist_germany
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_join_nationalist_italy
+		}
+		
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_jihad_faction
+		icon = align_to_pakistan
+		x = @ideology_tree_islamist_right
+		y = @ideology_tree_fourteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_jihad
+		}
+		
+		available = {
+			num_of_military_factories > 10
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_join_daesh
+		}
+		
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_communist_faction
+		icon = communism3
+		x = @ideology_tree_communist_left
+		y = @ideology_tree_fourteenth_row
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_will_of_the_people
+		}
+		
+		available = {
+			num_of_military_factories > 10
+		}
+		
+		mutually_exclusive = {
+			focus = AFR_join_communist_russia
+		}
+		
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	##########################
+	### FOREIGN INVESTMENT ###
+	##########################
+	
+	focus = {
+		id = AFR_public_private
+		icon = industry_civilian
+		x = @industrial_tree_foreign_right
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_foreign_investment
+		}
+
+		bypass = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = construction_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size < 2
+							include_locked = yes
+						}					
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_oil_companies
+		icon = oil_production
+		x = @industrial_tree_foreign_right
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_public_private
+		}
+		
+		completion_reward = {
+			random_owned_state = { 
+				add_resource = { type = oil amount = 4 }
+			}
+			random_owned_state = { 
+				add_resource = { type = oil amount = 4 }
+			}
+			random_owned_state = { 
+				add_resource = { type = oil amount = 4 }
+			}
+		}
+	}
+	
+	focus = {
+		id = AFR_outsourced_service_industry
+		icon = research
+		x = @industrial_tree_foreign_right
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_oil_companies
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_outsourced_service_industry
+		}
+	}
+	
+	focus = {
+		id = AFR_foreign_defense_outsourced
+		icon = industry_military
+		x = @industrial_tree_foreign_left
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_foreign_investment
+		}
+
+		bypass = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = production_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = arms_factory
+							size < 2
+							include_locked = yes
+						}					
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_private_security_contractors
+		icon = military_fort
+		x = @industrial_tree_foreign_left
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_foreign_defense_outsourced
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_private_security_contractors
+		}
+	}
+	
+	focus = {
+		id = AFR_private_military_forces
+		icon = army_doctrine
+		x = @industrial_tree_foreign_left
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_private_security_contractors
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_private_military_forces
+		}
+		
+	}
+	
+	###########################
+	### DOMESTIC INVESTMENT ###
+	###########################
+	
+	focus = {
+		id = AFR_domestic_slots_1
+		icon = construction2
+		x = @industrial_tree_domestic_general
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_domestic_investment
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_domestic_military_focus
+		icon = industry_military
+		x = @industrial_tree_domestic_left
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_domestic_slots_1
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_domestic_military_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_domestic_civilian_focus
+		icon = industry_civilian
+		x = @industrial_tree_domestic_right
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_domestic_slots_1
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_domestic_civilian_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_domestic_mining_focus
+		icon = oil_production
+		x = @industrial_tree_domestic_left
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_domestic_civilian_focus
+			focus = AFR_domestic_military_focus
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_domestic_mining_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_domestic_infrastructure_focus
+		icon = infrastructure
+		x = @industrial_tree_domestic_right
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_domestic_civilian_focus
+			focus = AFR_domestic_military_focus
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_domestic_infrastructure_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = AFR_domestic_slots_2
+		icon = construction2
+		x = @industrial_tree_domestic_general
+		y = 5
+		cost = 10
+		
+		prerequisite = {
+			focus = AFR_domestic_mining_focus
+			focus = AFR_domestic_infrastructure_focus
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

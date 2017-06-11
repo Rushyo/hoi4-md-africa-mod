@@ -1,0 +1,28 @@
+state={
+	id=864
+	name="STATE_864"
+	provinces={
+		7161 10766 
+	}
+	resources = {
+		tungsten = 4
+	}
+	history={
+		owner = RCD
+		add_core_of = RCD
+		add_core_of = DRC
+		buildings = {
+			infrastructure = 2
+			7161 = { bunker = 2 }
+			10766 = { bunker = 2 }
+		}
+		2003.7.15 = {
+			owner = DRC
+			remove_core_of = DRC
+		}
+	}
+	manpower=1240787
+	buildings_max_level_factor=1.000
+	
+	state_category = pastoral
+}

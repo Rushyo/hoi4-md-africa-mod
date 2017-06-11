@@ -1,0 +1,45 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+mlc_drc_relationship = {
+	enable = {
+		tag = MLC
+		country_exists = DRC
+	}
+	abort = {
+		NOT = { country_exists = DRC }
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "DRC"
+		value = 200
+	}
+}
+
+mlc_rcd_relationship = {
+	enable = {
+		tag = MLC
+		NOT = { country_exists = DRC }
+		country_exists = RCD
+	}
+	abort = {
+		NOT = { country_exists = RCD }
+		country_exists = DRC
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "RCD"
+		value = 200
+	}
+}

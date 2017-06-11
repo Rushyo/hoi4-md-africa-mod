@@ -1,0 +1,154 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+british_sierra_leone_relationship = {
+	enable = {
+		tag = ENG
+		ENG = { has_democratic_form_of_government = yes }
+		country_exists = SIE
+		SIE = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SIE }
+			SIE = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SIE"
+		value = 200
+	}
+	ai_strategy = {
+		type = protect
+		id = "SIE"
+		value = 200
+	}	
+}
+
+british_nigerian_relationship = {
+	enable = {
+		tag = ENG
+		ENG = { has_democratic_form_of_government = yes }
+		country_exists = NGR
+		NGR = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NGR }
+			NGR = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "NGR"
+		value = 200
+	}
+}
+
+british_south_african_relationship = {
+	enable = {
+		tag = ENG
+		ENG = { has_democratic_form_of_government = yes }
+		country_exists = SAF
+		SAF = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SAF }
+			SAF = { has_democratic_form_of_government = no }
+			date > 2010.6.15 # Visa restrictions
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SAF"
+		value = 200
+	}
+}
+
+british_somali_relationship = {
+	enable = {
+		tag = ENG
+		ENG = { has_democratic_form_of_government = yes }
+		country_exists = SOM
+		SOM = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SOM }
+			SOM = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SOM"
+		value = 200
+	}
+}
+
+british_somaliland_relationship = {
+	enable = {
+		tag = ENG
+		ENG = { has_democratic_form_of_government = yes }
+		country_exists = SML
+		SML = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SML }
+			SML = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SML"
+		value = 200
+	}
+}
+
+
+british_sudanese_relationship = {
+	enable = {
+		tag = ENG
+		ENG = { has_democratic_form_of_government = yes }
+		country_exists = SUD
+		SUD = {
+			OR = {
+				has_democratic_form_of_government = yes
+				has_government = islamist
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SUD }
+			NOT = {
+				OR = {
+					has_democratic_form_of_government = yes
+					has_government = islamist
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SUD"
+		value = 200
+	}
+}

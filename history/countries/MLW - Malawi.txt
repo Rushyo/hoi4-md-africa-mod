@@ -1,0 +1,165 @@
+﻿capital = 820
+
+oob = "MLW_2000"
+
+set_research_slots = 4
+set_convoys = 500
+set_national_unity = 0.75
+
+set_country_flag = country_language_chichewa
+set_country_flag = country_language_english
+
+set_country_flag = starting_stability_average
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	gen1_mbt = 1
+	gen1_apc = 1
+	gen1_ifv = 1
+	cold_war_ship_design = 1
+	corvette1 = 1
+	cold_war_engineering = 1
+	assembly_line = 1
+	squad_automatic_weapon = 1
+	tandem_charge_warheads = 1
+	special_forces = 1
+	camouflage = 1
+	body_armor = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	gw_artillery = 1
+	corvette2 = 1
+	gen2_attack = 1
+	gen2_multirole = 1
+	gen2_mpa = 1
+	software1 = 1
+	machine_tools1 = 1
+	oil1 = 1
+	construction1 = 1
+	excavation1 = 1
+}
+
+set_country_flag = african_nation
+
+add_ideas = {
+	population_growth_explosion
+	commonwealth_of_nations_member
+	african_union_member
+}
+
+set_politics = {
+
+	parties = {
+		conservative = {
+			popularity = 25
+		}
+		social_liberal = {
+			popularity = 50
+		}
+		social_democrat = {
+			popularity = 25
+		}
+	}
+	
+	ruling_party = social_liberal
+	last_election = "1999.6.15"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Bakili Muluzi"
+	picture = "Bakili_Muluzi.dds"
+	ideology = moderate
+}
+
+create_country_leader = {
+	name = "Gwanda Chakuamba"
+	picture = "Gwanda_Chakuamba.dds"
+	ideology = constitutionalist
+}
+	
+create_country_leader = {
+	name = "Chakufwa Chihana"
+	picture = "Chakufwa_Chihana.dds"
+	ideology = social_democrat_ideology
+}
+
+create_country_leader = {
+	name = "Peter Mutharika"
+	picture = "Peter_Mutharika.dds"
+	ideology = progressive_ideology
+}
+
+create_country_leader = {
+	name = "Joyca Banda"
+	picture = "Joyce_Banda.dds"
+	ideology = libertarian
+}
+
+create_corps_commander = {
+	name = "Henry Odillo"
+	picture = "generals/Henry_Odillo.dds"
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Ignacio Maulana"
+	picture = "generals/Ignacio_Maulana.dds"
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Marko Chiziko"
+	picture = "generals/Marko_Chiziko.dds"
+	skill = 1
+}
+
+2016.1.1 = {
+	set_politics = {
+
+	parties = {
+		conservative = {
+			popularity = 23
+		}
+		market_liberal = {
+			popularity = 25
+		}
+		social_liberal = {
+			popularity = 12
+		}
+		social_democrat = {
+			popularity = 5
+		}
+		progressive = {
+			popularity = 35
+		}
+	}
+	
+	ruling_party = progressive
+	last_election = "2014.5.20"
+	election_frequency = 60
+	elections_allowed = yes
+	}
+
+	create_country_leader = {
+	name = "Lazarus Chakwera"
+	picture = "Lazarus_Chakwera.dds"
+	ideology = fiscal_conservative
+	}
+
+	create_country_leader = {
+	name = "Atupele Muluzi"
+	picture = "Atupele_Muluzi.dds"
+	ideology = moderate
+	}
+
+}

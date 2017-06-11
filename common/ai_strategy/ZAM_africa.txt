@@ -1,0 +1,60 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+zambian_drc_stability_relationship = {
+	enable = {
+		tag = ZAM
+		country_exists = DRC
+		OR = {
+			country_exists = MLC
+			country_exists = RCD
+		}
+		DRC = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = DRC }
+			DRC = { has_democratic_form_of_government = no }
+			NOT = {
+				country_exists = MLC
+				country_exists = RCD
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "DRC"
+		value = 200
+	}
+}
+
+zambian_saf_relationship = {
+	enable = {
+		tag = ZAM
+		ZAM = { has_democratic_form_of_government = yes }
+		country_exists = SAF
+		SAF = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SAF }
+			SAF = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SAF"
+		value = 200
+	}
+}

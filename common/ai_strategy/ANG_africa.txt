@@ -1,0 +1,99 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+angolan_drc_stability_relationship = {
+	enable = {
+		tag = ANG
+		country_exists = DRC
+		OR = {
+			country_exists = MLC
+			country_exists = RCD
+		}
+		DRC = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = DRC }
+			DRC = { has_democratic_form_of_government = no }
+			NOT = {
+				country_exists = MLC
+				country_exists = RCD
+			}
+			date > 2009.6.15 #Border explusions
+		}
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "DRC"
+		value = 200
+	}
+}
+
+angolan_saf_relationship = {
+	enable = {
+		tag = ANG
+		ANG = { has_democratic_form_of_government = yes }
+		country_exists = SAF
+		SAF = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SAF }
+			SAF = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SAF"
+		value = 200
+	}
+}
+
+angolan_namibian_relationship = {
+	enable = {
+		tag = ANG
+		country_exists = NAM
+	}
+	abort = {
+		NOT = { country_exists = NAM }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "NAM"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "NAM"
+		value = 200
+	}
+}
+
+angolan_cape_verde_relationship = {
+	enable = {
+		tag = ANG
+		country_exists = CAB
+	}
+	abort = {
+		NOT = { country_exists = CAB }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "CAB"
+		value = 200
+	}
+}

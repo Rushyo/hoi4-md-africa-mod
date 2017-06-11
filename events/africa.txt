@@ -1,0 +1,97 @@
+add_namespace = africa
+
+#Attempt to Join [Faction]
+country_event = {
+	id = africa.1
+	title = africa.1.t
+	desc = africa.1.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Accept
+		name = africa.1.o1
+		add_to_faction = FROM
+		FROM = { country_event = diplomatic_response.1 }
+		ai_chance = { factor = 70 }
+	}
+	
+	option = {	#Decline
+		name = africa.1.o2
+		FROM = { country_event = diplomatic_response.2 }
+		ai_chance = { factor = 30 }
+	}
+}
+
+#Attempt to Join Daesh
+country_event = {
+	id = africa.2
+	title = africa.2.t
+	desc = africa.2.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Accept
+		name = africa.2.o1
+		add_to_faction = FROM
+		FROM = { country_event = diplomatic_response.1 }
+		ai_chance = { factory = 80 }
+	}
+	
+	option = {	#Decline
+		name = africa.2.o2
+		FROM = { country_event = diplomatic_response.2 }
+		ai_chance = { factor = 20 }
+	}
+}
+
+# Have been asked to join African Union
+country_event = {
+	id = africa.3
+	title = africa.3.t
+	desc = africa.3.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Accept
+		name = africa.3.o1
+		FROM = { add_to_faction = PREV }
+		ai_chance = {
+			factor = 60
+			modifier = { # Has begun AU integration already
+				factor = 120
+				has_completed_focus = AFR_african_union_integration
+			}
+			modifier = { # Already in alliance means 50% chance
+				factor = 40
+				is_in_faction = yes
+			}
+			modifier = { # Isolationist
+				factor = 0
+				has_completed_focus = AFR_isolation
+			}
+		}
+	}
+	
+	option = {	#Decline
+		name = africa.3.o2
+		#FROM = { country_event = africa.4 } # Too spammy
+		ai_chance = { factor = 40 }
+	}
+}
+
+# Declined to join African Union
+country_event = {
+	id = africa.4
+	title = africa.4.t
+	desc = africa.4.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Ok
+		name = africa.4.o1
+	}
+}

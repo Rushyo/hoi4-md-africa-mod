@@ -1,0 +1,2 @@
+RCD = "countries/Goma Rebels.txt"
+MLC = "countries/Equateur Rebels.txt"

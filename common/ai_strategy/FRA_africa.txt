@@ -1,0 +1,44 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+french_gabon_relationship = {
+	enable = {
+		tag = FRA
+		FRA = { has_democratic_form_of_government = yes }
+		country_exists = GAB
+		GAB = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = GAB }
+			GAB = { has_democratic_form_of_government = no }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "GAB"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "GAB"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = garrison
+		id = "GAB"
+		value = 200
+	}
+}

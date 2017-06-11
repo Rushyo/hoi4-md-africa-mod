@@ -1,0 +1,75 @@
+﻿capital = 269
+
+oob = "SML_2000"
+
+set_research_slots = 4
+set_convoys = 500
+set_national_unity = 0.75
+
+set_country_flag = country_language_arabic
+set_country_flag = country_language_somali
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	gen1_mbt = 1
+	gen1_apc = 1
+	gen1_ifv = 1
+	cold_war_ship_design = 1
+	corvette1 = 1
+	cold_war_engineering = 1
+	assembly_line = 1
+}
+
+set_country_flag = african_nation
+
+add_ideas = {
+	population_growth_rapid
+	partially_recognized_state
+}
+
+set_politics = {
+
+	parties = {
+		islamist = {
+			popularity = 42
+		}
+		conservative = {
+			popularity = 22
+		}
+		social_democrat = {
+			popularity = 20
+		}
+		democratic_socialist = {
+			popularity = 12
+		}
+		communist = {
+			popularity = 3
+		}
+		progressive = {
+			popularity = 1
+		}
+	}
+	
+	ruling_party = islamist
+	last_election = "1997.6.15"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Mohammed H. I. Egal"
+	picture = "Mohammed_HI_Egal.dds"
+	ideology = islamic_republican
+}
+
+2010.1.1 = {
+	create_country_leader = {
+		name = "Ahmed Mohammed Mahamoud"
+		picture = "Ahmed_M_Mahamoud.dds"
+		ideology = islamic_republican
+	}
+}

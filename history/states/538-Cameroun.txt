@@ -1,0 +1,40 @@
+
+state={
+	id=538
+	name="STATE_538" # Central Congo
+	manpower = 7500300
+	
+	state_category = rural
+	
+	resources = {
+		tungsten=56
+	}	
+
+	history={
+		owner = MLC
+		add_core_of = MLC
+		add_core_of = DRC
+		buildings = {
+			infrastructure = 1
+			988 = { bunker = 2 }
+			7219 = { bunker = 2 }
+			7931 = { bunker = 2 }
+			8016 = { bunker = 2 }
+			8048 = { bunker = 2 }
+			10071 = { bunker = 2 }
+			10883 = { bunker = 2 }
+			10951 = { bunker = 2 }
+			12741 = { bunker = 2 }
+			12775 = { bunker = 2 }
+			12824 = { bunker = 2 }
+		}
+		2003.7.15 = {
+			owner = DRC
+			remove_core_of = DRC
+		}
+	}
+
+	provinces={
+		988 7219 7931 8016 8048 10071 10883 10951 12741 12775 12824 
+	}
+}

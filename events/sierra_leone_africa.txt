@@ -1,0 +1,29 @@
+add_namespace = sierra_leone_africa
+
+# Initial civil war
+#country_event = {
+#	id = sierra_leone_africa.1
+#	title = sierra_leone_africa.1.t
+#	desc = sierra_leone_africa.1.d
+#	picture = GFX_report_event_spain_civil_war_soldiers
+#	
+#	#hidden = yes
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = SIE
+#		date < 2000.1.10
+#	}
+#
+#	option = {
+#		name = sierra_leone_africa.1.a
+#		
+#		start_civil_war = {
+#			ideology = reactionary
+#			size = 0.5
+#			capital = 2094
+#		}
+#		
+#		#set_cosmetic_tag
+#	}
+#}

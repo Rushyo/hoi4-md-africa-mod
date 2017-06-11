@@ -1,0 +1,58 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+ugandan_drc_instability_relationship = {
+	enable = {
+		tag = UGA
+		country_exists = DRC
+		DRC = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = DRC }
+			DRC = { has_democratic_form_of_government = no }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "DRC"
+		value = 200
+	}
+}
+
+rwandan_MLC_support = {
+	enable = {
+		tag = UGA
+		country_exists = MLC
+	}
+	abort = {
+		NOT = { country_exists = MLC }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "MLC"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = influence
+		id = "MLC"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "MLC"
+		value = 200
+	}
+}

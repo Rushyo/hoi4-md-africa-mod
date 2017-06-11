@@ -1,0 +1,111 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+### Post-Civil War Era ###
+
+#TODO
+
+### Gaddafi Era ###
+
+libya_uk_ira_support = {
+	enable = {
+		tag = LBA
+		country_exists = ENG
+		has_democratic_form_of_government = no
+		ENG = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		NOT = { country_exists = ENG }
+		has_democratic_form_of_government = yes
+		ENG = { has_democratic_form_of_government = no }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "ENG"
+		value = 200
+	}
+}
+
+libya_spain_basque_support = {
+	enable = {
+		tag = LBA
+		country_exists = SPA
+		has_democratic_form_of_government = no
+		SPA = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		NOT = { country_exists = SPA }
+		has_democratic_form_of_government = yes
+		SPA = { has_democratic_form_of_government = no }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SPA"
+		value = 200
+	}
+}
+
+libya_swiss_relationship = {
+	enable = {
+		tag = LBA
+		country_exists = SWI
+		date > 2008.6.15
+	}
+	abort = {
+		NOT = { country_exists = SWI }
+		has_democratic_form_of_government = yes
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SWI"
+		value = 200
+	}
+}
+
+### General Relationships ###
+
+libya_egypt_relationship = {
+	enable = {
+		tag = LBA
+		country_exists = EGY
+	}
+	abort = {
+		NOT = { country_exists = EGY }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "EGY"
+		value = 200
+	}
+}
+
+libya_pakistan_relationship = {
+	enable = {
+		tag = LBA
+		country_exists = PAK
+	}
+	abort = {
+		NOT = { country_exists = PAK }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "PAK"
+		value = 200
+	}
+}
+
+

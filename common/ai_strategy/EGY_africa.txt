@@ -1,0 +1,97 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+egypt_libya_relationship = {
+	enable = {
+		tag = EGY
+		country_exists = LBA
+	}
+	abort = {
+		NOT = { country_exists = LBA }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "LBA"
+		value = 200
+	}
+}
+
+egypt_morocco_relationship = {
+	enable = {
+		tag = EGY
+		country_exists = MOR
+	}
+	abort = {
+		NOT = { country_exists = MOR }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "MOR"
+		value = 200
+	}
+}
+
+egypt_somalia_relationship = {
+	enable = {
+		tag = EGY
+		country_exists = SOM
+	}
+	abort = {
+		NOT = { country_exists = SOM }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SOM"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "SOM"
+		value = 200
+	}
+}
+
+egypt_sudan_relationship = {
+	enable = {
+		tag = EGY
+		country_exists = SUD
+	}
+	abort = {
+		NOT = { country_exists = SUD }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SUD"
+		value = 200
+	}
+}
+
+egypt_usa_relationship = {
+	enable = {
+		tag = EGY
+		country_exists = USA
+	}
+	abort = {
+		NOT = { country_exists = USA }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = 200
+	}
+}
