@@ -10,7 +10,7 @@ Revamps 57 countries with a massive African focus tree adding tons of gameplay o
 
 ---
 
-Latest Patch: v0.102 - Updates supported version flag to 1.4.*. Lightly tested with MD + v1.4.
+Latest Patch: v0.103 - Possible fix for issue with national focuses disappearing due to civil wars.
 
 ---
 
@@ -43,4 +43,3 @@ http://steamcommunity.com/sharedfiles/filedetails/?id=898656198
 
 Battlesound - Modern Combat:
 http://steamcommunity.com/sharedfiles/filedetails/?id=901278402
-(Note: If you encounter crashes on startup with 1.4 it may be caused this mod)
