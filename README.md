@@ -1,6 +1,6 @@
 Hearts of Iron 4: Millenium Dawn - African Continent mod
 
-UPDATED TO SUPPORT PATCH 1.4. LIGHTLY TESTED, NO KNOWN (new) BUGS.
+SUPPORTS 1.4 OAK.
 
 Older version that supports v1.3.3 available here: https://www.dropbox.com/s/6p55vyx7ey006rs/hoi4-md-africa-mod-v0101.zip?dl=0
 
@@ -10,7 +10,7 @@ Revamps 57 countries with a massive African focus tree adding tons of gameplay o
 
 ---
 
-Latest Patch: v0.103 - Possible fix for issue with national focuses disappearing due to civil wars.
+Latest Patch: v0.103 - Fix for issue with national ideas disappearing due to civil wars.
 
 ---
 

@@ -1,0 +1,213 @@
+division_template = {
+	name = "Infantry Battalion"
+	
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		maintenance_company = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infantry Brigade"
+	
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		maintenance_company = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infantry Regiment"
+	
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		maintenance_company = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "VIP Protection Unit"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+}
+
+#This is a bit cheeky; the force is really 1 company strength at this time, but it's dynamic for gameplay purposes
+#and we can't model company-sized elements
+division_template = {
+	name = "Airborne Force"
+	
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Armoured Recon Regiment"
+	
+	regiments = {
+		light_mechanized = { x = 0 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		maintenance_company = { x = 0 y = 1 }
+	}
+}
+
+
+units = {
+
+	### Infantry Battalions ###
+	
+	division = {
+		name = "1 Infantry Battalion"
+		location = 10862
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.2
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" } # DIHOC production plus some foreign equipment
+		}
+	}
+	division = {
+		name = "2 Infantry Battalion"
+		location = 10862
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.2
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" }
+		}
+	}
+	division = {
+		name = "3 Infantry Battalion"
+		location = 12787
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.2
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" }
+		}
+	}
+	division = {
+		name = "4 Infantry Battalion"
+		location = 12787
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.2
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" }
+		}
+	}
+	division = {
+		name = "5 Infantry Battalion"
+		location = 10862
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.2
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" }
+		}
+	}
+	division = {
+		name = "6 Infantry Battalion"
+		location = 8039
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.2
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" }
+		}
+	}
+	
+	### Other Elements ###
+	
+	division = {
+		name = "Armoured Reconnaissance Regiment"
+		location = 10862
+		division_template = "Armoured Recon Regiment"
+		start_experience_factor = 0.2
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" }
+			armored_personnel_carrier_1 = { owner = "PRC" } #WZ523, possibly from Sudan MIC?
+		}
+	}
+	division = {
+		name = "64 Infantry Regiment"
+		location = 10862
+		division_template = "VIP Protection Unit"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" }
+		}
+	}
+	division = {
+		name = "Airborne Force"
+		location = 8039
+		division_template = "Airborne Force"
+		start_experience_factor = 0.2
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "GHA" }
+		}
+	}
+	
+	### Navy ###
+	
+	navy = {
+		name = "Ghana Navy"
+		base = 10862
+		location = 10862
+		
+		#FBP 57 Fast Attack
+		ship = {
+			name = "GNS Achitoma (P28)"
+			definition = corvette
+			equipment = {
+				corvette_2 = { owner = "GER" amount = 1 }
+			}
+		}
+		ship = {
+			name = "GNS Yogaga (P29)"
+			definition = corvette
+			equipment = {
+				corvette_2 = { owner = "GER" amount = 1 }
+			}
+		}
+	}
+}
+
+air_wings = {
+	777 = {
+		transport_plane_equipment_1 = {
+			owner = "ENG" 
+			amount = 1
+		}
+	}
+	777 = {
+		# Aermacchi MB-33
+		jet_attack_equipment_1 = {
+			owner = "ITA" 
+			amount = 4
+		}
+	}
+}

@@ -1,0 +1,113 @@
+division_template = {
+	name = "Infantry Battalion"
+	
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Rapid Intervention Battalion"
+	
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Armoured Battalion"
+	
+	regiments = {
+		modern_armor = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Air Defense Battalion"
+	
+	regiments = {
+		anti_air_brigade = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	### Infantry Battalions ###
+	
+	division = {
+		name = "1st Infantry Battalion"
+		location = 10803
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.1
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "FRA" } # Mostly French gear
+		}
+	}
+	division = {
+		name = "2nd Infantry Battalion"
+		location = 10762
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.1
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "FRA" }
+		}
+	division = {
+	}
+		name = "3rd Infantry Battalion"
+		location = 8122
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.1
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "FRA" }
+		}
+	}
+	
+	### Other Elements ###
+	
+	division = {
+		name = "Rapid Intervention Battalion"
+		location = 10803
+		division_template = "Rapid Intervention Battalion"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			infantry_equipment_1 = { owner = "FRA" }
+		}
+	}
+	division = {
+		name = "Armoured Battalion"
+		location = 10803
+		division_template = "Armoured Battalion"
+		start_experience_factor = 0.1
+		force_equipment_variants = {
+			modern_tank_equipment_1 = { owner = "SOV" } #Old T-54/T-55s
+		}
+	}
+	division = {
+		name = "Air Defense Battalion"
+		location = 10803
+		division_template = "Air Defense Battalion"
+		start_experience_factor = 0.1
+		force_equipment_variants = {
+			anti_air_equipment_1 = { owner = "SOV" } #Mix of Bofors and ZUs, mostly ZUs
+		}
+	}
+}
+
+air_wings = {
+	776 = {
+		transport_plane_equipment_1 = {
+			owner = "FRA" 
+			amount = 1
+		}
+	}
+	776 = {
+		# Sukhoi Su-25 - Prior to their 'extra-rapide forced demobilisation' by the Armée de l'air
+		jet_attack_equipment_2 = {
+			owner = "SOV" 
+			amount = 2
+		}
+	}
+}
