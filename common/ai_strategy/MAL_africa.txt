@@ -1,0 +1,21 @@
+
+mali_niger_mutual_relationship = {
+	enable = {
+		tag = MAL
+		country_exists = NIG
+		NIG = { has_democratic_form_of_government = yes }
+		MAL = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NIG }
+			NIG = { has_democratic_form_of_government = no }
+			MAL = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NIG"
+		value = 100
+	}
+}

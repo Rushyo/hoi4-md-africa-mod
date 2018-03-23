@@ -1,4 +1,4 @@
-division_template = {
+﻿division_template = {
 	name = "Infantry Battalion"
 	
 	regiments = {
@@ -54,8 +54,8 @@ units = {
 		force_equipment_variants = {
 			infantry_equipment_1 = { owner = "FRA" }
 		}
-	division = {
 	}
+	division = {
 		name = "3rd Infantry Battalion"
 		location = 8122
 		division_template = "Infantry Battalion"

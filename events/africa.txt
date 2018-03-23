@@ -1,4 +1,4 @@
-add_namespace = africa
+﻿add_namespace = africa
 
 #Attempt to Join [Faction]
 country_event = {
@@ -36,7 +36,7 @@ country_event = {
 		name = africa.2.o1
 		add_to_faction = FROM
 		FROM = { country_event = diplomatic_response.1 }
-		ai_chance = { factory = 80 }
+		ai_chance = { factor = 80 }
 	}
 	
 	option = {	#Decline
@@ -59,13 +59,13 @@ country_event = {
 		name = africa.3.o1
 		FROM = { add_to_faction = PREV }
 		ai_chance = {
-			factor = 60
+			factor = 60 #60%
 			modifier = { # Has begun AU integration already
-				factor = 120
+				factor = 120 #75%
 				has_completed_focus = AFR_african_union_integration
 			}
-			modifier = { # Already in alliance means 50% chance
-				factor = 40
+			modifier = { # Already in alliance means 33% chance
+				factor = 20
 				is_in_faction = yes
 			}
 			modifier = { # Isolationist

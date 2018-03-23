@@ -1,0 +1,16 @@
+nigeria_pakistan_mutual_relationship = {
+	enable = {
+		tag = PAK
+		country_exists = NGR
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NGR }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NGR"
+		value = 50
+	}	
+}

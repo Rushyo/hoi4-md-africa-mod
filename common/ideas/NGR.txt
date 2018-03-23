@@ -1,0 +1,508 @@
+ideas = {
+
+	materiel_manufacturer = {
+	
+		designer = yes
+
+		dicon_small_arms = {
+			available = {
+				AND = {
+					NGR = { exists = yes }
+					NGR = { has_completed_focus = NGR_industry_3 }
+					OR = {
+						tag = NGR
+						NGR = { has_opinion = { target = ROOT value > 24 } }
+					}
+				}
+			}
+			
+			cost = 75
+			removal_cost = 10
+			
+			research_bonus = { infantry_weapons = 0.15 }
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+	country = {
+		oodua_separatists_high = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.2
+			}
+		}
+		
+		oodua_separatists_medium = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.1
+			}
+		}
+		
+		oodua_separatists_low = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.05
+			}
+		}
+		
+		idea_focus_oodua_appeasement = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		idea_focus_oodua_concessions = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		idea_focus_oodua_unity = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
+		
+		biafra_separatists_high = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.2
+			}
+		}
+		
+		biafra_separatists_medium = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.1
+			}
+		}
+		
+		biafra_separatists_low = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.05
+			}
+		}
+		
+		idea_focus_biafra_appeasement = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		idea_focus_biafra_concessions = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		idea_focus_biafra_unity = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
+		
+		bokoharam_separatists_high = {
+			picture = islam1
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.2
+			}
+		}
+		
+		bokoharam_separatists_medium = {
+			picture = islam1
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.1
+			}
+		}
+		
+		bokoharam_separatists_low = {
+			picture = islam1
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.05
+			}
+		}
+		
+		idea_focus_bokoharam_appeasement = {
+			picture = islam2
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		idea_focus_bokoharam_concessions = {
+			picture = islam2
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		idea_focus_bokoharam_unity = {
+			picture = islam2
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
+		
+		idea_focus_nigeria_nasrda = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				research_time_factor = -0.15
+			}
+		}
+		
+		nigeria_oil_debt = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				#15% Consumer Goods
+			}
+		}
+		
+		idea_focus_nigerian_agriculture = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		idea_focus_nigerian_heavy_agriculture = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		nigeria_lacking_professionalism = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				category_army = {
+					max_organisation = -10
+				}
+			}
+		}
+		
+		nigeria_human_rights_abuses = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				land_reinforce_rate = -0.02
+				planning_speed = -0.25
+			}
+		}
+		
+		nigeria_poor_logistics = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				category_army = {
+					supply_consumption_factor = 0.10
+				}
+			}
+		}
+		
+		nigeria_poor_morale = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				category_army = {
+					default_morale = -0.2
+				}
+			}
+		}
+		
+		nigeria_compromised_military = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				category_army = {
+					supply_consumption_factor = 0.5
+					default_morale = -0.1
+					max_organisation = -5
+				}
+				land_reinforce_rate = -0.01
+				planning_speed = -0.1
+			}
+		}
+		
+		nigeria_corruption_vhigh = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				political_power_gain = -0.4
+			}
+		}
+		
+		nigeria_corruption_high = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_gain = -0.3
+			}
+		}
+		
+		nigeria_corruption_medium = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_gain = -0.2
+			}
+		}
+		
+		nigeria_corruption_low = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.1
+			}
+		}
+		
+		idea_focus_ecomog_nigerian_core = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteers_tension = -0.2
+				send_volunteer_divisions_required = -0.2
+			}
+		}
+		
+		idea_focus_ecomog_wide_deployments = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteers_tension = -0.4
+				send_volunteer_divisions_required = -0.4
+			}
+		}
+		
+		idea_focus_ecomog_military_attaches = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		
+		idea_focus_ecomog_counter_terrorism = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				enemy_partisan_effect = -0.25
+			}
+		}
+		
+		idea_focus_ecomog_common_enemy = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				islamist_drift = -0.05
+				nationalist_drift = 0.01
+				reactionary_drift = 0.01
+			}
+		}
+		
+		idea_focus_automated_construction = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		idea_focus_nigeria_war_on_terror = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				islamist_drift = -0.03
+				conservative_drift = 0.01
+				reactionary_drift = 0.01
+				enemy_partisan_effect = -0.25
+			}
+		}
+	}
+}

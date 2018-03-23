@@ -53,6 +53,8 @@ add_ideas = {
 	limited_conscription
 	african_union_member
 	commonwealth_of_nations_member
+	ecowas_member
+	wamz_member
 }
 
 set_politics = {

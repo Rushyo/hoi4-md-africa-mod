@@ -1,4 +1,4 @@
-add_namespace = CongoDR_africa
+﻿add_namespace = CongoDR_africa
 #
 # Initial civil war
 #country_event = {

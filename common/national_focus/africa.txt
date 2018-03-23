@@ -73,6 +73,7 @@ focus_tree = {
 	
 	reset_on_civilwar = no
 	
+	@standard_focus_cost = 10
 	@political_reform_cost = 10
 	@foreign_focuses_cost = 10
 	@foreign_ties_cost = 5
@@ -205,6 +206,18 @@ focus_tree = {
 	@air_tree_center = 46
 	@air_tree_right = 47
 	@air_tree_very_far_right = 49
+	
+	@afr_ecowas_far_left = 25
+	@afr_ecowas_left = 27
+	@afr_ecowas_tree = 29
+	@afr_ecowas_right = 31
+	@afr_ecowas_far_right = 33
+	
+	@afr_ecowas_tree_first = 10
+	@afr_ecowas_tree_second = 11
+	@afr_ecowas_tree_third = 12
+	@afr_ecowas_tree_fourth = 13
+	@afr_ecowas_tree_fifth = 14
 	
 	focus = {
 		id = AFR_industrial_focus
@@ -621,12 +634,7 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				has_idea = stability_1
-				has_idea = stability_2
-				has_idea = stability_3
-				has_idea = stability_4
-			}
+			has_stability < 0.5
 		}
 		
 		mutually_exclusive = {
@@ -839,7 +847,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			increase_stability_by_15 = yes
+			add_stability = 0.15
 		}
 		
 		ai_will_do = {
@@ -859,12 +867,7 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				has_idea = stability_4
-				has_idea = stability_5
-				has_idea = stability_6
-				has_idea = stability_7
-			}
+			has_stability > 0.49
 		}
 		
 		mutually_exclusive = {
@@ -933,7 +936,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			increase_stability_by_5 = yes
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -954,7 +957,7 @@ focus_tree = {
 		
 		completion_reward = {
 			remove_ideas = idea_focus_peacefully_contested_reforms
-			increase_stability_by_5 = yes
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -975,11 +978,7 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				has_idea = stability_5
-				has_idea = stability_6
-				has_idea = stability_7
-			}
+			has_stability > 0.75
 		}
 		
 		mutually_exclusive = {
@@ -1015,13 +1014,7 @@ focus_tree = {
 		
 		available = {
 			AND = {
-				OR =
-				{
-					has_idea = stability_4
-					has_idea = stability_5
-					has_idea = stability_6
-					has_idea = stability_7
-				}
+				has_stability > 0.5
 				NOT = {
 					OR = {
 						has_government = islamist
@@ -1052,12 +1045,7 @@ focus_tree = {
 		}
 		
 		available = {
-			OR =
-			{
-				has_idea = stability_5
-				has_idea = stability_6
-				has_idea = stability_7
-			}
+			has_stability > 0.49
 		}
 		
 		
@@ -1118,7 +1106,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			decrease_stability_by_5 = yes
+			add_stability = -0.05
 		}
 		
 		ai_will_do = {
@@ -1138,7 +1126,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			decrease_stability_by_5 = yes
+			add_stability = -0.05
 			remove_ideas = idea_focus_peaceful_revolution
 		}
 		
@@ -1163,13 +1151,7 @@ focus_tree = {
 		}
 		
 		available = {
-			OR =
-			{
-				has_idea = stability_1
-				has_idea = stability_2
-				has_idea = stability_3
-				has_idea = stability_4
-			}
+			has_stability < 0.5
 		}
 		
 		completion_reward = {
@@ -1375,7 +1357,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			decrease_stability_by_10 = yes
+			add_stability = -0.1
 		}
 		
 		ai_will_do = {
@@ -2731,7 +2713,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 25
-			increase_stability_by_2 = yes
+			add_stability = 0.05
 		}
 	}
 	
@@ -2748,7 +2730,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_national_unity = 0.05
-			increase_stability_by_5 = yes
+			add_stability = 0.05
 		}
 		
 		ai_will_do = {
@@ -4731,7 +4713,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = democratic_socialist } }
-				decrease_stability_by_5 = yes
+				add_stability = -0.05
 			}
 			add_popularity = {
 				ideology = democratic_socialist
@@ -4763,7 +4745,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = progressive } }
-				decrease_stability_by_5 = yes
+				add_stability = -0.05
 			}
 			add_popularity = {
 				ideology = progressive
@@ -4795,7 +4777,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = social_democrat } }
-				decrease_stability_by_5 = yes
+				add_stability = -0.05
 			}
 			add_popularity = {
 				ideology = social_democrat
@@ -4827,7 +4809,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = social_liberal } }
-				decrease_stability_by_5 = yes
+				add_stability = -0.05
 			}
 			add_popularity = {
 				ideology = social_liberal
@@ -4859,7 +4841,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = market_liberal } }
-				decrease_stability_by_5 = yes
+				add_stability = -0.05
 			}
 			add_popularity = {
 				ideology = market_liberal
@@ -4891,7 +4873,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = conservative } }
-				decrease_stability_by_5 = yes
+				add_stability = -0.05
 			}
 			add_popularity = {
 				ideology = conservative
@@ -4923,7 +4905,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = reactionary } }
-				decrease_stability_by_5 = yes
+				add_stability = -0.05
 			}
 			add_popularity = {
 				ideology = reactionary
@@ -4955,7 +4937,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = communist } }
-				decrease_stability_by_15 = yes
+				add_stability = -0.15
 			}
 			add_popularity = {
 				ideology = communist
@@ -4986,7 +4968,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = fascist } }
-				decrease_stability_by_15 = yes
+				add_stability = -0.15
 			}
 			add_popularity = {
 				ideology = fascist
@@ -5017,7 +4999,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = nationalist } }
-				decrease_stability_by_15 = yes
+				add_stability = -0.15
 			}
 			add_national_unity = 0.05
 			add_popularity = {
@@ -5049,7 +5031,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = monarchist } }
-				decrease_stability_by_10 = yes
+				add_stability = -0.1
 			}
 			add_popularity = {
 				ideology = monarchist
@@ -5080,7 +5062,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_government = islamist } }
-				decrease_stability_by_15 = yes
+				add_stability = -0.15
 			}
 			add_popularity = {
 				ideology = islamist
@@ -5099,7 +5081,7 @@ focus_tree = {
 	
 	focus = {
 		id = AFR_land_doctrine_1
-		icon = army_doctrines
+		icon = land_doctrine
 		x = @army_tree_center
 		y = 4
 		cost = 10
@@ -6942,6 +6924,364 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_tree
+		icon = industry_communist
+		x = @afr_ecowas_tree
+		y = @afr_ecowas_tree_first
+		cost = @standard_focus_cost
+		
+		available = {
+			has_completed_focus = AFR_foreign_politics
+			OR = {
+				tag = MRT
+				has_idea = ecowas_member
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = { NOT { has_idea = ecowas_member } } 
+				add_ideas = ecowas_member
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_rail
+		icon = infrastructure
+		x = @afr_ecowas_left
+		y = @afr_ecowas_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_tree
+		}
+		
+		completion_reward = {
+			every_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_court
+		icon = infrastructure
+		x = @afr_ecowas_left
+		y = @afr_ecowas_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_rail
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_court
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_parliament
+		icon = infrastructure
+		x = @afr_ecowas_left
+		y = @afr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_court
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_parliament
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_bank
+		icon = infrastructure
+		x = @afr_ecowas_left
+		y = @afr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_parliament
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_bank
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = ECOWAS_WAMZ
+		icon = consumer_goods
+		x = @afr_ecowas_tree
+		y = @afr_ecowas_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_tree
+		}
+		
+		mutually_exclusive = {
+			focus = ECOWAS_UEMOA
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = wamz_member } }
+				add_ideas = wamz_member
+			}
+			if = {
+				limit = { has_idea = uemoa_member }
+				remove_ideas = uemoa_member
+			}
+			add_political_power = 25
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_WAMI
+		icon = consumer_goods
+		x = @afr_ecowas_tree
+		y = @afr_ecowas_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_WAMZ
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_wami
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_monetary_standardisation
+		icon = consumer_goods
+		x = @afr_ecowas_tree
+		y = @afr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_WAMI
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_wamz_monetary_standardisation
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_join_eco_currency
+		icon = consumer_goods
+		x = @afr_ecowas_tree
+		y = @afr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_monetary_standardisation
+		}
+		
+		available = {
+			NGR = { has_completed_focus = NGR_form_eco_currency }
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = eco_currency } }
+				add_ideas = eco_currency
+			}
+			if = {
+				limit = { has_idea = west_africa_cfa_franc }
+				remove_ideas = west_africa_cfa_franc
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_UEMOA
+		icon = consumer_goods
+		x = @afr_ecowas_right
+		y = @afr_ecowas_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_tree
+		}
+		
+		mutually_exclusive = {
+			focus = ECOWAS_WAMZ
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = uemoa_member } }
+				add_ideas = uemoa_member
+			}
+			if = {
+				limit = { has_idea = wamz_member }
+				remove_ideas = wamz_member
+			}
+			add_political_power = 25
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+		
+	focus = {
+		id = ECOWAS_join_cfa_franc
+		icon = consumer_goods
+		x = @afr_ecowas_right
+		y = @afr_ecowas_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_UEMOA
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NGR = { has_completed_focus = ECOWAS_merge_ECOWAS_currencies } }
+				if = {
+					limit = { has_idea = west_africa_cfa_franc }
+					remove_ideas = west_africa_cfa_franc
+				}
+				if = {
+					limit = { NOT = { has_idea = eco_currency } }
+					add_ideas = eco_currency
+				}
+			}
+			
+			if = {
+				limit = { NOT = { NGR = { has_completed_focus = ECOWAS_merge_ECOWAS_currencies } } }
+				if = {
+					limit = { NOT = { has_idea = west_africa_cfa_franc } }
+					add_ideas = west_africa_cfa_franc
+				}
+				if = {
+					limit = { has_idea = eco_currency }
+					remove_ideas = eco_currency
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_UEMOA_customs_union
+		icon = consumer_goods
+		x = @afr_ecowas_right
+		y = @afr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_join_cfa_franc
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_uemoa_customs_union
+		}
+	}
+	
+	focus = {
+		id = ECOWAS_UEMOA_common_market
+		icon = consumer_goods
+		x = @afr_ecowas_right
+		y = @afr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_UEMOA_customs_union
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_uemoa_common_market
+		}
+	}
+	
+	
+	focus = {
+		id = ECOWAS_ECOMOG
+		icon = infantry_commonwealth
+		x = @afr_ecowas_far_right
+		y = @afr_ecowas_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = ECOWAS_tree
+		}
+		
+		prerequisite = {
+			focus = ECOWAS_military_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 25
 		}
 	}
 }

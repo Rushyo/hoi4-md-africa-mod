@@ -1,0 +1,16 @@
+ghana_japan_mutual_relationship = {
+	enable = {
+		tag = JAP
+		country_exists = GHA
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = GHA }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "GHA"
+		value = 50
+	}
+}

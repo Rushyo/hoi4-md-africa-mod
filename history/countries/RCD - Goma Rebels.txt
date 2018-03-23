@@ -1,10 +1,10 @@
-﻿capital = 1181
+﻿capital = 862 #North Kivu (Goma)
 
 oob = "RCD_2000"
 
 set_research_slots = 4
 set_convoys = 500
-set_national_unity = 0.9
+#set_national_unity = 0.9
 
 set_country_flag = country_language_french
 set_country_flag = country_language_lingala
@@ -95,6 +95,6 @@ set_politics = {
 }
 create_country_leader = {
 	name = "Ernest Wamba dia Wamba"
-	ideology = social_liberal
-	picture = "Laurent_Desire_Kabila.dds"
+	ideology = liberalist
+	picture = "gfx/leaders/RCD/Ernest_Wamba_dia_Wamba.dds"
 }

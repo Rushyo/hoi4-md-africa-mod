@@ -1,0 +1,20 @@
+ghana_burkina_faso_mutual_relationship = {
+		enable = {
+		tag = BKF
+		BKF = { has_democratic_form_of_government = yes }
+		country_exists = GHA
+		GHA = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = GHA }
+			BKF = { has_democratic_form_of_government = no }
+			GHA = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "GHA"
+		value = 150
+	}
+}

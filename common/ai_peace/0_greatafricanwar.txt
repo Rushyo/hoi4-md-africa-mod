@@ -18,6 +18,10 @@ drc_war_peace = {
 				ROOT = { tag = MLC }
 				FROM = { tag = DRC }
 			}
+			AND = {
+				ROOT = { tag = MLC }
+				FROM = { tag = RCD }
+			}
 		}
 	}
 

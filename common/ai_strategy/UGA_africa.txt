@@ -20,6 +20,7 @@ ugandan_drc_instability_relationship = {
 		OR = {
 			NOT = { country_exists = DRC }
 			DRC = { has_democratic_form_of_government = no }
+		}
 	}
 	
 	ai_strategy = {

@@ -1,0 +1,37 @@
+liberia_guinea_ruf_tensions = {
+	enable = {
+		tag = LIB
+		has_government = reactionary
+		country_exists = GUI
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = GUI }
+			NOT = { has_government = reactionary }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "GUI"
+		value = 200
+	}
+}
+
+liberia_sierra_leone_ruf_tensions = {
+	enable = {
+		tag = LIB
+		has_government = reactionary
+		country_exists = SIE
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SIE }
+			NOT = { has_government = reactionary }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SIE"
+		value = 200
+	}
+}

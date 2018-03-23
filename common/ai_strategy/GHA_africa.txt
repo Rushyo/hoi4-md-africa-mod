@@ -1,0 +1,92 @@
+nigeria_ghana_mutual_relationship = {
+	enable = {
+		tag = GHA
+		GHA = { has_democratic_form_of_government = yes }
+		country_exists = NGR
+		NGR = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NGR }
+			GHA = { has_democratic_form_of_government = no }
+			NGR = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NGR"
+		value = 50
+	}
+}
+
+ghana_burkina_faso_mutual_relationship = {
+		enable = {
+		tag = GHA
+		GHA = { has_democratic_form_of_government = yes }
+		country_exists = BKF
+		BKF = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = BKF }
+			GHA = { has_democratic_form_of_government = no }
+			BKF = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "BKF"
+		value = 150
+	}
+}
+
+ghana_togo_tension = {
+	enable = {
+		tag = GHA
+		country_exists = TOG
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = TOG }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "TOG"
+		value = 50
+	}	
+}
+
+ghana_china_mutual_relationship = {
+		enable = {
+		tag = GHA
+		country_exists = PRC
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = PRC }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "PRC"
+		value = 50
+	}
+}
+
+ghana_japan_mutual_relationship = {
+		enable = {
+		tag = GHA
+		country_exists = JAP
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = JAP }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "JAP"
+		value = 50
+	}
+}

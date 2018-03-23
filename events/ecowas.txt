@@ -1,0 +1,250 @@
+﻿add_namespace = ecowas
+
+# Have been asked to join ECOMOG alliance
+country_event = {
+	id = ecowas.1
+	title = ecowas.1.t
+	desc = ecowas.1.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Accept
+		name = ecowas.1.o1
+		FROM = { add_to_faction = PREV }
+		ai_chance = {
+			factor = 80 #80%
+			#modifier = { # Has begun ECOMOG integration already
+			#	factor = 120 #75%
+			#	has_completed_focus = AFR_african_union_integration
+			#}
+			modifier = { # Already in alliance means 50% chance
+				factor = 20
+				is_in_faction = yes
+			}
+			modifier = { # Isolationist
+				factor = 0
+				has_completed_focus = AFR_isolation
+			}
+			modifier = { #Dislike Nigeria and Nigeria is heading up ECOMOG
+				factor = 0
+				AND = {
+					country_exists = NGR
+					has_opinion = {
+						target = NGR
+						value < 0
+					}
+				}
+			}
+			modifier = { #Defensive. this shouldn't happen.
+				factor = 0
+				NOT = { has_idea = ecomog_member }
+			}
+		}
+	}
+	
+	option = {	#Decline
+		name = ecowas.1.o2
+		FROM = { country_event = ecowas.2 }
+		ai_chance = { factor = 20 }
+	}
+}
+
+# Declined to join ECOMOG alliance
+country_event = {
+	id = ecowas.2
+	title = ecowas.2.t
+	desc = ecowas.2.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Ok
+		name = ecowas.2.o1
+	}
+}
+
+# Have been asked to join Federal States of West Africa
+country_event = {
+	id = ecowas.3
+	title = ecowas.3.t
+	desc = ecowas.3.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Accept
+		name = ecowas.3.o1
+		
+		FROM = { puppet = PREV }
+		
+		ai_chance = {
+			factor = 80 #80%
+			modifier = { # Already in alliance means 60% chance
+				factor = 60
+				is_in_faction = yes
+			}
+			modifier = { # Isolationist
+				factor = 10 #50%
+				has_completed_focus = AFR_isolation
+			}
+			modifier = { #Dislike Nigeria
+				factor = 0
+				AND = {
+					country_exists = NGR
+					has_opinion = {
+						target = NGR
+						value < 0
+					}
+				}
+			}
+			modifier = { #Defensive. this shouldn't happen.
+				factor = 0
+				NOT = { has_idea = ecowas_member }
+			}
+			modifier = {
+				factor = 0
+				is_puppet = yes
+			}
+		}
+	}
+	
+	option = {	#Decline
+		name = ecowas.3.o2
+		FROM = { country_event = ecowas.4 }
+		ai_chance = { factor = 20 }
+	}
+}
+
+# Declined to join FSWA
+country_event = {
+	id = ecowas.4
+	title = ecowas.4.t
+	desc = ecowas.4.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Ok
+		name = ecowas.4.o1
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {	#Wargoal
+		name = ecowas.4.o2
+		
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Charles Taylor choice to keep supporting the RUF in Sierra Leone + Guinea
+country_event = {
+	id = ecowas.5
+	title = ecowas.5.t
+	desc = ecowas.5.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Continue support
+		name = ecowas.5.o1
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {	#Support only in Sierra Leone
+		name = ecowas.5.o2
+		
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {	#Support only in Guinea
+		name = ecowas.5.o3
+		
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {	#Support neither
+		name = ecowas.5.o4
+		
+		ai_chance = { factor = 0 }
+	}
+}
+
+# ECOMOG alliance formed - Global event
+country_event = {
+	id = ecowas.6
+	title = ecowas.6.t
+	desc = ecowas.6.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Ok
+		name = ecowas.6.o1
+	}
+}
+
+# FWSA formed - Global event
+country_event = {
+	id = ecowas.7
+	title = ecowas.7.t
+	desc = ecowas.7.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Ok
+		name = ecowas.7.o1
+	}
+}
+
+# ECOMOG re-vitalisation - Global event
+country_event = {
+	id = ecowas.8
+	title = ecowas.8.t
+	desc = ecowas.8.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Ok
+		name = ecowas.8.o1
+	}
+}
+
+
+# Defense Industries Corporation formed - Global event
+country_event = {
+	id = ecowas.9
+	title = ecowas.9.t
+	desc = ecowas.9.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Ok
+		name = ecowas.9.o1
+	}
+}
+
+
+# Currencies merged - Global event
+country_event = {
+	id = ecowas.10
+	title = ecowas.10.t
+	desc = ecowas.10.d
+	picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Ok
+		name = ecowas.10.o1
+	}
+}
+
+
+# TODO: [Nation] attacked, Nigeria has option to intervene

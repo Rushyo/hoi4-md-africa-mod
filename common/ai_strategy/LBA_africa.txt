@@ -36,22 +36,22 @@ libya_uk_ira_support = {
 	}
 }
 
-libya_spain_basque_support = {
+libya_SPRin_basque_support = {
 	enable = {
 		tag = LBA
-		country_exists = SPA
+		country_exists = SPR
 		has_democratic_form_of_government = no
-		SPA = { has_democratic_form_of_government = yes }
+		SPR = { has_democratic_form_of_government = yes }
 	}
 	abort = {
-		NOT = { country_exists = SPA }
+		NOT = { country_exists = SPR }
 		has_democratic_form_of_government = yes
-		SPA = { has_democratic_form_of_government = no }
+		SPR = { has_democratic_form_of_government = no }
 	}
 	
 	ai_strategy = {
 		type = antagonize
-		id = "SPA"
+		id = "SPR"
 		value = 200
 	}
 }
@@ -109,3 +109,20 @@ libya_pakistan_relationship = {
 }
 
 
+
+libya_niger_border_friction = {
+	enable = {
+		tag = LBA
+		country_exists = NIG
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NIG }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NIG"
+		value = 50
+	}
+}

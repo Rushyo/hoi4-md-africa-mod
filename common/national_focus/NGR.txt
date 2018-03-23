@@ -18,20 +18,21 @@ focus_tree = {
 	@foreign_focuses_cost = 10
 	@foreign_ties_cost = 5
 	
-	@economic_tree_focus = 9
+	@economic_tree_focus = 7
 	@federal_tree_focus = 8
 	@military_tree_focus = 22
 	@corruption_tree_focus = 27
+	@domestic_tree_focus = 31
 	
 	@mining_tree = 0
 	@stability_tree = 2
 	@agriculture_tree = 4
 	@industry_tree = 6
-	@ecowas_tree = 11
-	@ecowas_infra_tree = 8
-	@wamz_tree = 10
-	@uemoa_tree = 12
-	@ecomog_tree = 14
+	@ngr_ecowas_tree = 11
+	@ngr_ecowas_infra_tree = 8
+	@ngr_wamz_tree = 10
+	@ngr_uemoa_tree = 12
+	@ngr_ecomog_tree = 14
 	@waf_tree = 11
 	@au_tree = 17
 	@oil_debt_tree = 3
@@ -86,6 +87,23 @@ focus_tree = {
 	@lower_tree_sixth = 15
 	@lower_tree_seventh = 16
 	
+	@ngr_ecowas_tree_first = 1
+	@ngr_ecowas_tree_second = 2
+	@ngr_ecowas_tree_third = 3
+	@ngr_ecowas_tree_fourth = 4
+	@ngr_ecowas_tree_fifth = 5
+	@ngr_ecowas_tree_sixth = 6
+	@ngr_ecowas_tree_seventh = 7
+	@ngr_ecowas_tree_eighth = 8
+	
+	@ngr_domestic_traditional_tree = 30
+	@ngr_domestic_demographic_tree = 31
+	@ngr_domestic_female_tree = 32
+	@ngr_domestic_unity_tree = 33
+	@ngr_domestic_admin_tree = 35
+	@ngr_domestic_investment_tree = 34
+	@ngr_domestic_education_tree = 36
+	
 	focus = {
 		id = NGR_economic_focus
 		icon = production
@@ -129,11 +147,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_political_power = 25
+		}
 	}
 	
 	focus = {
 		id = NGR_pmc
-		icon = production
+		icon = army_officers
 		x = @army_tree
 		y = 1
 		cost = @standard_focus_cost
@@ -145,13 +167,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			army_experience = 5
+		}
 	}
 	
 	focus = {
-		id = NGR_western_assistance_3
-		icon = production
+		id = NGR_western_assistance_2
+		icon = small_arms
 		x = @army_tree
-		y = 3
+		y = 2
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -161,14 +187,37 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = NGR_western_assistance_3
+		icon = small_arms
+		x = @army_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGR_western_assistance_2
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	
 	focus = {
 		id = NGR_path_of_corruption
-		icon = production
+		icon = air_production
 		x = @army_corruption_tree
 		y = 4
 		cost = @standard_focus_cost
+		
+		mutually_exclusive = {
+			focus = NGR_path_of_reformation
+		}
 		
 		prerequisite = {
 			focus = NGR_western_assistance_3
@@ -176,6 +225,10 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 50
 		}
 	}
 	
@@ -193,6 +246,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.25
+				uses = 2
+				category = land_doctrine
+			}
+		}
 	}
 		
 	focus = {
@@ -209,6 +271,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_automated_construction
+		}
 	}
 	
 	focus = {
@@ -224,6 +290,10 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_nigeria_war_on_terror
 		}
 	}
 	
@@ -247,6 +317,18 @@ focus_tree = {
 			focus = NGR_confraternities
 		}
 		
+		mutually_exclusive = {
+			focus = NGR_path_of_corruption
+		}
+		
+		available = {
+			has_political_power > 99
+		}
+		
+		completion_reward = {
+			add_political_power = -100
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -261,6 +343,14 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = NGR_path_of_reformation
+		}
+		
+		available = {
+			has_idea = nigeria_lacking_professionalism
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_lacking_professionalism
 		}
 		
 		ai_will_do = {
@@ -279,6 +369,14 @@ focus_tree = {
 			focus = NGR_path_of_reformation
 		}
 		
+		available = {
+			has_idea = nigeria_human_rights_abuses
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_human_rights_abuses
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -286,7 +384,7 @@ focus_tree = {
 
 	focus = {
 		id = NGR_army_retraining
-		icon = production
+		icon = small_arms
 		x = @army_reformation_tree
 		y = 6
 		cost = @standard_focus_cost
@@ -298,6 +396,11 @@ focus_tree = {
 		prerequisite = {
 			focus = NGR_address_human_rights_abuses
 		}
+		
+		completion_reward = {
+			army_experience = 50
+		}
+		
 		
 		ai_will_do = {
 			factor = 10
@@ -318,6 +421,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		available = {
+			has_idea = nigeria_poor_logistics
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_poor_logistics
+		}
+		
 	}
 	
 	
@@ -335,6 +447,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		available = {
+			has_idea = nigeria_poor_morale
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_poor_morale
+		}
 	}
 	
 	focus = {
@@ -350,6 +470,14 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_human_rights_abuses
+			remove_ideas = nigeria_poor_logistics
+			remove_ideas = nigeria_poor_morale
+			remove_ideas = nigeria_lacking_professionalism
+			add_ideas = nigeria_compromised_military
 		}
 	}
 	
@@ -368,6 +496,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NGR_modernisation_1
+				bonus = 0.20
+				uses = 2
+				category = infantry_weapons
+			}
+		}
 	}
 	
 	focus = {
@@ -383,6 +520,16 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NGR_modernisation_2
+				bonus = 0.20
+				uses = 2
+				category = light_mechanized
+				category = heavy_mechanized
+			}
 		}
 	}
 	
@@ -400,6 +547,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NGR_modernisation_3
+				bonus = 0.2
+				uses = 2
+				category = light_air
+				category = cas_bomber
+			}
+		}
 	}
 	
 	focus = {
@@ -415,6 +572,15 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NGR_modernisation_4
+				bonus = 0.20
+				uses = 2
+				category = armor
+			}
 		}
 	}
 	
@@ -433,6 +599,10 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_army_officer_school
 		}
 	}
 	
@@ -499,6 +669,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			navy_experience = 5
+			add_tech_bonus = {
+				name = corvette_bonus
+				bonus = 0.25
+				uses = 2
+				technology = corvette1
+				technology = corvette2
+				technology = corvette3
+				technology = corvette4
+				technology = corvette5
+				technology = corvette6
+			}
+		}
 	}
 	
 	focus = {
@@ -514,6 +699,21 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = frigate_bonus
+				bonus = 0.25
+				uses = 2
+				technology = frigate1
+				technology = frigate2
+				technology = frigate3
+				technology = frigate4
+				technology = frigate5
+				technology = frigate6
+			}
 		}
 	}
 	
@@ -537,6 +737,24 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = steel_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	
 	focus = {
@@ -552,6 +770,24 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = aluminium_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = aluminium_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -569,6 +805,24 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = tungsten_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = tungsten_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	
 	focus = {
@@ -584,6 +838,24 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = chromium_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = chromium_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -603,7 +875,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			increase_stability_by_2 = yes
+			add_stability = 0.05
 		}
 		
 		ai_will_do = {
@@ -623,7 +895,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			increase_stability_by_5 = yes
+			add_stability = 0.05
 		}
 		
 		ai_will_do = {
@@ -643,7 +915,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			increase_stability_by_2 = yes
+			add_stability = 0.05
 		}
 		
 		ai_will_do = {
@@ -663,7 +935,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			increase_stability_by_5 = yes
+			add_stability = 0.05
 		}
 		
 		
@@ -690,13 +962,6 @@ focus_tree = {
 		completion_reward = {
 			766 = {
 				add_extra_state_shared_building_slots = 1
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -724,13 +989,6 @@ focus_tree = {
 		completion_reward = {
 			858 = {
 				add_extra_state_shared_building_slots = 1
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -738,6 +996,14 @@ focus_tree = {
 				}
 			}
 			add_ideas = idea_focus_nigerian_agriculture
+			859 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rubber_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -759,13 +1025,6 @@ focus_tree = {
 		completion_reward = {
 			768 = {
 				add_extra_state_shared_building_slots = 1
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -793,13 +1052,6 @@ focus_tree = {
 		completion_reward = {
 			859 = {
 				add_extra_state_shared_building_slots = 1
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -807,7 +1059,7 @@ focus_tree = {
 				}
 			}
 			remove_ideas = idea_focus_nigerian_agriculture
-			add_ideas = idea_focus_heavy_nigerian_agriculture
+			add_ideas = idea_focus_nigerian_heavy_agriculture
 		}
 		
 		ai_will_do = {
@@ -833,13 +1085,6 @@ focus_tree = {
 		completion_reward = {
 			767 = {
 				add_extra_state_shared_building_slots = 1
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -848,13 +1093,6 @@ focus_tree = {
 			}
 			558 = {
 				add_extra_state_shared_building_slots = 1
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -886,13 +1124,6 @@ focus_tree = {
 		completion_reward = {
 			764 = {
 				add_extra_state_shared_building_slots = 1
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -901,13 +1132,6 @@ focus_tree = {
 			}
 			765 = {
 				add_extra_state_shared_building_slots = 1
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -932,18 +1156,14 @@ focus_tree = {
 		completion_reward = {
 			767 = {
 				add_extra_state_shared_building_slots = 3
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_building_construction = {
 					type = arms_factory
 					level = 3
 					instant_build = yes
 				}
+			}
+			every_country = {
+				country_event = ecowas.9
 			}
 		}
 		
@@ -954,7 +1174,7 @@ focus_tree = {
 	
 			
 	focus = {
-		id = NASRDA
+		id = NGR_NASRDA
 		icon = research
 		x = @industry_tree
 		y = 5
@@ -965,7 +1185,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_ideas = idea_focus_nsarda
+			add_ideas = idea_focus_nigeria_nasrda
 		}
 		
 		ai_will_do = {
@@ -984,8 +1204,33 @@ focus_tree = {
 			focus = NGR_economic_focus
 		}
 		
+		available = {
+			has_political_power > 99
+		}
+		
+		completion_reward = {
+			add_political_power = -100
+			remove_ideas = nigeria_oil_debt
+		}
+		
 		ai_will_do = {
 			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_domestic_focus
+		icon = forceful_treaty
+		x = @domestic_tree_focus
+		y = 0
+		cost = @standard_focus_cost
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 25
 		}
 	}
 	
@@ -994,11 +1239,23 @@ focus_tree = {
 		id = NGR_EFCC
 		icon = forceful_treaty
 		x = @corruption_tree_focus
-		y = 0
+		y = 1
 		cost = @standard_focus_cost
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		prerequisite = {
+			focus = NGR_domestic_focus
+		}
+		
+		available = {
+			has_political_power > 99
+		}
+		
+		completion_reward = {
+			add_political_power = -100
 		}
 	}
 	
@@ -1016,6 +1273,28 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = nigeria_corruption_low }
+				remove_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_medium }
+				remove_ideas = nigeria_corruption_medium
+				add_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_high }
+				remove_ideas = nigeria_corruption_high
+				add_ideas = nigeria_corruption_medium
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_vhigh }
+				remove_ideas = nigeria_corruption_vhigh
+				add_ideas = nigeria_corruption_high
+			}
+		}
 	}
 	
 	focus = {
@@ -1031,6 +1310,28 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = nigeria_corruption_low }
+				remove_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_medium }
+				remove_ideas = nigeria_corruption_medium
+				add_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_high }
+				remove_ideas = nigeria_corruption_high
+				add_ideas = nigeria_corruption_medium
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_vhigh }
+				remove_ideas = nigeria_corruption_vhigh
+				add_ideas = nigeria_corruption_high
+			}
 		}
 	}
 	
@@ -1052,6 +1353,28 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = nigeria_corruption_low }
+				remove_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_medium }
+				remove_ideas = nigeria_corruption_medium
+				add_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_high }
+				remove_ideas = nigeria_corruption_high
+				add_ideas = nigeria_corruption_medium
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_vhigh }
+				remove_ideas = nigeria_corruption_vhigh
+				add_ideas = nigeria_corruption_high
+			}
+		}
 	}
 	
 	focus = {
@@ -1072,17 +1395,44 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = nigeria_corruption_low }
+				remove_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_medium }
+				remove_ideas = nigeria_corruption_medium
+				add_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_high }
+				remove_ideas = nigeria_corruption_high
+				add_ideas = nigeria_corruption_medium
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_vhigh }
+				remove_ideas = nigeria_corruption_vhigh
+				add_ideas = nigeria_corruption_high
+			}
+		}
 	}
 	
 	focus = {
 		id = NGR_ECOWAS_tree
 		icon = industry_communist
-		x = @ecowas_tree
-		y = 1
+		x = @ngr_ecowas_tree
+		y = @ngr_ecowas_tree_first
 		cost = @standard_focus_cost
 		
 		prerequisite = {
 			focus = NGR_economic_focus
+		}
+		
+		completion_reward = {
+			add_political_power = 50
 		}
 		
 		ai_will_do = {
@@ -1093,8 +1443,8 @@ focus_tree = {
 	focus = {
 		id = NGR_ECOWAS_rail
 		icon = infrastructure
-		x = @ecowas_infra_tree
-		y = 2
+		x = @ngr_ecowas_infra_tree
+		y = @ngr_ecowas_tree_second
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1117,10 +1467,71 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = NGR_ECOWAS_court
+		icon = infrastructure
+		x = @ngr_ecowas_infra_tree
+		y = @ngr_ecowas_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGR_ECOWAS_rail
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_court
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_ECOWAS_parliament
+		icon = infrastructure
+		x = @ngr_ecowas_infra_tree
+		y = @ngr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGR_ECOWAS_court
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_parliament
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_ECOWAS_bank
+		icon = infrastructure
+		x = @ngr_ecowas_infra_tree
+		y = @ngr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGR_ECOWAS_parliament
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_bank
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
 		id = NGR_WAMZ
 		icon = consumer_goods
-		x = @wamz_tree
-		y = 2
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_second
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1131,6 +1542,18 @@ focus_tree = {
 			focus = NGR_UEMOA
 		}
 		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = wamz_member } }
+				add_ideas = wamz_member
+			}
+			if = {
+				limit = { has_idea = uemoa_member }
+				remove_ideas = uemoa_member
+			}
+			add_political_power = 25
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -1139,8 +1562,8 @@ focus_tree = {
 	focus = {
 		id = NGR_WAMI
 		icon = consumer_goods
-		x = @wamz_tree
-		y = 3
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_third
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1150,13 +1573,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_wami
+		}
 	}
 	
 	focus = {
 		id = NGR_monetary_standardisation
 		icon = consumer_goods
-		x = @wamz_tree
-		y = 4
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_fourth
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1166,17 +1593,32 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_wamz_monetary_standardisation
+		}
 	}
 	
 	focus = {
 		id = NGR_form_eco_currency
 		icon = consumer_goods
-		x = @wamz_tree
-		y = 5
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_fifth
 		cost = @standard_focus_cost
 		
 		prerequisite = {
 			focus = NGR_monetary_standardisation
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = eco_currency } }
+				add_ideas = eco_currency
+			}
+			if = {
+				limit = { has_idea = west_africa_cfa_franc }
+				remove_ideas = west_africa_cfa_franc
+			}
 		}
 		
 		ai_will_do = {
@@ -1187,24 +1629,46 @@ focus_tree = {
 	focus = {
 		id = NGR_merge_ECOWAS_currencies
 		icon = consumer_goods
-		x = @wamz_tree
-		y = 6
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_sixth
 		cost = @standard_focus_cost
 		
 		prerequisite = {
 			focus = NGR_form_eco_currency
 		}
 		
+		available = {
+			has_idea = eco_currency
+		}
+		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			every_country = {
+				if = {
+					limit = {
+						has_idea = ecowas_member
+					}
+					country_event = ecowas.10
+				}
+				if = {
+					limit = {
+						has_idea = eco_currency
+					}
+					remove_ideas = west_africa_cfa_franc
+					add_ideas = eco_currency
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = NGR_UEMOA
 		icon = consumer_goods
-		x = @uemoa_tree
-		y = 2
+		x = @ngr_uemoa_tree
+		y = @ngr_ecowas_tree_second
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1213,6 +1677,18 @@ focus_tree = {
 		
 		mutually_exclusive = {
 			focus = NGR_WAMZ
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = uemoa_member } }
+				add_ideas = uemoa_member
+			}
+			if = {
+				limit = { has_idea = wamz_member }
+				remove_ideas = wamz_member
+			}
+			add_political_power = 25
 		}
 		
 		ai_will_do = {
@@ -1224,8 +1700,8 @@ focus_tree = {
 	focus = {
 		id = NGR_join_cfa_franc
 		icon = consumer_goods
-		x = @uemoa_tree
-		y = 3
+		x = @ngr_uemoa_tree
+		y = @ngr_ecowas_tree_third
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1235,13 +1711,39 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			if = {
+				limit = { NGR = { has_completed_focus = NGR_merge_ECOWAS_currencies } }
+				if = {
+					limit = { has_idea = west_africa_cfa_franc }
+					remove_ideas = west_africa_cfa_franc
+				}
+				if = {
+					limit = { NOT = { has_idea = eco_currency } }
+					add_ideas = eco_currency
+				}
+			}
+			
+			if = {
+				limit = { NOT = { NGR = { has_completed_focus = NGR_merge_ECOWAS_currencies } } }
+				if = {
+					limit = { NOT = { has_idea = west_africa_cfa_franc } }
+					add_ideas = west_africa_cfa_franc
+				}
+				if = {
+					limit = { has_idea = eco_currency }
+					remove_ideas = eco_currency
+				}
+			}
+		}
 	}
 	
 	focus = {
 		id = NGR_UEMOA_customs_union
 		icon = consumer_goods
-		x = @uemoa_tree
-		y = 4
+		x = @ngr_uemoa_tree
+		y = @ngr_ecowas_tree_fourth
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1251,13 +1753,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_uemoa_customs_union
+		}
 	}
 	
 	focus = {
 		id = NGR_UEMOA_common_market
 		icon = consumer_goods
-		x = @uemoa_tree
-		y = 5
+		x = @ngr_uemoa_tree
+		y = @ngr_ecowas_tree_fifth
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1267,13 +1773,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_uemoa_common_market
+		}
 	}
 	
 	focus = {
 		id = NGR_united_ECOWAS
 		icon = industry_communist
-		x = @ecowas_tree
-		y = 7
+		x = @ngr_ecowas_tree
+		y = @ngr_ecowas_tree_seventh
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1284,18 +1794,25 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+		}
 	}
 	
 	
 	focus = {
 		id = NGR_ECOMOG
 		icon = infantry_commonwealth
-		x = @ecomog_tree
-		y = 2
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_second
 		cost = @standard_focus_cost
 		
 		prerequisite = {
 			focus = NGR_ECOWAS_tree
+		}
+		
+		prerequisite = {
+			focus = NGR_military_focus
 		}
 		
 		mutually_exclusive = {
@@ -1305,21 +1822,132 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
+		completion_reward = {
+			add_political_power = 25
+			every_country = {
+				limit = {
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.8
+			}
+		}
 	}
 	
 	focus = {
-		id = NGR_ECOMOG_wide_deployments
+		id = NGR_ECOMOG_nigerian_core
 		icon = infantry_commonwealth
-		x = @ecomog_tree
-		y = 7
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_third
 		cost = @standard_focus_cost
 		
 		prerequisite = {
 			focus = NGR_ECOMOG
 		}
 		
+		mutually_exclusive = {
+			focus = NGR_african_union_ties
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecomog_nigerian_core
+		}
+		
 		ai_will_do = {
 			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_ECOMOG_military_attaches
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGR_ECOMOG_nigerian_core
+		}
+		
+		mutually_exclusive = {
+			focus = NGR_african_union_ties
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecomog_military_attaches
+		}
+	}
+	
+	focus = {
+		id = NGR_ECOMOG_counter_terrorism
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGR_ECOMOG_military_attaches
+		}
+		
+		mutually_exclusive = {
+			focus = NGR_african_union_ties
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_national_unity = 0.05
+			add_ideas = idea_focus_ecomog_counter_terrorism
+		}
+	}
+	
+	focus = {
+		id = NGR_ECOMOG_common_enemy
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGR_ECOMOG_counter_terrorism
+		}
+		
+		mutually_exclusive = {
+			focus = NGR_african_union_ties
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecomog_common_enemy
+		}
+	}
+	
+	focus = {
+		id = NGR_ECOMOG_wide_deployments
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_seventh
+		cost = 30
+		
+		prerequisite = {
+			focus = NGR_ECOMOG_common_enemy
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecomog_wide_deployments
 		}
 	}
 	
@@ -1333,7 +1961,7 @@ focus_tree = {
 		cost = @standard_focus_cost
 		
 		prerequisite = {
-			focus = NGR_economic_focus
+			focus = NGR_military_focus
 		}
 		
 		available = {
@@ -1350,7 +1978,7 @@ focus_tree = {
 		}
 		
 		mutually_exclusive = {
-			focus = NGR_ECOMOG_tree
+			focus = NGR_ECOMOG
 		}
 		
 		ai_will_do = {
@@ -1665,8 +2293,8 @@ focus_tree = {
 	focus = {
 		id = NGR_ECOMOG_mission_expansion
 		icon = major_alliance
-		x = @ecomog_tree
-		y = 8
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_eighth
 		cost = @standard_focus_cost
 		
 		prerequisite = {
@@ -1696,10 +2324,17 @@ focus_tree = {
 			set_global_flag = ecomog_faction_formed
 			every_country = {
 				limit = {
-					has_idea = ecowas_member
+					has_idea = ecomog_member
 					NOT = { tag = PREV }
 				}
-				#country_event = africa.3
+				country_event = ecowas.1
+			}
+			every_country = {
+				limit = {
+					NOT = { has_idea = ecomog_member }
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.6
 			}
 		}
 		
@@ -1717,7 +2352,7 @@ focus_tree = {
 		icon = production
 		x = @waf_tree
 		y = 8
-		cost = @standard_focus_cost
+		cost = 30
 		
 		prerequisite = {
 			focus = NGR_united_ECOWAS
@@ -1734,6 +2369,40 @@ focus_tree = {
 		
 		available = {
 			num_of_military_factories > 10
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -1755,6 +2424,24 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
+		}
+		
+		completion_reward = {
+			set_global_flag = fswa_formed
+			every_country = {
+				limit = {
+					has_idea = ecowas_member
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.3
+			}
+			every_country = {
+				limit = {
+					NOT = { has_idea = ecowas_member }
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.7
+			}
 		}
 	}
 	
@@ -1966,6 +2653,10 @@ focus_tree = {
 			focus = NGR_oodua_suppression_1
 		}
 		
+		completion_reward = {
+			add_ideas = idea_focus_oodua_appeasement
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -1986,6 +2677,31 @@ focus_tree = {
 			focus = NGR_oodua_appeasement_tree
 		}
 		
+		available = {
+			OR = {
+				has_idea = oodua_separatists_high
+				has_idea = oodua_separatists_medium
+				has_idea = oodua_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = oodua_separatists_high }
+				remove_ideas = oodua_separatists_high
+				add_ideas = oodua_separatists_medium
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_medium }
+				remove_ideas = oodua_separatists_medium
+				add_ideas = oodua_separatists_low
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_low }
+				remove_ideas = oodua_separatists_low
+			}
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -2000,6 +2716,31 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = NGR_oodua_suppression_1
+		}
+		
+		available = {
+			OR = {
+				has_idea = oodua_separatists_high
+				has_idea = oodua_separatists_medium
+				has_idea = oodua_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = oodua_separatists_high }
+				remove_ideas = oodua_separatists_high
+				add_ideas = oodua_separatists_medium
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_medium }
+				remove_ideas = oodua_separatists_medium
+				add_ideas = oodua_separatists_low
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_low }
+				remove_ideas = oodua_separatists_low
+			}
 		}
 		
 		ai_will_do = {
@@ -2018,6 +2759,31 @@ focus_tree = {
 			focus = NGR_oodua_suppression_2
 		}
 		
+		available = {
+			OR = {
+				has_idea = oodua_separatists_high
+				has_idea = oodua_separatists_medium
+				has_idea = oodua_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = oodua_separatists_high }
+				remove_ideas = oodua_separatists_high
+				add_ideas = oodua_separatists_medium
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_medium }
+				remove_ideas = oodua_separatists_medium
+				add_ideas = oodua_separatists_low
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_low }
+				remove_ideas = oodua_separatists_low
+			}
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -2032,6 +2798,31 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = NGR_oodua_suppression_3
+		}
+		
+		available = {
+			OR = {
+				has_idea = oodua_separatists_high
+				has_idea = oodua_separatists_medium
+				has_idea = oodua_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = oodua_separatists_high }
+				remove_ideas = oodua_separatists_high
+				add_ideas = oodua_separatists_medium
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_medium }
+				remove_ideas = oodua_separatists_medium
+				add_ideas = oodua_separatists_low
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_low }
+				remove_ideas = oodua_separatists_low
+			}
 		}
 		
 		ai_will_do = {
@@ -2053,6 +2844,10 @@ focus_tree = {
 		#mutually_exclusive = {
 		#	focus = NGR_decentralisation
 		#}
+		
+		completion_reward = {
+			add_ideas = idea_focus_oodua_concessions
+		}
 		
 		ai_will_do = {
 			factor = 10
@@ -2086,6 +2881,10 @@ focus_tree = {
 			focus = NGR_invest_in_capital
 		}
 		
+		completion_reward = {
+			add_ideas = idea_focus_oodua_unity
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -2101,6 +2900,10 @@ focus_tree = {
 		prerequisite = {
 			focus = NGR_oodua_suppression_4
 			focus = NGR_yoruban_cultural_exchange
+		}
+		
+		completion_reward = {
+			set_country_flag = NGR_oodua_question_resolved
 		}
 		
 		ai_will_do = {
@@ -2143,7 +2946,7 @@ focus_tree = {
 #		}
 #		
 #		available = {
-#			NOT = { has_country_flag = boko_haram }
+#			NOT = { has_country_flag = NGR_boko_haram }
 #		}
 #		
 #		ai_will_do = {
@@ -2169,7 +2972,7 @@ focus_tree = {
 		}
 		
 		available = {
-			has_country_flag = boko_haram
+			has_country_flag = NGR_boko_haram
 		}
 		
 		ai_will_do = {
@@ -2194,7 +2997,7 @@ focus_tree = {
 		}
 		
 		available = {
-			NOT = { has_country_flag = boko_haram }
+			NOT = { has_country_flag = NGR_boko_haram }
 		}
 		
 		ai_will_do = {
@@ -2290,6 +3093,11 @@ focus_tree = {
 			focus = NGR_bh_suppression_3
 		}
 		
+		completion_reward = {
+			set_country_flag = NGR_bh_question_resolved
+			#remove_country_flag = NGR_bokoharam
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -2333,6 +3141,31 @@ focus_tree = {
 			focus = NGR_bh_dewesternisation_tree
 		}
 		
+		available = {
+			OR = {
+				has_idea = bokoharam_separatists_high
+				has_idea = bokoharam_separatists_medium
+				has_idea = bokoharam_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = bokoharam_separatists_high }
+				remove_ideas = bokoharam_separatists_high
+				add_ideas = bokoharam_separatists_medium
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_medium }
+				remove_ideas = bokoharam_separatists_medium
+				add_ideas = bokoharam_separatists_low
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_low }
+				remove_ideas = bokoharam_separatists_low
+			}
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -2349,6 +3182,31 @@ focus_tree = {
 			focus = NGR_bh_suppression_1
 		}
 		
+		available = {
+			OR = {
+				has_idea = bokoharam_separatists_high
+				has_idea = bokoharam_separatists_medium
+				has_idea = bokoharam_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = bokoharam_separatists_high }
+				remove_ideas = bokoharam_separatists_high
+				add_ideas = bokoharam_separatists_medium
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_medium }
+				remove_ideas = bokoharam_separatists_medium
+				add_ideas = bokoharam_separatists_low
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_low }
+				remove_ideas = bokoharam_separatists_low
+			}
+		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -2363,6 +3221,31 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = NGR_bh_suppression_2
+		}
+		
+		available = {
+			OR = {
+				has_idea = bokoharam_separatists_high
+				has_idea = bokoharam_separatists_medium
+				has_idea = bokoharam_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = bokoharam_separatists_high }
+				remove_ideas = bokoharam_separatists_high
+				add_ideas = bokoharam_separatists_medium
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_medium }
+				remove_ideas = bokoharam_separatists_medium
+				add_ideas = bokoharam_separatists_low
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_low }
+				remove_ideas = bokoharam_separatists_low
+			}
 		}
 		
 		ai_will_do = {
@@ -2408,6 +3291,315 @@ focus_tree = {
 #		}
 #	}
 
+	
+	focus = {
+		id = NGR_demographic_studies
+		icon = consumer_goods
+		x = @ngr_domestic_demographic_tree
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_domestic_focus
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = NGR_secure_national_unity
+		icon = national_unity
+		x = @ngr_domestic_unity_tree
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_domestic_focus
+		}
+		
+		completion_reward = {
+			add_national_unity = 0.05
+			add_stability = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_recruit_more_administrators
+		icon = intelligence_exchange
+		x = @ngr_domestic_admin_tree
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_domestic_focus
+		}
+		
+		completion_reward = {
+			add_political_power = 15
+			add_national_unity = 0.05
+			ruling_party_support_+5 = yes
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = NGR_traditional_values
+		icon = demand_territory2
+		x = @ngr_domestic_traditional_tree
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_demographic_studies
+		}
+		
+		available = {
+			NOT = { has_government = social_democrat }
+			NOT = { has_government = progressive }
+			NOT = { has_government = democratic_socialist }
+			NOT = { has_government = communist }
+		}
+		
+		mutually_exclusive = {
+			focus = NGR_female_workforce
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_male_workforce
+			add_national_unity = -0.05
+			if = {
+				limit = { has_democratic_form_of_government = yes }
+				add_popularity = {
+					ideology = conservative
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = reactionary
+					popularity = 0.04
+				}
+			}
+			if = {
+				limit = { has_democratic_form_of_government = no }
+				add_popularity = {
+					ideology = fascist
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = nationalist
+					popularity = 0.04
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_female_workforce
+		icon = national_unity
+		x = @ngr_domestic_female_tree
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_demographic_studies
+		}
+		prerequisite = {
+			focus = NGR_secure_national_unity
+		}
+		
+		available = {
+			NOT = { has_government = islamist }
+		}
+		
+		mutually_exclusive = {
+			focus = NGR_traditional_values
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_equal_workforce
+			if = {
+				limit = { has_democratic_form_of_government = yes }
+				add_popularity = {
+					ideology = progressive
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = democratic_socialist
+					popularity = 0.04
+				}
+			}
+			if = {
+				limit = { has_democratic_form_of_government = no }
+				add_popularity = {
+					ideology = communist
+					popularity = 0.06
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_invest_in_public_service
+		icon = construction3
+		x = @ngr_domestic_investment_tree
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_recruit_more_administrators
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_public_service_investment
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_education_reform
+		icon = construction2
+		x = @ngr_domestic_education_tree
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_recruit_more_administrators
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_education_reform
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_crackdown_on_contraceptives
+		icon = propaganda
+		x = @ngr_domestic_traditional_tree
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_traditional_values
+		}
+		
+		available = {
+			NOT = { has_idea = population_growth_explosion }
+		}
+		
+		completion_reward = {
+			increase_birth_rate = yes
+			add_national_unity = -0.05
+		}
+	}
+	
+	focus = {
+		id = NGR_birth_control_programs
+		icon = radar
+		x = @ngr_domestic_female_tree
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_female_workforce
+		}
+		
+		available = {
+			NOT = { has_idea = population_growth_decline }
+		}
+		
+		completion_reward = {
+			lower_birth_rate = yes
+			add_national_unity = 0.05
+		}
+	}
+	
+	focus = {
+		id = NGR_research_incentives
+		icon = research
+		x = @ngr_domestic_investment_tree
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_invest_in_public_service
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_encouraged_private_research
+			add_ideas = idea_focus_generic_census_reform
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_expand_the_secret_services
+		icon = intelligence_exchange
+		x = @ngr_domestic_education_tree
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = NGR_education_reform
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_expanded_secret_services
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGR_extra_research_slot
+		icon = research
+		x = @ngr_domestic_admin_tree
+		y = 5
+		cost = 25
+		
+		prerequisite = {
+			focus = NGR_research_incentives
+		}
+		prerequisite = {
+			focus = NGR_expand_the_secret_services
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
 
 
 }

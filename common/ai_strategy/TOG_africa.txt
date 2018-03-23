@@ -1,0 +1,16 @@
+ghana_togo_tension = {
+	enable = {
+		tag = TOG
+		country_exists = GHA
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = GHA }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "GHA"
+		value = 50
+	}	
+}

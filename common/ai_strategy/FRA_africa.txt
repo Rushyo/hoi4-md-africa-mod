@@ -42,3 +42,26 @@ french_gabon_relationship = {
 		value = 200
 	}
 }
+
+
+france_niger_relationship = {
+	enable = {
+		tag = FRA
+		country_exists = NIG
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NIG }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NIG"
+		value = 100
+	}
+	ai_strategy = {
+		type = protect
+		id = "NIG"
+		value = 50
+	}
+}

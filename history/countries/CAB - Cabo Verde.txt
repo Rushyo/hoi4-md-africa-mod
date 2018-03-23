@@ -51,6 +51,7 @@ set_country_flag = african_nation
 add_ideas = {
 	population_growth_steady
 	african_union_member
+	ecowas_member
 }
 
 set_politics = {

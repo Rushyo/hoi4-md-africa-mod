@@ -1,0 +1,168 @@
+ideas = {
+
+	country = {
+		ecowas_member = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		
+		ecomog_member = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteers_tension = -0.20
+			}
+		}
+		
+		mru_member = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		
+		wamz_member = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		
+		uemoa_member = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		
+		west_africa_cfa_franc = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		eco_currency = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		idea_focus_ecowas_court = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
+		
+		idea_focus_ecowas_parliament = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.02
+			}
+		}
+		
+		idea_focus_ecowas_bank = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		idea_focus_wami = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.2
+			}
+		}
+		
+		idea_focus_wamz_monetary_standardisation = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.1
+			}
+		}
+		
+		idea_focus_uemoa_customs_union = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.1
+			}
+		}
+		
+		idea_focus_uemoa_common_market = {
+			picture = democracy
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+	}
+}

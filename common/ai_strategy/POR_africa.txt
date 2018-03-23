@@ -35,19 +35,19 @@ portugese_mozambique_relationship = {
 	enable = {
 		tag = POR
 		POR = { has_democratic_form_of_government = yes }
-		country_exists = MOZ
-		MOZ = { has_democratic_form_of_government = yes }
+		country_exists = MZB
+		MZB = { has_democratic_form_of_government = yes }
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = MOZ }
-			MOZ = { has_democratic_form_of_government = no }
+			NOT = { country_exists = MZB }
+			MZB = { has_democratic_form_of_government = no }
 		}
 	}
 	
 	ai_strategy = {
 		type = befriend
-		id = "MOZ"
+		id = "MZB"
 		value = 200
 	}
 }

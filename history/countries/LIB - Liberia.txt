@@ -31,6 +31,10 @@ add_ideas = {
 	population_growth_rapid
 	african_union_member
 	limited_conscription
+	ecowas_member
+	ecomog_member
+	wamz_member
+	mru_member
 }
 
 set_politics = {

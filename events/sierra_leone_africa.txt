@@ -1,4 +1,4 @@
-add_namespace = sierra_leone_africa
+﻿add_namespace = sierra_leone_africa
 
 # Initial civil war
 #country_event = {

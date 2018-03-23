@@ -1,0 +1,81 @@
+
+nigeria_niger_mutual_relationship = {
+	enable = {
+		tag = NIG
+		NIG = { has_democratic_form_of_government = yes }
+		country_exists = NGR
+		NGR = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NGR }
+			NIG = { has_democratic_form_of_government = no }
+			NGR = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NGR"
+		value = 50
+	}
+}
+
+benin_niger_mutual_relationship = {
+	enable = {
+		tag = NIG
+		NIG = { has_democratic_form_of_government = yes }
+		country_exists = BEN
+		BEN = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = BEN }
+			NIG = { has_democratic_form_of_government = no }
+			BEN = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "BEN"
+		value = 100
+	}
+}
+
+france_niger_mutual_relationship = {
+	enable = {
+		tag = NIG
+		country_exists = FRA
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = FRA }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "FRA"
+		value = 50
+	}
+}
+
+
+mali_niger_mutual_relationship = {
+	enable = {
+		tag = NIG
+		country_exists = MAL
+		NIG = { has_democratic_form_of_government = yes }
+		MAL = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = MAL }
+			NIG = { has_democratic_form_of_government = no }
+			MAL = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "MAL"
+		value = 100
+	}
+}

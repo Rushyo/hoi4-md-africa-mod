@@ -36,6 +36,7 @@ add_ideas = {
 	population_growth_explosion
 	african_union_member
 	arab_league_member
+	ecowas_member
 }
 
 set_politics = {
