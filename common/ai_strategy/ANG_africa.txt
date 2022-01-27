@@ -13,17 +13,17 @@
 angolan_drc_stability_relationship = {
 	enable = {
 		tag = ANG
-		country_exists = DRC
+		country_exists = COG
 		OR = {
 			country_exists = MLC
 			country_exists = RCD
 		}
-		DRC = { has_democratic_form_of_government = yes }
+		COG = { has_democratic_form_of_government = yes }
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = DRC }
-			DRC = { has_democratic_form_of_government = no }
+			NOT = { country_exists = COG }
+			COG = { has_democratic_form_of_government = no }
 			NOT = {
 				country_exists = MLC
 				country_exists = RCD
@@ -34,7 +34,7 @@ angolan_drc_stability_relationship = {
 	
 	ai_strategy = {
 		type = protect
-		id = "DRC"
+		id = "COG"
 		value = 200
 	}
 }
@@ -63,21 +63,21 @@ angolan_saf_relationship = {
 angolan_namibian_relationship = {
 	enable = {
 		tag = ANG
-		country_exists = NAM
+		country_exists = NMB
 	}
 	abort = {
-		NOT = { country_exists = NAM }
+		NOT = { country_exists = NMB }
 	}
 	
 	ai_strategy = {
 		type = befriend
-		id = "NAM"
+		id = "NMB"
 		value = 200
 	}
 	
 	ai_strategy = {
 		type = protect
-		id = "NAM"
+		id = "NMB"
 		value = 200
 	}
 }
@@ -101,16 +101,16 @@ angolan_cape_verde_relationship = {
 nigeria_angola_mutual_relationship = {
 	enable = {
 		tag = ANG
-		country_exists = NGR
+		country_exists = NGA
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = NGR }
+			NOT = { country_exists = NGA }
 		}
 	}
 	ai_strategy = {
 		type = befriend
-		id = "NGR"
+		id = "NGA"
 		value = 50
 	}	
 }

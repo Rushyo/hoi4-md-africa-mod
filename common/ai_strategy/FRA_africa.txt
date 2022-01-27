@@ -47,21 +47,21 @@ french_gabon_relationship = {
 france_niger_relationship = {
 	enable = {
 		tag = FRA
-		country_exists = NIG
+		country_exists = NGR
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = NIG }
+			NOT = { country_exists = NGR }
 		}
 	}
 	ai_strategy = {
 		type = befriend
-		id = "NIG"
+		id = "NGR"
 		value = 100
 	}
 	ai_strategy = {
 		type = protect
-		id = "NIG"
+		id = "NGR"
 		value = 50
 	}
 }

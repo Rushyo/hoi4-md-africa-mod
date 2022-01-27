@@ -1,0 +1,170 @@
+capital = 547
+
+oob = "KEN_2000"
+
+set_research_slots = 4
+set_convoys = 500
+set_stability = 0.75
+
+set_country_flag = country_language_english
+set_country_flag = country_language_swahili
+
+set_country_flag = starting_stability_low
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	gen1_mbt = 1
+	gen1_apc = 1
+	gen1_ifv = 1
+	cold_war_ship_design = 1
+	corvette1 = 1
+	cold_war_engineering = 1
+	assembly_line = 1
+	squad_automatic_weapon = 1
+	tandem_charge_warheads = 1
+	special_forces = 1
+	camouflage = 1
+	body_armor = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	gw_artillery = 1
+	corvette2 = 1
+	gen2_attack = 1
+	gen2_multirole = 1
+	gen2_mpa = 1
+	software1 = 1
+	machine_tools1 = 1
+	oil1 = 1
+	construction1 = 1
+	excavation1 = 1
+}
+
+set_country_flag = african_nation
+
+add_ideas = {
+	population_growth_rapid
+	african_union_member
+	commonwealth_of_nations_member
+}
+
+set_popularities = {
+	islamist = 0
+	fascist = 0
+	nationalist = 16
+	reactionary = 2
+	conservative = 50
+	market_liberal = 2
+	social_liberal = 21
+	social_democrat = 1
+	progressive = 1
+	democratic_socialist = 1
+	communist = 6
+}
+set_politics = {
+	ruling_party = conservative
+	last_election = "1997.12.29"
+	election_frequency = 60
+	elections_allowed = yes
+}
+	
+create_country_leader = {
+	name = "Daniel Arap Moi"
+	picture = "Daniel_Arap_Moi.dds"
+	ideology = right_wing_conservative
+}
+
+#	create_country_leader = {
+#	name = "Mwai Kibaki"
+#	picture = "Mwai_Kibaki.dds"
+#	ideology = right_wing_conservative
+#	}
+
+create_country_leader = {
+	name = "Michael Wamalwa"
+	picture = "Michael_Wamalwa.dds"
+	ideology = moderate
+}
+
+create_country_leader = {
+	name = "Mwandawiro Mghanga"
+	picture = "Mwandawiro_Mghanga.dds"
+	ideology = marxist
+}
+
+create_country_leader = {
+	name = "Katama Mkangi"
+	picture = "Katama_Mkangi.dds"
+	ideology = libertarian
+}
+
+create_country_leader = {
+	name = "Moses Wetangula"
+	picture = "Moses_Wetangula.dds"
+	ideology = liberalist
+}
+
+create_country_leader = {
+	name = "Raila Odinga"
+	picture = "Raila_Odinga.dds"
+	ideology = social_democrat_ideology
+}
+
+create_country_leader = {
+	name = "Uhuru Kenyatta"
+	picture = "Uhuru_Kenyatta.dds"
+	ideology = counter_progressive_democrat
+}
+
+create_country_leader = {
+	name = "Musalia Mudavadi"
+	picture = "Musalia_Mudavadi.dds"
+	ideology = progressive_ideology
+}
+
+create_corps_commander = {
+	name = "Samson Mwathethe"
+	picture = "generals/Samson_Mwathethe.dds"
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Leonard Ngondi"
+	picture = "generals/Leonard_Ngondi.dds"
+	skill = 1
+}
+
+create_navy_leader = {
+	name = "Levi Mghalu"
+	picture = "admirals/Levi_Mghalu.dds"
+	skill = 1
+}
+
+2013.3.4 = {
+	set_popularities = {
+		islamist = 0
+		fascist = 0
+		nationalist = 5
+		reactionary = 40
+		conservative = 5
+		market_liberal = 0
+		social_liberal = 20
+		social_democrat = 25
+		progressive = 5
+		democratic_socialist = 0
+		communist = 0
+	}
+	set_politics = {
+		ruling_party = reactionary
+		last_election = "2013.3.4"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+}

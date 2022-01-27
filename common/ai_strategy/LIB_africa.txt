@@ -2,17 +2,17 @@ liberia_guinea_ruf_tensions = {
 	enable = {
 		tag = LIB
 		has_government = reactionary
-		country_exists = GUI
+		country_exists = GNA
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = GUI }
+			NOT = { country_exists = GNA }
 			NOT = { has_government = reactionary }
 		}
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "GUI"
+		id = "GNA"
 		value = 200
 	}
 }

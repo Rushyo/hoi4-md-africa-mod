@@ -1,0 +1,145 @@
+
+nigeria_angola_mutual_relationship = {
+	enable = {
+		tag = NGA
+		country_exists = NGA
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = ANG }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ANG"
+		value = 50
+	}	
+}
+
+nigeria_cameroon_border_tension = {
+	enable = {
+		tag = NGA
+		country_exists = CAM
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = CAM }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "CAM"
+		value = 100
+	}	
+}
+
+nigeria_ghana_mutual_relationship = {
+	enable = {
+		tag = NGA
+		NGA = { has_democratic_form_of_government = yes }
+		country_exists = GHA
+		GHA = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = GHA }
+			NGA = { has_democratic_form_of_government = no }
+			GHA = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "GHA"
+		value = 50
+	}	
+}
+
+nigeria_niger_mutual_relationship = {
+	enable = {
+		tag = NGA
+		NGA = { has_democratic_form_of_government = yes }
+		country_exists = NGR
+		NGR = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NGR }
+			NGA = { has_democratic_form_of_government = no }
+			NGR = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NGR"
+		value = 50
+	}	
+}
+
+nigeria_pakistan_mutual_relationship = {
+	enable = {
+		tag = NGA
+		country_exists = PAK
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = PAK }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "PAK"
+		value = 50
+	}	
+}
+
+nigeria_uk_relationship = {
+	enable = {
+		tag = NGA
+		country_exists = ENG
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = ENG }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ENG"
+		value = 50
+	}	
+}
+
+
+nigeria_barbados_unilateral_relationship = {
+	enable = {
+		tag = NGA
+		country_exists = BRB
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = BRB }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "BRB"
+		value = 100
+	}	
+}
+
+nigeria_equatorial_guinea_tension = {
+	enable = {
+		tag = NGA
+		country_exists = EQG
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = EQG }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "EQG"
+		value = 50
+	}	
+}

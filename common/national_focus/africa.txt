@@ -13,25 +13,25 @@ focus_tree = {
 				tag = ALG # Algeria
 				tag = BEN # Benin
 				tag = BOT # Botswana
-				tag = BUR # Burundi
-				tag = BKF # Burkina Faso
+				tag = BRD # BRDundi
+				tag = VOL # BRDkina Faso
 				tag = CAB # Cape Verde
-				tag = CAF # Central Africa
+				tag = CAR # Central Africa
 				tag = CAM # Cameroon
 				tag = COM # Comoros
 				tag = COG # Congo
-				tag = CHD # Chad
-				tag = DRC # CongoDR
+				tag = CHA # Chad
+				tag = COG # CongoDR
 				tag = DJI # Djibouti
 				tag = EGY # Egypt
 				tag = ERI # Eritrea
 				tag = ETH # Ethiopia
-				tag = EQU # Equi. Guinea
+				tag = EQG # Equi. Guinea
 				tag = GAB # Gabon
 				tag = GAM # Gambia
 				tag = GHA # Ghana
-				tag = GUI # Guinea
-				tag = GBS # Guinea-Bissau
+				tag = GNA # Guinea
+				tag = GNB # Guinea-Bissau
 				tag = IVO # Ivory Coast
 				tag = KEN # Kenya
 				tag = LIB # Liberia
@@ -44,9 +44,9 @@ focus_tree = {
 				tag = MLW # Malawi
 				tag = MOR # Morocco
 				tag = MZB # Mozambique
-				tag = NAM # Namibia
-				tag = NIG # Niger
-				tag = NGR # Nigeria
+				tag = NMB # Namibia
+				tag = NGR # Niger
+				tag = NGA # Nigeria
 				tag = RWA # Rwanda
 				tag = SAF # South Africa
 				tag = SOM # Somalia
@@ -58,15 +58,15 @@ focus_tree = {
 				tag = SEN # Senegal
 				tag = SEY # Seychelles
 				tag = SIE # Sierra Leone
-				tag = TNZ # Tanzania
+				tag = TZN # Tanzania
 				tag = TOG # Togo
 				tag = TUN # Tunisia
 				tag = UGA # Uganda
-				tag = WSH # West Sahara
+				tag = WES # West Sahara
 				tag = ZAM # Zambia
 				tag = ZIM # Zimbabwe
-				tag = MLC # DRC MLC
-				tag = RCD # DRC RCD
+				tag = MLC # COG MLC
+				tag = RCD # COG RCD
 			}
 		}
 	}
@@ -590,7 +590,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_national_unity = 0.05
+			add_stability = 0.05
 		}
 		
 		ai_will_do = {
@@ -614,7 +614,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_national_unity = -0.05
+			add_stability = -0.05
 		}
 		
 		ai_will_do = {
@@ -1025,7 +1025,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_national_unity = 0.05
+			add_stability = 0.05
 		}
 	}
 	
@@ -1379,7 +1379,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_national_unity = 0.05
+			add_stability = 0.05
 		}
 		
 		ai_will_do = {
@@ -1590,7 +1590,7 @@ focus_tree = {
 				name = AFR_african_union_military_collaboration
 				bonus = 0.15
 				uses = 2
-				category = light_mechanized
+				category = motorized_equipment
 			}
 			add_tech_bonus = {
 				name = AFR_african_union_military_collaboration
@@ -1997,7 +1997,7 @@ focus_tree = {
 				name = AFR_western_mech_development
 				bonus = 0.4
 				uses = 1
-				category = heavy_mechanized
+				category = cat_mechanized_equipment
 			}
 		}
 		
@@ -2455,16 +2455,20 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_tech_bonus = {
-				name = corvette_bonus
-				bonus = 0.25
-				uses = 1
-				technology = corvette1
-				technology = corvette2
-				technology = corvette3
-				technology = corvette4
-				technology = corvette5
-				technology = corvette6
+			#TODO Man the guns support
+			if = {
+				limit = { not = { has_dlc = "Man the Guns" } }
+				add_tech_bonus = {
+					name = corvette_bonus
+					bonus = 0.25
+					uses = 1
+					technology = corvette1
+					technology = corvette2
+					technology = corvette3
+					technology = corvette4
+					technology = corvette5
+					technology = corvette6
+				}
 			}
 		}
 		
@@ -2486,16 +2490,20 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_tech_bonus = {
-				name = corvette_bonus
-				bonus = 0.25
-				uses = 2
-				technology = corvette1
-				technology = corvette2
-				technology = corvette3
-				technology = corvette4
-				technology = corvette5
-				technology = corvette6
+			#TODO Man the guns support
+			if = {
+				limit = { not = { has_dlc = "Man the Guns" } }
+				add_tech_bonus = {
+					name = corvette_bonus
+					bonus = 0.25
+					uses = 2
+					technology = corvette1
+					technology = corvette2
+					technology = corvette3
+					technology = corvette4
+					technology = corvette5
+					technology = corvette6
+				}
 			}
 		}
 		
@@ -2729,7 +2737,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_stability = 0.05
 		}
 		
@@ -2751,7 +2759,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 15
-			add_national_unity = 0.05
+			add_stability = 0.05
 			ruling_party_support_+5 = yes
 		}
 		
@@ -3359,7 +3367,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = idea_focus_male_workforce
-			add_national_unity = -0.05
+			add_stability = -0.05
 			if = {
 				limit = { has_democratic_form_of_government = yes }
 				add_popularity = {
@@ -3499,7 +3507,7 @@ focus_tree = {
 					has_idea = neutrality_idea 
 				}
 				add_political_power = 100
-				add_national_unity = 0.05
+				add_stability = 0.05
 			}
 			if = {
 				limit = { 
@@ -3953,7 +3961,7 @@ focus_tree = {
 				name = light_mechanised_bonus
 				bonus = 0.25
 				uses = 2
-				category = light_mechanized
+				category = motorized_equipment
 			}
 		}
 		
@@ -4347,7 +4355,7 @@ focus_tree = {
 		
 		completion_reward = {
 			increase_birth_rate = yes
-			add_national_unity = -0.05
+			add_stability = -0.05
 		}
 	}
 	
@@ -4368,7 +4376,7 @@ focus_tree = {
 		
 		completion_reward = {
 			lower_birth_rate = yes
-			add_national_unity = 0.05
+			add_stability = 0.05
 		}
 	}
 	
@@ -4719,7 +4727,7 @@ focus_tree = {
 				ideology = democratic_socialist
 				popularity = 0.15
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = democratic_socialist
 				elections_allowed = yes
 			}
@@ -4751,7 +4759,7 @@ focus_tree = {
 				ideology = progressive
 				popularity = 0.15
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = progressive
 				elections_allowed = yes
 			}
@@ -4783,7 +4791,7 @@ focus_tree = {
 				ideology = social_democrat
 				popularity = 0.15
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = social_democrat
 				elections_allowed = yes
 			}
@@ -4815,7 +4823,7 @@ focus_tree = {
 				ideology = social_liberal
 				popularity = 0.15
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = social_liberal
 				elections_allowed = yes
 			}
@@ -4847,7 +4855,7 @@ focus_tree = {
 				ideology = market_liberal
 				popularity = 0.15
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = market_liberal
 				elections_allowed = yes
 			}
@@ -4879,7 +4887,7 @@ focus_tree = {
 				ideology = conservative
 				popularity = 0.15
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = conservative
 				elections_allowed = yes
 			}
@@ -4911,7 +4919,7 @@ focus_tree = {
 				ideology = reactionary
 				popularity = 0.15
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = reactionary
 				elections_allowed = yes
 			}
@@ -4943,7 +4951,7 @@ focus_tree = {
 				ideology = communist
 				popularity = 0.2
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = communist
 				elections_allowed = no
 			}
@@ -4974,7 +4982,7 @@ focus_tree = {
 				ideology = fascist
 				popularity = 0.2
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = fascist
 				elections_allowed = no
 			}
@@ -5001,12 +5009,12 @@ focus_tree = {
 				limit = { NOT = { has_government = nationalist } }
 				add_stability = -0.15
 			}
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_popularity = {
 				ideology = nationalist
 				popularity = 0.2
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = nationalist
 				elections_allowed = no
 			}
@@ -5037,7 +5045,7 @@ focus_tree = {
 				ideology = monarchist
 				popularity = 0.2
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = monarchist
 				elections_allowed = no
 			}
@@ -5068,7 +5076,7 @@ focus_tree = {
 				ideology = islamist
 				popularity = 0.2
 			}
-			set_politics = {
+			set_politics = { #maybe should be set_politics?
 				ruling_party = islamist
 				elections_allowed = no
 			}
@@ -5802,7 +5810,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_ideas = idea_focus_generic_army_of_purity
 		}
 		
@@ -7126,7 +7134,7 @@ focus_tree = {
 		}
 		
 		available = {
-			NGR = { has_completed_focus = NGR_form_eco_currency }
+			NGA = { has_completed_focus = NGA_form_eco_currency }
 		}
 		
 		completion_reward = {
@@ -7195,7 +7203,7 @@ focus_tree = {
 		
 		completion_reward = {
 			if = {
-				limit = { NGR = { has_completed_focus = ECOWAS_merge_ECOWAS_currencies } }
+				limit = { NGA = { has_completed_focus = NGA_merge_ECOWAS_currencies } }
 				if = {
 					limit = { has_idea = west_africa_cfa_franc }
 					remove_ideas = west_africa_cfa_franc
@@ -7207,7 +7215,7 @@ focus_tree = {
 			}
 			
 			if = {
-				limit = { NOT = { NGR = { has_completed_focus = ECOWAS_merge_ECOWAS_currencies } } }
+				limit = { NOT = { NGA = { has_completed_focus = NGA_merge_ECOWAS_currencies } } }
 				if = {
 					limit = { NOT = { has_idea = west_africa_cfa_franc } }
 					add_ideas = west_africa_cfa_franc

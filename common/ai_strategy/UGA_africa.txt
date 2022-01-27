@@ -13,19 +13,19 @@
 ugandan_drc_instability_relationship = {
 	enable = {
 		tag = UGA
-		country_exists = DRC
-		DRC = { has_democratic_form_of_government = yes }
+		country_exists = COG
+		COG = { has_democratic_form_of_government = yes }
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = DRC }
-			DRC = { has_democratic_form_of_government = no }
+			NOT = { country_exists = COG }
+			COG = { has_democratic_form_of_government = no }
 		}
 	}
 	
 	ai_strategy = {
 		type = antagonize
-		id = "DRC"
+		id = "COG"
 		value = 200
 	}
 }

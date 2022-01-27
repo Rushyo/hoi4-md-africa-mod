@@ -1,0 +1,127 @@
+capital = 543
+
+oob = "SSD_2016"
+
+set_research_slots = 4
+set_convoys = 500
+set_stability = 0.75
+
+set_country_flag = starting_stability_low
+
+set_country_flag = country_language_english
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	gen1_mbt = 1
+	gen1_apc = 1
+	gen1_ifv = 1
+	cold_war_ship_design = 1
+	corvette1 = 1
+	cold_war_engineering = 1
+	assembly_line = 1
+	squad_automatic_weapon = 1
+	tandem_charge_warheads = 1
+	special_forces = 1
+	camouflage = 1
+	body_armor = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	gw_artillery = 1
+	corvette2 = 1
+	gen2_attack = 1
+	gen2_multirole = 1
+	gen2_mpa = 1
+	software1 = 1
+	machine_tools1 = 1
+	oil1 = 1
+	construction1 = 1
+	excavation1 = 1
+}
+
+set_country_flag = african_nation
+
+add_ideas = {
+	population_growth_explosion
+	african_union_member
+	extensive_conscription
+}
+
+set_popularities = {
+
+	parties = {
+		nationalist = {
+			popularity = 2
+		}
+		reactionary = {
+			popularity = 94
+		}
+		social_liberal = {
+			popularity = 2
+		}
+		social_democrat = {
+			popularity = 2
+		}
+		communist = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = reactionary
+	last_election = "1997.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Salva Kiir Mayardit"
+	picture = "Salva_Kiir.dds"
+	ideology = counter_progressive_democrat
+}
+
+create_country_leader = {
+	name = "Dr. Lam Akol"
+	picture = "Lam_Akol.dds"
+	ideology = liberalist
+}
+
+create_country_leader = {
+	name = "Federico Awi Vuni"
+	picture = "Federico_Awi_Vuni.dds"
+	ideology = democratic_socialist_ideology
+}
+
+create_country_leader = {
+	name = "Toby Maduot"
+	picture = "Toby_Maduot.dds"
+	ideology = national_democrat
+}
+
+create_country_leader = {
+	name = "Joseph Wol Modesto"
+	ideology = leninist
+}
+
+create_country_leader = {
+	name = "Simon Achien Majur"
+	ideology = progressive_ideology
+}
+
+create_corps_commander = {
+	name = "Dom Deng"
+	picture = "generals/Dom_Deng"
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Paul Malong"
+	picture = "generals/Paul_Malong"
+	skill = 1
+}

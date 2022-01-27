@@ -1,10 +1,10 @@
-﻿capital = 862 #North Kivu (Goma)
+capital = 862 #North Kivu (Goma)
 
 oob = "RCD_2000"
 
 set_research_slots = 4
 set_convoys = 500
-#set_national_unity = 0.9
+#set_stability = 0.9
 
 set_country_flag = country_language_french
 set_country_flag = country_language_lingala
@@ -50,17 +50,17 @@ set_technology = {
 	excavation1 = 1
 }
 
-set_country_flag = DRC_civil_war
+set_country_flag = COG_civil_war
 
 declare_war_on = {
-	target = DRC
+	target = COG
 	type = annex_everything
 }
 
 #RWA = {
 #	add_to_war = {
 #		targeted_alliance = RCD
-#		enemy = DRC
+#		enemy = COG
 #	}
 #	puppet = RCD
 #}
@@ -76,18 +76,14 @@ declare_war_on = {
 add_ideas = {
 	population_growth_explosion
 	
-	war_economy
+	#war_economy
 	service_by_requirement
 }
 
+set_popularities = {
+	social_liberal = 100
+}
 set_politics = {
-
-	parties = {
-		social_liberal = {
-			popularity = 100
-		}
-	}
-	
 	ruling_party = social_liberal
 	last_election = "1997.1.1"
 	election_frequency = 48

@@ -13,7 +13,7 @@ state={
 	history={
 		owner = MLC
 		add_core_of = MLC
-		add_core_of = DRC
+		add_core_of = COG
 		buildings = {
 			infrastructure = 1
 			988 = { bunker = 2 }
@@ -29,8 +29,8 @@ state={
 			12824 = { bunker = 2 }
 		}
 		2003.7.15 = {
-			owner = DRC
-			remove_core_of = DRC
+			owner = COG
+			remove_core_of = COG
 		}
 	}
 

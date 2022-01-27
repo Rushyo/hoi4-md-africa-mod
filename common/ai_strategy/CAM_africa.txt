@@ -1,16 +1,16 @@
 nigeria_cameroon_border_tension = {
 	enable = {
 		tag = CAM
-		country_exists = NGR
+		country_exists = NGA
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = NGR }
+			NOT = { country_exists = NGA }
 		}
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "NGR"
+		id = "NGA"
 		value = 100
 	}	
 }

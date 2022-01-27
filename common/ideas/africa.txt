@@ -9,7 +9,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unity_factor = -0.2
+				stability_factor = -0.2
 				drift_defence_factor = -0.5
 			}
 		}
@@ -21,7 +21,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unity_factor = -0.3
+				stability_factor = -0.3
 				drift_defence_factor = -0.3
 			}
 		}
@@ -33,7 +33,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unity_factor = -0.2
+				stability_factor = -0.2
 				drift_defence_factor = -0.5
 			}
 		}
@@ -67,7 +67,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unity_factor = -0.3
+				stability_factor = -0.3
 				drift_defence_factor = -0.2
 			}
 		}
@@ -228,7 +228,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = -0.05
 			}
 		}
 		
@@ -330,7 +330,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unity_factor = 0.05
+				stability_factor = 0.05
 			}
 		}
 		idea_focus_african_peace_and_security_council = {

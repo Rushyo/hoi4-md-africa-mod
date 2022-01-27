@@ -1,0 +1,195 @@
+capital = 271
+
+oob = "ETH_2000"
+
+set_research_slots = 4
+set_convoys = 500
+set_stability = 0.60
+
+set_country_flag = country_language_amharic
+
+#set_country_flag = country_language_oromifa
+#set_country_flag = country_language_somali
+#set_country_flag = country_language_tigrigna
+#set_country_flag = country_language_afar
+#set_country_flag = country_language_wolaytta
+#set_country_flag = country_language_sidama
+#set_country_flag = country_language_kunama
+#set_country_flag = country_language_benshangul
+#set_country_flag = country_language_gumuz
+#set_country_flag = country_language_english
+#set_country_flag = country_language_harari
+
+set_country_flag = starting_stability_very_low
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	gen1_mbt = 1
+	gen1_apc = 1
+	gen1_ifv = 1
+	cold_war_ship_design = 1
+	corvette1 = 1
+	cold_war_engineering = 1
+	assembly_line = 1
+	squad_automatic_weapon = 1
+	tandem_charge_warheads = 1
+	special_forces = 1
+	camouflage = 1
+	body_armor = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	gw_artillery = 1
+	corvette2 = 1
+	gen2_attack = 1
+	gen2_multirole = 1
+	gen2_mpa = 1
+	software1 = 1
+	machine_tools1 = 1
+	oil1 = 1
+	construction1 = 1
+	excavation1 = 1
+}
+
+set_country_flag = african_nation
+
+add_ideas = {
+	population_growth_explosion
+	african_union_member
+}
+
+set_popularities = {
+
+	parties = {
+	islamist = {
+	popularity = 0
+	}
+	fascist = {
+	popularity = 0
+	}
+	nationalist = {
+	popularity = 0
+	}
+	reactionary = {
+	popularity = 0
+	}
+	conservative = {
+	popularity = 10
+	}
+	market_liberal = {
+	popularity = 0
+	}
+	social_liberal = {
+	popularity = 10
+	}
+	social_democrat = {
+	popularity = 10
+	}
+	progressive = {
+	popularity = 0
+	}
+	democratic_socialist = {
+	popularity = 40
+	}
+	communist = {
+	popularity = 30
+	}
+	}
+	
+	ruling_party = democratic_socialist
+	last_election = "1995.5.18"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+add_opinion_modifier = {
+	target = ERI
+	modifier = rival
+}
+
+add_opinion_modifier = {
+	target = ERI
+	modifier = rival_trade
+}
+
+create_country_leader = {
+	name = "Abdifatah Sheikh Abdullahi"
+	picture = "Abdifatah_Abdullahi.dds"
+	ideology = democratic_socialist_ideology
+}
+
+create_country_leader = {
+	name = "Meles Zenawi"
+	picture = "Meles_Zenawi.dds"
+	ideology = democratic_socialist_ideology
+}
+
+create_country_leader = {
+	name = "Birtukan Mideksa"
+	picture = "Birtukan_Mideksa.dds"
+	ideology = liberalist
+}
+
+create_country_leader = {
+	name = "Hailu Shawul"
+	picture = "Hailu_Shawul.dds"
+	ideology = social_democrat_ideology
+}
+
+create_country_leader = {
+	name = "Dr. Chane Kebede"
+	picture = "Chane_Kebede.dds"
+	ideology = constitutionalist
+}
+
+create_country_leader = {
+	name = "Zera Yacob Amha Selassie"
+	picture = "Zera_Selassie.dds"
+	ideology = absolute_monarchist
+}
+
+create_corps_commander = {
+	name = "Birhanu Julla"
+	picture = "generals/Birhanu_Julla.dds"
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Samora Yunis"
+	picture = "generals/Samora_Yunis.dds"
+	skill = 1
+}
+
+2015.5.24 = {
+	set_popularities = {
+		parties = {
+			islamist = { popularity = 0 }
+			fascist = { popularity = 0 }
+			nationalist = { popularity = 0 }
+			reactionary = { popularity = 5 }
+			conservative = { popularity = 5 }
+			market_liberal = { popularity = 5 }
+			social_liberal = { popularity = 5 }
+			social_democrat = { popularity = 5 }
+			progressive = { popularity = 5 }
+			democratic_socialist = { popularity = 50 }
+			communist = { popularity = 20 }
+		}
+		ruling_party = democratic_socialist
+		last_election = "2015.5.24"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	create_country_leader = {
+		name = "Hailemariam Desalegn"
+		picture = "Hailemariam_Desalegn.dds"
+		ideology = leninist
+	}
+}

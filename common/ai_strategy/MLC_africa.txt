@@ -13,15 +13,15 @@
 mlc_drc_relationship = {
 	enable = {
 		tag = MLC
-		country_exists = DRC
+		country_exists = COG
 	}
 	abort = {
-		NOT = { country_exists = DRC }
+		NOT = { country_exists = COG }
 	}
 	
 	ai_strategy = {
 		type = conquer
-		id = "DRC"
+		id = "COG"
 		value = 200
 	}
 }
@@ -29,12 +29,12 @@ mlc_drc_relationship = {
 mlc_rcd_relationship = {
 	enable = {
 		tag = MLC
-		NOT = { country_exists = DRC }
+		NOT = { country_exists = COG }
 		country_exists = RCD
 	}
 	abort = {
 		NOT = { country_exists = RCD }
-		country_exists = DRC
+		country_exists = COG
 	}
 	
 	ai_strategy = {

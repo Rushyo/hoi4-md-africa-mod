@@ -7,7 +7,7 @@ state={
 	history = {
 		owner = RCD
 		add_core_of = RCD
-		add_core_of = DRC
+		add_core_of = COG
 		buildings = {
 			infrastructure = 1
 			4941 = { bunker = 2 }

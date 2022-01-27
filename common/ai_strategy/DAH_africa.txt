@@ -1,0 +1,20 @@
+benin_niger_mutual_relationship = {
+	enable = {
+		tag = DAH
+		DAH = { has_democratic_form_of_government = yes }
+		country_exists = NGR
+		NGR = { has_democratic_form_of_government = yes }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NGR }
+			DAH = { has_democratic_form_of_government = no }
+			NGR = { has_democratic_form_of_government = no }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NGR"
+		value = 100
+	}
+}

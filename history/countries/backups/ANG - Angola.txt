@@ -1,0 +1,104 @@
+capital = 540
+
+oob = "ANG_2000"
+
+set_research_slots = 4
+set_convoys = 500
+set_stability = 0.75
+
+set_country_flag = country_language_portuguese
+
+set_country_flag = starting_stability_average
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	gen1_mbt = 1
+	gen1_apc = 1
+	gen1_ifv = 1
+	cold_war_ship_design = 1
+	corvette1 = 1
+	cold_war_engineering = 1
+	assembly_line = 1
+	squad_automatic_weapon = 1
+	tandem_charge_warheads = 1
+	special_forces = 1
+	camouflage = 1
+	body_armor = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	gw_artillery = 1
+	corvette2 = 1
+	gen2_attack = 1
+	gen2_multirole = 1
+	gen2_mpa = 1
+	software1 = 1
+	machine_tools1 = 1
+	oil1 = 1
+	construction1 = 1
+	excavation1 = 1
+}
+
+
+set_country_flag = african_nation
+
+add_ideas = {
+	population_growth_explosion
+	african_union_member
+	limited_conscription
+}
+
+set_popularities = {
+	social_democrat = 34
+	conservative = 30
+	social_liberal = 15
+	nationalist = 6
+	communist = 15
+}
+set_politics = {
+	ruling_party = conservative
+	last_election = "1997.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "José Eduardo dos Santos"
+	picture = "Jose_Eduardo_dos_Santos.dds"
+	ideology = social_democrat_ideology
+}
+
+create_country_leader = {
+	name = "Jonas Savimbi"
+	picture = "Jonas_Savimbi.dds"
+	ideology = fiscal_conservative
+}
+
+create_country_leader = {
+	name = "Holden Roberto"
+	picture = "Holden_Roberto.dds"
+	ideology = national_democrat
+}
+
+2002.2.22 = {
+	create_country_leader = {
+		name = "Isaías Samakuva"
+		picture = "Isaias_Samakuva.dds"
+		ideology = fiscal_conservative
+	}
+}
+
+2007.8.2 = {
+	create_country_leader = {
+		name = "Ngola Kabangu"
+		picture = "Ngola_Kabangu.dds"
+		ideology = national_democrat
+	}
+}

@@ -13,17 +13,17 @@
 zambian_drc_stability_relationship = {
 	enable = {
 		tag = ZAM
-		country_exists = DRC
+		country_exists = COG
 		OR = {
 			country_exists = MLC
 			country_exists = RCD
 		}
-		DRC = { has_democratic_form_of_government = yes }
+		COG = { has_democratic_form_of_government = yes }
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = DRC }
-			DRC = { has_democratic_form_of_government = no }
+			NOT = { country_exists = COG }
+			COG = { has_democratic_form_of_government = no }
 			NOT = {
 				country_exists = MLC
 				country_exists = RCD
@@ -33,7 +33,7 @@ zambian_drc_stability_relationship = {
 	
 	ai_strategy = {
 		type = protect
-		id = "DRC"
+		id = "COG"
 		value = 200
 	}
 }

@@ -10,15 +10,15 @@ state={
 	history={
 		owner = RCD
 		add_core_of = RCD
-		add_core_of = DRC
+		add_core_of = COG
 		buildings = {
 			infrastructure = 2
 			7161 = { bunker = 2 }
 			10766 = { bunker = 2 }
 		}
 		2003.7.15 = {
-			owner = DRC
-			remove_core_of = DRC
+			owner = COG
+			remove_core_of = COG
 		}
 	}
 	manpower=1240787

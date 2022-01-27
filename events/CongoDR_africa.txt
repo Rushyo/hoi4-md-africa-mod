@@ -13,7 +13,7 @@
 #	trigger = {
 #		#NOT = { has_global_flag = scw_over }
 #		#has_country_flag = SPR_communist_civil_war
-#		tag = DRC
+#		tag = COG
 #		date < 2000.1.10
 #	}
 #
@@ -37,14 +37,14 @@
 #		
 #		random_other_country = {
 #			limit = {
-#				original_tag = DRC
+#				original_tag = COG
 #				has_government = reactionary
-#				NOT = { has_country_flag = north_DRC_rebels }
+#				NOT = { has_country_flag = north_COG_rebels }
 #			}
 #			#load_oob = "SPR_Civil_War"
 #			set_equipment_fraction = 0.5
-#			set_national_unity = 0.9
-#			set_country_flag = south_DRC_rebels
+#			set_stability = 0.9
+#			set_country_flag = south_COG_rebels
 #			#add_popularity = {
 #			#	ideology = nationalist
 #			#	popularity = 0.35
@@ -107,7 +107,7 @@
 #	trigger = {
 #		#NOT = { has_global_flag = scw_over }
 #		#has_country_flag = SPR_communist_civil_war
-#		tag = DRC
+#		tag = COG
 #		date < 2000.1.10
 #	}
 #
@@ -127,14 +127,14 @@
 #		
 #		random_other_country = {
 #			limit = {
-#				original_tag = DRC
+#				original_tag = COG
 #				has_government = nationalist
-#				NOT = { has_country_flag = south_DRC_rebels }
+#				NOT = { has_country_flag = south_COG_rebels }
 #			}
 #			#load_oob = "SPR_Civil_War"
 #			set_equipment_fraction = 0.5
-#			set_national_unity = 0.9
-#			set_country_flag = north_DRC_rebels
+#			set_stability = 0.9
+#			set_country_flag = north_COG_rebels
 #			#add_popularity = {
 #			#	ideology = nationalist
 #			#	popularity = 0.35
@@ -190,7 +190,7 @@
 #	}
 #}
 
-# End civil war (DRC victory)
+# End civil war (COG victory)
 country_event = {
 	id = CongoDR_africa.1
 	title = CongoDR_africa.1.t
@@ -201,9 +201,9 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DRC
+		tag = COG
 		has_war = no
-		has_country_flag = DRC_civil_war
+		has_country_flag = COG_civil_war
 		NOT = { country_exists = MLC }
 		NOT = { country_exists = RCD }
 	}
@@ -213,7 +213,7 @@ country_event = {
 		
 		
 		#news_event = { hours = 6 id = news.63 }
-		clr_country_flag = DRC_civil_war
+		clr_country_flag = COG_civil_war
 	}
 }
 
@@ -229,20 +229,20 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		NOT = { country_exists = DRC }
+		NOT = { country_exists = COG }
 		tag = MLC
 		has_war = no
-		has_country_flag = DRC_civil_war
+		has_country_flag = COG_civil_war
 	}
 
 	option = {
 		name = CongoDR_africa.2.a
 		
-		set_cosmetic_tag = MLC_DRC
+		set_cosmetic_tag = MLC_COG
 		
 		#news_event = { hours = 6 id = news.63 }
-		clr_country_flag = DRC_civil_war
-		RCD = { clr_country_flag = DRC_civil_war }
+		clr_country_flag = COG_civil_war
+		RCD = { clr_country_flag = COG_civil_war }
 		
 		#TODO: Give all RCD territory to MLC
 	}
@@ -259,20 +259,20 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		NOT = { country_exists = DRC }
+		NOT = { country_exists = COG }
 		tag = RCD
 		has_war = no
-		has_country_flag = DRC_civil_war
+		has_country_flag = COG_civil_war
 	}
 
 	option = {
 		name = CongoDR_africa.3.a
 		
-		set_cosmetic_tag = RCD_DRC
+		set_cosmetic_tag = RCD_COG
 		
 		#news_event = { hours = 6 id = news.63 }
-		clr_country_flag = DRC_civil_war
-		MLC = { clr_country_flag = DRC_civil_war }
+		clr_country_flag = COG_civil_war
+		MLC = { clr_country_flag = COG_civil_war }
 		
 		#TODO: Give all MLC territory to RCD
 	}

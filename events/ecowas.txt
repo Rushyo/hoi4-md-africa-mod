@@ -29,9 +29,9 @@ country_event = {
 			modifier = { #Dislike Nigeria and Nigeria is heading up ECOMOG
 				factor = 0
 				AND = {
-					country_exists = NGR
+					country_exists = NGA
 					has_opinion = {
-						target = NGR
+						target = NGA
 						value < 0
 					}
 				}
@@ -91,9 +91,9 @@ country_event = {
 			modifier = { #Dislike Nigeria
 				factor = 0
 				AND = {
-					country_exists = NGR
+					country_exists = NGA
 					has_opinion = {
-						target = NGR
+						target = NGA
 						value < 0
 					}
 				}

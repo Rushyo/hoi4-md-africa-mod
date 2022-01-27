@@ -1,0 +1,16 @@
+nigeria_equatorial_guinea_tension = {
+	enable = {
+		tag = EQG
+		country_exists = NGA
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NGA }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NGA"
+		value = 50
+	}	
+}

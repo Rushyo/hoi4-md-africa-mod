@@ -1,0 +1,3594 @@
+focus_tree = {
+
+	id = NGA_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 19
+			tag = NGA # Nigeria
+		}
+	}
+	
+	reset_on_civilwar = no
+	
+	@standard_focus_cost = 10
+	@political_reform_cost = 10
+	@foreign_focuses_cost = 10
+	@foreign_ties_cost = 5
+	
+	@economic_tree_focus = 7
+	@federal_tree_focus = 8
+	@military_tree_focus = 22
+	@corruption_tree_focus = 27
+	@domestic_tree_focus = 31
+	
+	@mining_tree = 0
+	@stability_tree = 2
+	@agriculture_tree = 4
+	@industry_tree = 6
+	@ngr_ecowas_tree = 11
+	@ngr_ecowas_infra_tree = 8
+	@ngr_wamz_tree = 10
+	@ngr_uemoa_tree = 12
+	@ngr_ecomog_tree = 14
+	@waf_tree = 11
+	@au_tree = 17
+	@oil_debt_tree = 3
+	@au_military_alliance = 14
+	
+	@au_military_tree = 18
+	@au_economic_tree = 16
+	
+	
+	
+	@gang_corruption_tree = 28
+	@drug_corruption_tree = 26
+	
+	
+	@oodua_tree = 1
+	@biafra_tree = 6
+	@muslim_tree = 11
+#	@decentralisation_tree = 8
+	
+	
+	@oodua_appeasement_tree = 0
+	@oodua_suppression_tree = 2
+	@oodua_ender = 1
+	
+	@biafra_appeasement_tree = 5
+	@biafra_suppression_tree = 7
+	@biafra_ender = 6
+	
+	@boko_haram_tree = 14
+	@address_boko_haram_tree = 12
+	@muslim_appeasement_tree = 10
+	@bh_dewesternisation_tree = 14
+	@bh_suppression_tree = 12
+	@bh_encourage_tree = 14
+	@muslim_deradicalisation = 11
+	
+	@army_tree = 22
+	@army_corruption_tree = 22
+	@army_reformation_tree = 26
+	@army_reformation_tree_left = 25
+	@army_reformation_tree_right = 27
+	@early_naval_tree = 24
+	@late_naval_tree = 28
+	@air_force_tree = 26
+	@reformed_army_tree = 24
+	
+	@lower_tree_first = 10
+	@lower_tree_second = 11
+	@lower_tree_third = 12
+	@lower_tree_fourth = 13
+	@lower_tree_fifth = 14
+	@lower_tree_sixth = 15
+	@lower_tree_seventh = 16
+	
+	@ngr_ecowas_tree_first = 1
+	@ngr_ecowas_tree_second = 2
+	@ngr_ecowas_tree_third = 3
+	@ngr_ecowas_tree_fourth = 4
+	@ngr_ecowas_tree_fifth = 5
+	@ngr_ecowas_tree_sixth = 6
+	@ngr_ecowas_tree_seventh = 7
+	@ngr_ecowas_tree_eighth = 8
+	
+	@ngr_domestic_traditional_tree = 30
+	@ngr_domestic_demographic_tree = 31
+	@ngr_domestic_female_tree = 32
+	@ngr_domestic_unity_tree = 33
+	@ngr_domestic_admin_tree = 35
+	@ngr_domestic_investment_tree = 34
+	@ngr_domestic_education_tree = 36
+	
+	focus = {
+		id = NGA_economic_focus
+		icon = production
+		x = @economic_tree_focus
+		y = 0
+		cost = @standard_focus_cost
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.35
+				uses = 2
+				category = industry
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_federal_focus
+		icon = production
+		x = @federal_tree_focus
+		y = @lower_tree_first
+		cost = @standard_focus_cost
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_military_focus
+		icon = production
+		x = @military_tree_focus
+		y = 0
+		cost = @standard_focus_cost
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	
+	focus = {
+		id = NGA_pmc
+		icon = army_officers
+		x = @army_tree
+		y = 1
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_military_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			army_experience = 5
+		}
+	}
+	
+	focus = {
+		id = NGA_western_assistance_2
+		icon = small_arms
+		x = @army_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_pmc
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = NGA_western_assistance_3
+		icon = small_arms
+		x = @army_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_western_assistance_2
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_path_of_corruption
+		icon = air_production
+		x = @army_corruption_tree
+		y = 4
+		cost = @standard_focus_cost
+		
+		mutually_exclusive = {
+			focus = NGA_path_of_reformation
+		}
+		
+		prerequisite = {
+			focus = NGA_western_assistance_3
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = NGA_path_of_corruption_1
+		icon = production
+		x = @army_corruption_tree
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_path_of_corruption
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.25
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+		
+	focus = {
+		id = NGA_path_of_corruption_2
+		icon = production
+		x = @army_corruption_tree
+		y = 6
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_path_of_corruption_1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_automated_construction
+		}
+	}
+	
+	focus = {
+		id = NGA_path_of_corruption_3
+		icon = production
+		x = @army_corruption_tree
+		y = 7
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_path_of_corruption_2
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_nigeria_war_on_terror
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_path_of_reformation
+		icon = production
+		x = @army_reformation_tree
+		y = 4
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_western_assistance_3
+		}
+		
+		prerequisite = {
+			focus = NGA_piracy
+		}
+		
+		prerequisite = {
+			focus = NGA_confraternities
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_path_of_corruption
+		}
+		
+		available = {
+			has_political_power > 99
+		}
+		
+		completion_reward = {
+			add_political_power = -100
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_restore_professionalism
+		icon = production
+		x = @army_reformation_tree_left
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_path_of_reformation
+		}
+		
+		available = {
+			has_idea = nigeria_lacking_professionalism
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_lacking_professionalism
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_address_human_rights_abuses
+		icon = production
+		x = @army_reformation_tree_right
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_path_of_reformation
+		}
+		
+		available = {
+			has_idea = nigeria_human_rights_abuses
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_human_rights_abuses
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = NGA_army_retraining
+		icon = small_arms
+		x = @army_reformation_tree
+		y = 6
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_restore_professionalism
+		}
+		
+		prerequisite = {
+			focus = NGA_address_human_rights_abuses
+		}
+		
+		completion_reward = {
+			army_experience = 50
+		}
+		
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_improve_logistics
+		icon = production
+		x = @army_reformation_tree_left
+		y = 7
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_army_retraining
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = nigeria_poor_logistics
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_poor_logistics
+		}
+		
+	}
+	
+	
+	focus = {
+		id = NGA_improve_morale
+		icon = production
+		x = @army_reformation_tree_right
+		y = 7
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_army_retraining
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = nigeria_poor_morale
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_poor_morale
+		}
+	}
+	
+	focus = {
+		id = NGA_limited_restoration
+		icon = production
+		x = @army_corruption_tree
+		y = 8
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_path_of_corruption_3
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			remove_ideas = nigeria_human_rights_abuses
+			remove_ideas = nigeria_poor_logistics
+			remove_ideas = nigeria_poor_morale
+			remove_ideas = nigeria_lacking_professionalism
+			add_ideas = nigeria_compromised_military
+		}
+	}
+	
+	focus = {
+		id = NGA_modernisation_1
+		icon = production
+		x = @army_corruption_tree
+		y = 9
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_limited_restoration
+			focus = NGA_complete_overhaul
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NGA_modernisation_1
+				bonus = 0.20
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_modernisation_2
+		icon = production
+		x = @army_corruption_tree
+		y = 10
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_modernisation_1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NGA_modernisation_2
+				bonus = 0.20
+				uses = 2
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_modernisation_3
+		icon = production
+		x = @army_corruption_tree
+		y = 11
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_modernisation_2
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NGA_modernisation_3
+				bonus = 0.2
+				uses = 2
+				category = light_air
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_modernisation_4
+		icon = production
+		x = @army_corruption_tree
+		y = 12
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_modernisation_3
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NGA_modernisation_4
+				bonus = 0.20
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_complete_overhaul
+		icon = production
+		x = @army_reformation_tree
+		y = 8
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_improve_logistics
+			focus = NGA_improve_morale
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_army_officer_school
+		}
+	}
+	
+	focus = {
+		id = NGA_nigerian_navy
+		icon = production
+		x = @late_naval_tree
+		y = 9
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_complete_overhaul
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_nigerian_air_force
+		icon = production
+		x = @air_force_tree
+		y = 9
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_complete_overhaul
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_nigerian_army_1
+		icon = production
+		x = @reformed_army_tree
+		y = 9
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_complete_overhaul
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_brown_water_navy
+		icon = coastal_fort
+		x = @early_naval_tree
+		y = 1
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_military_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			navy_experience = 5
+			#TODO Man the guns support
+			if = {
+				limit = { not = { has_dlc = "Man the Guns" } }
+				add_tech_bonus = {
+					name = corvette_bonus
+					bonus = 0.25
+					uses = 2
+					technology = corvette1
+					technology = corvette2
+					technology = corvette3
+					technology = corvette4
+					technology = corvette5
+					technology = corvette6
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_blue_water_navy
+		icon = battleships
+		x = @early_naval_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_brown_water_navy
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = frigate_bonus
+				bonus = 0.25
+				uses = 2
+				technology = frigate1
+				technology = frigate2
+				technology = frigate3
+				technology = frigate4
+				technology = frigate5
+				technology = frigate6
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = NGA_mining_1
+		icon = production2
+		x = @mining_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_pay_oil_debt
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_stability_1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = steel_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_mining_2
+		icon = production2
+		x = @mining_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_mining_1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = aluminium_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = aluminium_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_mining_3
+		icon = production2
+		x = @mining_tree
+		y = 4
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_mining_2
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = tungsten_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = tungsten_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_mining_4
+		icon = production2
+		x = @mining_tree
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_mining_3
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = chromium_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = chromium_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_stability_1
+		icon = improve_relations
+		x = @stability_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_pay_oil_debt
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_mining_1
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_stability_2
+		icon = improve_relations
+		x = @stability_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_stability_1
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_stability_3
+		icon = improve_relations
+		x = @stability_tree
+		y = 4
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_stability_2
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_stability_4
+		icon = improve_relations
+		x = @stability_tree
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_stability_3
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+		
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_agriculture_1
+		icon = construction2
+		x = @agriculture_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_pay_oil_debt
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_industry_1
+		}
+		
+		completion_reward = {
+			766 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_agriculture_2
+		icon = construction2
+		x = @agriculture_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_agriculture_1
+		}
+		
+		completion_reward = {
+			858 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = idea_focus_nigerian_agriculture
+			859 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rubber_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_agriculture_3
+		icon = construction2
+		x = @agriculture_tree
+		y = 4
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_agriculture_2
+		}
+		
+		completion_reward = {
+			768 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_agriculture_4
+		icon = construction2
+		x = @agriculture_tree
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_agriculture_3
+		}
+		
+		completion_reward = {
+			859 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			remove_ideas = idea_focus_nigerian_agriculture
+			add_ideas = idea_focus_nigerian_heavy_agriculture
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_industry_1
+		icon = industry_civilian
+		x = @industry_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_pay_oil_debt
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_agriculture_1
+		}
+		
+		completion_reward = {
+			767 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			558 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_industry_2
+		icon = industry_civilian
+		x = @industry_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_industry_1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			764 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			765 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+		
+	focus = {
+		id = NGA_industry_3
+		icon = industry_military
+		x = @industry_tree
+		y = 4
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_industry_2
+		}
+		
+		completion_reward = {
+			767 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			every_country = {
+				country_event = ecowas.9
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+			
+	focus = {
+		id = NGA_NASRDA
+		icon = research
+		x = @industry_tree
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_industry_3
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_nigeria_nasrda
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_pay_oil_debt
+		icon = oil_production
+		x = @oil_debt_tree
+		y = 1
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_economic_focus
+		}
+		
+		available = {
+			has_political_power > 99
+		}
+		
+		completion_reward = {
+			add_political_power = -100
+			remove_ideas = nigeria_oil_debt
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_domestic_focus
+		icon = forceful_treaty
+		x = @domestic_tree_focus
+		y = 0
+		cost = @standard_focus_cost
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	
+	focus = {
+		#Economic and Financial Crimes Commission
+		id = NGA_EFCC
+		icon = forceful_treaty
+		x = @corruption_tree_focus
+		y = 1
+		cost = @standard_focus_cost
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		prerequisite = {
+			focus = NGA_domestic_focus
+		}
+		
+		available = {
+			has_political_power > 99
+		}
+		
+		completion_reward = {
+			add_political_power = -100
+		}
+	}
+	
+	focus = {
+		id = NGA_area_boys
+		icon = forceful_treaty
+		x = @gang_corruption_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_EFCC
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = nigeria_corruption_low }
+				remove_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_medium }
+				remove_ideas = nigeria_corruption_medium
+				add_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_high }
+				remove_ideas = nigeria_corruption_high
+				add_ideas = nigeria_corruption_medium
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_vhigh }
+				remove_ideas = nigeria_corruption_vhigh
+				add_ideas = nigeria_corruption_high
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_confraternities
+		icon = forceful_treaty
+		x = @gang_corruption_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_area_boys
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = nigeria_corruption_low }
+				remove_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_medium }
+				remove_ideas = nigeria_corruption_medium
+				add_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_high }
+				remove_ideas = nigeria_corruption_high
+				add_ideas = nigeria_corruption_medium
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_vhigh }
+				remove_ideas = nigeria_corruption_vhigh
+				add_ideas = nigeria_corruption_high
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_smuggling
+		icon = forceful_treaty
+		x = @drug_corruption_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_EFCC
+		}
+		
+		prerequisite = {
+			focus = NGA_brown_water_navy
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = nigeria_corruption_low }
+				remove_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_medium }
+				remove_ideas = nigeria_corruption_medium
+				add_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_high }
+				remove_ideas = nigeria_corruption_high
+				add_ideas = nigeria_corruption_medium
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_vhigh }
+				remove_ideas = nigeria_corruption_vhigh
+				add_ideas = nigeria_corruption_high
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_piracy
+		icon = coastal_fort
+		x = @drug_corruption_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_smuggling
+		}
+		
+		prerequisite = {
+			focus = NGA_blue_water_navy
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = nigeria_corruption_low }
+				remove_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_medium }
+				remove_ideas = nigeria_corruption_medium
+				add_ideas = nigeria_corruption_low
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_high }
+				remove_ideas = nigeria_corruption_high
+				add_ideas = nigeria_corruption_medium
+			}
+			if = {
+				limit = { has_idea = nigeria_corruption_vhigh }
+				remove_ideas = nigeria_corruption_vhigh
+				add_ideas = nigeria_corruption_high
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOWAS_tree
+		icon = industry_communist
+		x = @ngr_ecowas_tree
+		y = @ngr_ecowas_tree_first
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_economic_focus
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOWAS_rail
+		icon = infrastructure
+		x = @ngr_ecowas_infra_tree
+		y = @ngr_ecowas_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOWAS_tree
+		}
+		
+		completion_reward = {
+			every_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOWAS_court
+		icon = infrastructure
+		x = @ngr_ecowas_infra_tree
+		y = @ngr_ecowas_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOWAS_rail
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_court
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOWAS_parliament
+		icon = infrastructure
+		x = @ngr_ecowas_infra_tree
+		y = @ngr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOWAS_court
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_parliament
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOWAS_bank
+		icon = infrastructure
+		x = @ngr_ecowas_infra_tree
+		y = @ngr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOWAS_parliament
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecowas_bank
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_WAMZ
+		icon = consumer_goods
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOWAS_tree
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_UEMOA
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = wamz_member } }
+				add_ideas = wamz_member
+			}
+			if = {
+				limit = { has_idea = uemoa_member }
+				remove_ideas = uemoa_member
+			}
+			add_political_power = 25
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_WAMI
+		icon = consumer_goods
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_WAMZ
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_wami
+		}
+	}
+	
+	focus = {
+		id = NGA_monetary_standardisation
+		icon = consumer_goods
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_WAMI
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_wamz_monetary_standardisation
+		}
+	}
+	
+	focus = {
+		id = NGA_form_eco_currency
+		icon = consumer_goods
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_monetary_standardisation
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = eco_currency } }
+				add_ideas = eco_currency
+			}
+			if = {
+				limit = { has_idea = west_africa_cfa_franc }
+				remove_ideas = west_africa_cfa_franc
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_merge_ECOWAS_currencies
+		icon = consumer_goods
+		x = @ngr_wamz_tree
+		y = @ngr_ecowas_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_form_eco_currency
+		}
+		
+		available = {
+			has_idea = eco_currency
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			every_country = {
+				if = {
+					limit = {
+						has_idea = ecowas_member
+					}
+					country_event = ecowas.10
+				}
+				if = {
+					limit = {
+						has_idea = eco_currency
+					}
+					remove_ideas = west_africa_cfa_franc
+					add_ideas = eco_currency
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_UEMOA
+		icon = consumer_goods
+		x = @ngr_uemoa_tree
+		y = @ngr_ecowas_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOWAS_tree
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_WAMZ
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = uemoa_member } }
+				add_ideas = uemoa_member
+			}
+			if = {
+				limit = { has_idea = wamz_member }
+				remove_ideas = wamz_member
+			}
+			add_political_power = 25
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+		
+	focus = {
+		id = NGA_join_cfa_franc
+		icon = consumer_goods
+		x = @ngr_uemoa_tree
+		y = @ngr_ecowas_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_UEMOA
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NGA = { has_completed_focus = NGA_merge_ECOWAS_currencies } }
+				if = {
+					limit = { has_idea = west_africa_cfa_franc }
+					remove_ideas = west_africa_cfa_franc
+				}
+				if = {
+					limit = { NOT = { has_idea = eco_currency } }
+					add_ideas = eco_currency
+				}
+			}
+			
+			if = {
+				limit = { NOT = { NGA = { has_completed_focus = NGA_merge_ECOWAS_currencies } } }
+				if = {
+					limit = { NOT = { has_idea = west_africa_cfa_franc } }
+					add_ideas = west_africa_cfa_franc
+				}
+				if = {
+					limit = { has_idea = eco_currency }
+					remove_ideas = eco_currency
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_UEMOA_customs_union
+		icon = consumer_goods
+		x = @ngr_uemoa_tree
+		y = @ngr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_join_cfa_franc
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_uemoa_customs_union
+		}
+	}
+	
+	focus = {
+		id = NGA_UEMOA_common_market
+		icon = consumer_goods
+		x = @ngr_uemoa_tree
+		y = @ngr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_UEMOA_customs_union
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_uemoa_common_market
+		}
+	}
+	
+	focus = {
+		id = NGA_united_ECOWAS
+		icon = industry_communist
+		x = @ngr_ecowas_tree
+		y = @ngr_ecowas_tree_seventh
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_merge_ECOWAS_currencies
+			focus = NGA_UEMOA_common_market
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_ECOMOG
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOWAS_tree
+		}
+		
+		prerequisite = {
+			focus = NGA_military_focus
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_african_union_ties
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			every_country = {
+				limit = {
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.8
+			}
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOMOG_nigerian_core
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOMOG
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecomog_nigerian_core
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOMOG_military_attaches
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOMOG_nigerian_core
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecomog_military_attaches
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOMOG_counter_terrorism
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOMOG_military_attaches
+		}
+
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = idea_focus_ecomog_counter_terrorism
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOMOG_common_enemy
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOMOG_counter_terrorism
+		}
+		
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecomog_common_enemy
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOMOG_wide_deployments
+		icon = infantry_commonwealth
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_seventh
+		cost = 30
+		
+		prerequisite = {
+			focus = NGA_ECOMOG_common_enemy
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_ecomog_wide_deployments
+		}
+	}
+	
+	
+	
+	focus = {
+		id = NGA_african_union_ties
+		icon = improve_relations
+		x = @au_tree
+		y = 2
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_military_focus
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = african_union_member }
+				}
+				add_ideas = african_union_member
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_ECOMOG
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOSOCC
+		icon = trade_deal
+		x = @au_economic_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_african_union_ties
+			focus = NGA_ECOMOG
+		}
+		
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = synth_bonus
+				bonus = 0.2
+				uses = 2
+				category = synth_resources
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = NGA_african_central_bank
+		icon = consumer_goods
+		x = @au_economic_tree
+		y = 4
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_ECOSOCC
+		}
+		
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_central_bank
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = NGA_african_court_of_justice
+		icon = neutrality
+		x = @au_economic_tree
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_african_central_bank
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_court_of_justice
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = NGA_african_peace_and_security_council
+		icon = democracy
+		x = @au_economic_tree
+		y = 6
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_african_court_of_justice
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_peace_and_security_council
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = NGA_african_union_military_collaboration
+		icon = small_arms
+		x = @au_military_tree
+		y = 3
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_african_union_ties
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_african_union_military_collaboration
+				bonus = 0.15
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_collaboration
+				bonus = 0.15
+				uses = 2
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_collaboration
+				bonus = 0.15
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_collaboration
+				bonus = 0.15
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	
+	
+	focus = {
+		id = NGA_african_union_light_vehicle_manufacturing
+		icon = motorized
+		x = @au_military_tree
+		y = 4
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_african_union_military_collaboration
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_union_light_vehicle_manufacturing
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = NGA_african_union_heavy_vehicle_manufacturing
+		icon = tank
+		x = @au_military_tree
+		y = 5
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_african_union_light_vehicle_manufacturing
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_african_union_heavy_vehicle_manufacturing
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_african_union_military_modernisation
+		icon = air_doctrine
+		x = @au_military_tree
+		y = 6
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_african_union_heavy_vehicle_manufacturing
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AFR_african_union_military_modernisation
+				bonus = 0.30
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_modernisation
+				bonus = 0.30
+				uses = 1
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_modernisation
+				bonus = 0.30
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = AFR_african_union_military_modernisation
+				bonus = 0.30
+				uses = 1
+				category = cas_bomber
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = NGA_african_union_military_alliance
+		icon = major_alliance
+		x = @au_tree
+		y = 8
+		cost = @standard_focus_cost
+		
+		#prerequisite = {
+		#	focus = NGA_united_ECOWAS
+		#}
+		
+		prerequisite = {
+			focus = NGA_african_peace_and_security_council
+		}
+		
+		prerequisite = {
+			focus = NGA_african_union_military_modernisation
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_ECOMOG_mission_expansion
+			focus = NGA_giant_of_africa
+		}
+		
+		available = {
+			is_in_faction = no
+			num_of_military_factories > 10
+			has_completed_focus = NGA_united_ECOWAS
+		}
+		
+		bypass = {
+			has_global_flag = african_union_formed
+		}
+		
+		completion_reward = {
+			create_faction = african_union_faction
+			set_global_flag = african_union_formed
+			every_country = {
+				limit = {
+					has_idea = african_union_member
+					NOT = { tag = PREV }
+				}
+				country_event = africa.3
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = african_union_member
+		}
+	}
+	
+	focus = {
+		id = NGA_ECOMOG_mission_expansion
+		icon = major_alliance
+		x = @ngr_ecomog_tree
+		y = @ngr_ecowas_tree_eighth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_united_ECOWAS
+		}
+		
+		prerequisite = {
+			focus = NGA_ECOMOG_wide_deployments
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_african_union_military_alliance
+			focus = NGA_giant_of_africa
+		}
+		
+		available = {
+			is_in_faction = no
+			num_of_military_factories > 10
+		}
+		
+		bypass = {
+			has_global_flag = ecomog_faction_formed
+		}
+		
+		completion_reward = {
+			create_faction = ecomog_faction
+			set_global_flag = ecomog_faction_formed
+			every_country = {
+				limit = {
+					has_idea = ecomog_member
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.1
+			}
+			every_country = {
+				limit = {
+					NOT = { has_idea = ecomog_member }
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.6
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_idea = ecowas_member
+		}
+	}
+	
+	focus = {
+		id = NGA_giant_of_africa
+		icon = production
+		x = @waf_tree
+		y = 8
+		cost = 30
+		
+		prerequisite = {
+			focus = NGA_united_ECOWAS
+		}
+		
+		prerequisite = {
+			focus = NGA_ECOMOG_wide_deployments
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_ECOMOG_mission_expansion
+			focus = NGA_african_union_military_alliance
+		}
+		
+		available = {
+			num_of_military_factories > 10
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_west_african_federation
+		icon = major_alliance
+		x = @waf_tree
+		y = 9
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_giant_of_africa
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			set_global_flag = fswa_formed
+			every_country = {
+				limit = {
+					has_idea = ecowas_member
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.3
+			}
+			every_country = {
+				limit = {
+					NOT = { has_idea = ecowas_member }
+					NOT = { tag = PREV }
+				}
+				country_event = ecowas.7
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_biafra_tree
+		icon = production
+		x = @biafra_tree
+		y = @lower_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_federal_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_biafra_appeasement_tree
+		icon = production
+		x = @biafra_appeasement_tree
+		y = @lower_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_biafra_tree
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_biafra_suppression_1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_biafra_suppression_1
+		icon = production
+		x = @biafra_suppression_tree
+		y = @lower_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_biafra_tree
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_biafra_appeasement_tree
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_biafra_suppression_2
+		icon = production
+		x = @biafra_suppression_tree
+		y = @lower_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_biafra_suppression_1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_biafra_suppression_3
+		icon = production
+		x = @biafra_suppression_tree
+		y = @lower_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_biafra_suppression_2
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_biafra_suppression_4
+		icon = production
+		x = @biafra_suppression_tree
+		y = @lower_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_biafra_suppression_3
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_biafra_concessions
+		icon = production
+		x = @biafra_appeasement_tree
+		y = @lower_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_biafra_appeasement_tree
+		}
+		
+		#mutually_exclusive = {
+		#	focus = NGA_decentralisation
+		#}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_invest_in_biafra
+		icon = production
+		x = @biafra_appeasement_tree
+		y = @lower_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_biafra_concessions
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_cultural_integration
+		icon = production
+		x = @biafra_appeasement_tree
+		y = @lower_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_invest_in_biafra
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_end_biafra_question
+		icon = production
+		x = @biafra_ender
+		y = @lower_tree_seventh
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_biafra_suppression_4
+			focus = NGA_cultural_integration
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	
+	
+	focus = {
+		id = NGA_oodua_tree
+		icon = production
+		x = @oodua_tree
+		y = @lower_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_federal_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_oodua_appeasement_tree
+		icon = production
+		x = @oodua_appeasement_tree
+		y = @lower_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_oodua_tree
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_oodua_suppression_1
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_oodua_appeasement
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_oodua_suppression_1
+		icon = production
+		x = @oodua_suppression_tree
+		y = @lower_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_oodua_tree
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_oodua_appeasement_tree
+		}
+		
+		available = {
+			OR = {
+				has_idea = oodua_separatists_high
+				has_idea = oodua_separatists_medium
+				has_idea = oodua_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = oodua_separatists_high }
+				remove_ideas = oodua_separatists_high
+				add_ideas = oodua_separatists_medium
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_medium }
+				remove_ideas = oodua_separatists_medium
+				add_ideas = oodua_separatists_low
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_low }
+				remove_ideas = oodua_separatists_low
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_oodua_suppression_2
+		icon = production
+		x = @oodua_suppression_tree
+		y = @lower_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_oodua_suppression_1
+		}
+		
+		available = {
+			OR = {
+				has_idea = oodua_separatists_high
+				has_idea = oodua_separatists_medium
+				has_idea = oodua_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = oodua_separatists_high }
+				remove_ideas = oodua_separatists_high
+				add_ideas = oodua_separatists_medium
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_medium }
+				remove_ideas = oodua_separatists_medium
+				add_ideas = oodua_separatists_low
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_low }
+				remove_ideas = oodua_separatists_low
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_oodua_suppression_3
+		icon = production
+		x = @oodua_suppression_tree
+		y = @lower_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_oodua_suppression_2
+		}
+		
+		available = {
+			OR = {
+				has_idea = oodua_separatists_high
+				has_idea = oodua_separatists_medium
+				has_idea = oodua_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = oodua_separatists_high }
+				remove_ideas = oodua_separatists_high
+				add_ideas = oodua_separatists_medium
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_medium }
+				remove_ideas = oodua_separatists_medium
+				add_ideas = oodua_separatists_low
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_low }
+				remove_ideas = oodua_separatists_low
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_oodua_suppression_4
+		icon = production
+		x = @oodua_suppression_tree
+		y = @lower_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_oodua_suppression_3
+		}
+		
+		available = {
+			OR = {
+				has_idea = oodua_separatists_high
+				has_idea = oodua_separatists_medium
+				has_idea = oodua_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = oodua_separatists_high }
+				remove_ideas = oodua_separatists_high
+				add_ideas = oodua_separatists_medium
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_medium }
+				remove_ideas = oodua_separatists_medium
+				add_ideas = oodua_separatists_low
+			}
+			if = {
+				limit = { has_idea = oodua_separatists_low }
+				remove_ideas = oodua_separatists_low
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_oodua_concessions
+		icon = production
+		x = @oodua_appeasement_tree
+		y = @lower_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_oodua_appeasement_tree
+		}
+		
+		#mutually_exclusive = {
+		#	focus = NGA_decentralisation
+		#}
+		
+		completion_reward = {
+			add_ideas = idea_focus_oodua_concessions
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_invest_in_capital
+		icon = production
+		x = @oodua_appeasement_tree
+		y = @lower_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_oodua_concessions
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_yoruban_cultural_exchange
+		icon = production
+		x = @oodua_appeasement_tree
+		y = @lower_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_invest_in_capital
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_oodua_unity
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_end_oodua_question
+		icon = production
+		x = @oodua_ender
+		y = @lower_tree_seventh
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_oodua_suppression_4
+			focus = NGA_yoruban_cultural_exchange
+		}
+		
+		completion_reward = {
+			set_country_flag = NGA_oodua_question_resolved
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	
+	focus = {
+		id = NGA_religion_question
+		icon = align_to_pakistan
+		x = @muslim_tree
+		y = @lower_tree_second
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_federal_focus
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = NGA_address_muslim_question
+#		icon = production
+#		x = @muslim_appeasement_tree
+#		y = @lower_tree_third
+#		cost = @standard_focus_cost
+#		
+#		prerequisite = {
+#			focus = NGA_federal_focus
+#		}
+#		
+#		mutually_exclusive = {
+#			focus = NGA_address_boko_haram_tree
+#			focus = NGA_encourage_boko_haram_tree
+#		}
+#		
+#		available = {
+#			NOT = { has_country_flag = NGA_boko_haram }
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+	
+	
+	focus = {
+		id = NGA_address_boko_haram_tree
+		icon = align_to_pakistan
+		x = @address_boko_haram_tree
+		y = @lower_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_religion_question
+		}
+		
+		mutually_exclusive = {
+			#focus = NGA_religious_appeasement_tree
+			focus = NGA_encourage_boko_haram_tree
+		}
+		
+		available = {
+			has_country_flag = NGA_boko_haram
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_encourage_boko_haram_tree
+		icon = align_to_pakistan
+		x = @bh_encourage_tree
+		y = @lower_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_religion_question
+		}
+		
+		mutually_exclusive = {
+			#focus = NGA_religious_appeasement_tree
+			focus = NGA_address_boko_haram_tree
+		}
+		
+		available = {
+			NOT = { has_country_flag = NGA_boko_haram }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_religious_appeasement_tree
+		icon = align_to_pakistan
+		x = @muslim_appeasement_tree
+		y = @lower_tree_third
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_religion_question
+		}
+		
+		#mutually_exclusive = {
+		#	focus = NGA_encourage_boko_haram_tree
+		#	focus = NGA_address_boko_haram_tree
+		#}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_sharia_bylaws
+		icon = align_to_pakistan
+		x = @muslim_appeasement_tree
+		y = @lower_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_religious_appeasement_tree
+		}
+		
+		#mutually_exclusive = {
+		#	focus = NGA_decentralisation
+		#}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_invest_in_north
+		icon = production
+		x = @muslim_appeasement_tree
+		y = @lower_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_sharia_bylaws
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_multi_cultural_ethos
+		icon = align_to_pakistan
+		x = @muslim_appeasement_tree
+		y = @lower_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_invest_in_north
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_deradicalisation
+		icon = align_to_pakistan
+		x = @muslim_deradicalisation
+		y = @lower_tree_seventh
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_multi_cultural_ethos
+		}
+		
+		prerequisite = {
+			focus = NGA_bh_suppression_3
+		}
+		
+		completion_reward = {
+			set_country_flag = NGA_bh_question_resolved
+			#remove_country_flag = NGA_bokoharam
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_bh_dewesternisation_tree
+		icon = align_to_pakistan
+		x = @bh_dewesternisation_tree
+		y = @lower_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_address_boko_haram_tree
+			focus = NGA_encourage_boko_haram_tree
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_bh_suppression_1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	focus = {
+		id = NGA_bh_suppression_1
+		icon = production
+		x = @bh_suppression_tree
+		y = @lower_tree_fourth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_address_boko_haram_tree
+			focus = NGA_encourage_boko_haram_tree
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_bh_dewesternisation_tree
+		}
+		
+		available = {
+			OR = {
+				has_idea = bokoharam_separatists_high
+				has_idea = bokoharam_separatists_medium
+				has_idea = bokoharam_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = bokoharam_separatists_high }
+				remove_ideas = bokoharam_separatists_high
+				add_ideas = bokoharam_separatists_medium
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_medium }
+				remove_ideas = bokoharam_separatists_medium
+				add_ideas = bokoharam_separatists_low
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_low }
+				remove_ideas = bokoharam_separatists_low
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_bh_suppression_2
+		icon = production
+		x = @bh_suppression_tree
+		y = @lower_tree_fifth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_bh_suppression_1
+		}
+		
+		available = {
+			OR = {
+				has_idea = bokoharam_separatists_high
+				has_idea = bokoharam_separatists_medium
+				has_idea = bokoharam_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = bokoharam_separatists_high }
+				remove_ideas = bokoharam_separatists_high
+				add_ideas = bokoharam_separatists_medium
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_medium }
+				remove_ideas = bokoharam_separatists_medium
+				add_ideas = bokoharam_separatists_low
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_low }
+				remove_ideas = bokoharam_separatists_low
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_bh_suppression_3
+		icon = production
+		x = @bh_suppression_tree
+		y = @lower_tree_sixth
+		cost = @standard_focus_cost
+		
+		prerequisite = {
+			focus = NGA_bh_suppression_2
+		}
+		
+		available = {
+			OR = {
+				has_idea = bokoharam_separatists_high
+				has_idea = bokoharam_separatists_medium
+				has_idea = bokoharam_separatists_low
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = bokoharam_separatists_high }
+				remove_ideas = bokoharam_separatists_high
+				add_ideas = bokoharam_separatists_medium
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_medium }
+				remove_ideas = bokoharam_separatists_medium
+				add_ideas = bokoharam_separatists_low
+			}
+			if = {
+				limit = { has_idea = bokoharam_separatists_low }
+				remove_ideas = bokoharam_separatists_low
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#	focus = {
+#		id = NGA_decentralisation
+#		icon = production
+#		x = @decentralisation_tree
+#		y = @lower_tree_fourth
+#		cost = @standard_focus_cost
+#		
+#		prerequisite = {
+#			focus = NGA_religious_appeasement_tree
+#			focus = NGA_biafra_appeasement_tree
+#		}
+#		
+#		mutually_exclusive = {
+#			focus = NGA_biafra_concessions
+#			focus = NGA_sharia_bylaws
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+#	
+#	focus = {
+#		id = NGA_autonomous_states
+#		icon = production
+#		x = @decentralisation_tree
+#		y = @lower_tree_sixth
+#		cost = @standard_focus_cost
+#		
+#		prerequisite = {
+#			focus = NGA_decentralisation
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+
+	
+	focus = {
+		id = NGA_demographic_studies
+		icon = consumer_goods
+		x = @ngr_domestic_demographic_tree
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_domestic_focus
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = NGA_secure_national_unity
+		icon = national_unity
+		x = @ngr_domestic_unity_tree
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_domestic_focus
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_stability = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_recruit_more_administrators
+		icon = intelligence_exchange
+		x = @ngr_domestic_admin_tree
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_domestic_focus
+		}
+		
+		completion_reward = {
+			add_political_power = 15
+			add_stability = 0.05
+			ruling_party_support_+5 = yes
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = NGA_traditional_values
+		icon = demand_territory2
+		x = @ngr_domestic_traditional_tree
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_demographic_studies
+		}
+		
+		available = {
+			NOT = { has_government = social_democrat }
+			NOT = { has_government = progressive }
+			NOT = { has_government = democratic_socialist }
+			NOT = { has_government = communist }
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_female_workforce
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_male_workforce
+			add_stability = -0.05
+			if = {
+				limit = { has_democratic_form_of_government = yes }
+				add_popularity = {
+					ideology = conservative
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = reactionary
+					popularity = 0.04
+				}
+			}
+			if = {
+				limit = { has_democratic_form_of_government = no }
+				add_popularity = {
+					ideology = fascist
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = nationalist
+					popularity = 0.04
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_female_workforce
+		icon = national_unity
+		x = @ngr_domestic_female_tree
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_demographic_studies
+		}
+		prerequisite = {
+			focus = NGA_secure_national_unity
+		}
+		
+		available = {
+			NOT = { has_government = islamist }
+		}
+		
+		mutually_exclusive = {
+			focus = NGA_traditional_values
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_equal_workforce
+			if = {
+				limit = { has_democratic_form_of_government = yes }
+				add_popularity = {
+					ideology = progressive
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = democratic_socialist
+					popularity = 0.04
+				}
+			}
+			if = {
+				limit = { has_democratic_form_of_government = no }
+				add_popularity = {
+					ideology = communist
+					popularity = 0.06
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_invest_in_public_service
+		icon = construction3
+		x = @ngr_domestic_investment_tree
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_recruit_more_administrators
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_public_service_investment
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_education_reform
+		icon = construction2
+		x = @ngr_domestic_education_tree
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_recruit_more_administrators
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_education_reform
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_crackdown_on_contraceptives
+		icon = propaganda
+		x = @ngr_domestic_traditional_tree
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_traditional_values
+		}
+		
+		available = {
+			NOT = { has_idea = population_growth_explosion }
+		}
+		
+		completion_reward = {
+			increase_birth_rate = yes
+			add_stability = -0.05
+		}
+	}
+	
+	focus = {
+		id = NGA_birth_control_programs
+		icon = radar
+		x = @ngr_domestic_female_tree
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_female_workforce
+		}
+		
+		available = {
+			NOT = { has_idea = population_growth_decline }
+		}
+		
+		completion_reward = {
+			lower_birth_rate = yes
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = NGA_research_incentives
+		icon = research
+		x = @ngr_domestic_investment_tree
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_invest_in_public_service
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_generic_encouraged_private_research
+			add_ideas = idea_focus_generic_census_reform
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_expand_the_secret_services
+		icon = intelligence_exchange
+		x = @ngr_domestic_education_tree
+		y = 4
+		cost = 10
+		
+		prerequisite = {
+			focus = NGA_education_reform
+		}
+		
+		completion_reward = {
+			add_ideas = idea_focus_expanded_secret_services
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = NGA_extra_research_slot
+		icon = research
+		x = @ngr_domestic_admin_tree
+		y = 5
+		cost = 25
+		
+		prerequisite = {
+			focus = NGA_research_incentives
+		}
+		prerequisite = {
+			focus = NGA_expand_the_secret_services
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+
+}

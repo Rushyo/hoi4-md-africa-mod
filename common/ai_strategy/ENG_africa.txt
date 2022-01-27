@@ -40,19 +40,19 @@ british_nigerian_relationship = {
 	enable = {
 		tag = ENG
 		ENG = { has_democratic_form_of_government = yes }
-		country_exists = NGR
-		NGR = { has_democratic_form_of_government = yes }
+		country_exists = NGA
+		NGA = { has_democratic_form_of_government = yes }
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = NGR }
-			NGR = { has_democratic_form_of_government = no }
+			NOT = { country_exists = NGA }
+			NGA = { has_democratic_form_of_government = no }
 		}
 	}
 	
 	ai_strategy = {
 		type = befriend
-		id = "NGR"
+		id = "NGA"
 		value = 200
 	}
 }

@@ -1,0 +1,171 @@
+capital = 778
+
+oob = "CAR_2000"
+
+set_research_slots = 4
+set_convoys = 500
+set_stability = 0.75
+
+set_country_flag = country_language_french
+set_country_flag = country_language_sango
+
+set_country_flag = starting_stability_very_low
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	gen1_mbt = 1
+	gen1_apc = 1
+	gen1_ifv = 1
+	cold_war_ship_design = 1
+	corvette1 = 1
+	cold_war_engineering = 1
+	assembly_line = 1
+	squad_automatic_weapon = 1
+	tandem_charge_warheads = 1
+	special_forces = 1
+	camouflage = 1
+	body_armor = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	gw_artillery = 1
+	corvette2 = 1
+	gen2_attack = 1
+	gen2_multirole = 1
+	gen2_mpa = 1
+	software1 = 1
+	machine_tools1 = 1
+	oil1 = 1
+	construction1 = 1
+	excavation1 = 1
+}
+
+set_country_flag = african_nation
+
+add_ideas = {
+	population_growth_rapid
+	african_union_member
+}
+
+set_popularities = {
+	islamist = 3
+	nationalist = 0
+	reactionary = 0
+	conservative = 21
+	market_liberal = 3
+	social_liberal = 11
+	social_democrat = 6
+	progressive = 4
+	democratic_socialist = 52
+	communist = 0
+}
+set_politics = {
+	ruling_party = democratic_socialist
+	last_election = "1999.9.19"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Ange-Félix Patassé"
+	picture = "Ange_Patasse.dds"
+	ideology = democratic_socialist_ideology
+}
+
+create_country_leader = {
+	name = "Andre Kolingba"
+	picture = "Andre_Kolingba.dds"
+	ideology = constitutionalist
+}
+
+create_country_leader = {
+	name = "David Dacko"
+	picture = "David_Dacko.dds"
+	ideology = moderate
+}
+
+create_country_leader = {
+	name = "Jean-Paul Ngoupandé"
+	picture = "Jean_Ngoupande.dds"
+	ideology = progressive_ideology
+}
+
+create_country_leader = {
+	name = "Enoch Derant Lakoue"
+	picture = "Enoch_Lakoue.dds"
+	ideology = social_democrat_ideology
+}
+
+create_country_leader = {
+	name = "Charles Massi"
+	picture = "Charles_Massi.dds"
+	ideology = libertarian
+}
+
+create_country_leader = {
+	name = "Michel Djotodia"
+	picture = "Michel_Djotodia.dds"
+	ideology = islamic_authoritarian
+}
+
+create_country_leader = {
+	name = "Anicet-Georges Dologuélé"
+	picture = "Anicet_Dologuele.dds"
+	ideology = counter_progressive_democrat
+}
+
+create_corps_commander = {
+	name = "Marcel Mombeka"
+	picture = "generals/Marcel_Mombeka.dds"
+	skill = 1
+}
+
+2013.1.1 = {
+	set_party_name = {
+		ideology = social_liberal
+		name = CAR_social_liberal_party_IND
+	}
+}
+
+2015.12.30 = {
+	set_popularities = {
+		islamist = 5
+		nationalist = 0
+		reactionary = 13
+		conservative = 10
+		market_liberal = 0
+		social_liberal = 61
+		social_democrat = 0
+		progressive = 1
+		democratic_socialist = 10
+		communist = 0
+	}
+	set_politics = {
+		ruling_party = social_liberal
+		last_election = "2015.12.30"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	create_country_leader = {
+		name = "Faustin-Archange Touadéra"
+		picture = "Faustin_Touadera.dds"
+		ideology = moderate
+	}
+	create_country_leader = {
+		name = "Désiré Kolingba"
+		picture = "Desire_Kolingba.dds"
+		ideology = constitutionalist
+	}
+	create_country_leader = {
+		name = "Martin Ziguélé"
+		picture = "Martin_Ziguele.dds"
+		ideology = democratic_socialist_ideology
+	}
+}

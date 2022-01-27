@@ -30,11 +30,11 @@ algeria_morocco_western_sahara_relationship = {
 	enable = {
 		tag = ALG
 		country_exists = MOR
-		country_exists = WSH
+		country_exists = WES
 	}
 	abort = {
 		NOT = { country_exists = MOR }
-		NOT = { country_exists = WSH }
+		NOT = { country_exists = WES }
 	}
 	
 	ai_strategy = {
@@ -47,15 +47,15 @@ algeria_morocco_western_sahara_relationship = {
 algeria_western_sahara_relationship = {
 	enable = {
 		tag = ALG
-		country_exists = WSH
+		country_exists = WES
 	}
 	abort = {
-		NOT = { country_exists = WSH }
+		NOT = { country_exists = WES }
 	}
 	
 	ai_strategy = {
 		type = protect
-		id = "WSH"
+		id = "WES"
 		value = 200
 	}
 }

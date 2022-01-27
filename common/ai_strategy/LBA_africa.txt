@@ -113,16 +113,16 @@ libya_pakistan_relationship = {
 libya_niger_border_friction = {
 	enable = {
 		tag = LBA
-		country_exists = NIG
+		country_exists = NGR
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = NIG }
+			NOT = { country_exists = NGR }
 		}
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "NIG"
+		id = "NGR"
 		value = 50
 	}
 }

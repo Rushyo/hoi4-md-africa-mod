@@ -2,40 +2,40 @@ nigeria_ghana_mutual_relationship = {
 	enable = {
 		tag = GHA
 		GHA = { has_democratic_form_of_government = yes }
-		country_exists = NGR
-		NGR = { has_democratic_form_of_government = yes }
+		country_exists = NGA
+		NGA = { has_democratic_form_of_government = yes }
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = NGR }
+			NOT = { country_exists = NGA }
 			GHA = { has_democratic_form_of_government = no }
-			NGR = { has_democratic_form_of_government = no }
+			NGA = { has_democratic_form_of_government = no }
 		}
 	}
 	ai_strategy = {
 		type = befriend
-		id = "NGR"
+		id = "NGA"
 		value = 50
 	}
 }
 
-ghana_burkina_faso_mutual_relationship = {
+ghana_BRDkina_faso_mutual_relationship = {
 		enable = {
 		tag = GHA
 		GHA = { has_democratic_form_of_government = yes }
-		country_exists = BKF
-		BKF = { has_democratic_form_of_government = yes }
+		country_exists = VOL
+		VOL = { has_democratic_form_of_government = yes }
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = BKF }
+			NOT = { country_exists = VOL }
 			GHA = { has_democratic_form_of_government = no }
-			BKF = { has_democratic_form_of_government = no }
+			VOL = { has_democratic_form_of_government = no }
 		}
 	}
 	ai_strategy = {
 		type = befriend
-		id = "BKF"
+		id = "VOL"
 		value = 150
 	}
 }

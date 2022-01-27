@@ -4,8 +4,8 @@ state={
 	name="STATE_718"
 	
 	history={
-		owner = DRC
-		add_core_of = DRC
+		owner = COG
+		add_core_of = COG
 		buildings = {
 			infrastructure = 1
 			1950 = { bunker = 5 }
@@ -26,8 +26,8 @@ state={
 			2034 1
 		}
 		2003.7.15 = {
-			owner = DRC
-			remove_core_of = DRC
+			owner = COG
+			remove_core_of = COG
 		}
 
 	}

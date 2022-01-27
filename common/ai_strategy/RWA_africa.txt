@@ -13,19 +13,19 @@
 rwandan_drc_instability_relationship = {
 	enable = {
 		tag = RWA
-		country_exists = DRC
-		DRC = { has_democratic_form_of_government = yes }
+		country_exists = COG
+		COG = { has_democratic_form_of_government = yes }
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = DRC }
-			DRC = { has_democratic_form_of_government = no }
+			NOT = { country_exists = COG }
+			COG = { has_democratic_form_of_government = no }
 		}
 	}
 	
 	ai_strategy = {
 		type = antagonize
-		id = "DRC"
+		id = "COG"
 		value = 200
 	}
 }
@@ -59,18 +59,18 @@ rwandan_RCD_support = {
 }
 
 
-rwandan_burundi_border_tension = {
+rwandan_BRDundi_border_tension = {
 	enable = {
 		tag = RWA
-		country_exists = BUR
+		country_exists = BRD
 	}
 	abort = {
-		NOT = { country_exists = BUR }
+		NOT = { country_exists = BRD }
 	}
 	
 	ai_strategy = {
 		type = befriend
-		id = "BUR"
+		id = "BRD"
 		value = 200
 	}
 }

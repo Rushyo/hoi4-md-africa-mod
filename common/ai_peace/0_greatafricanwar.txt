@@ -3,20 +3,20 @@ drc_war_peace = {
 	enable = {
 		OR = {
 			AND = {
-				ROOT = { tag = DRC }
+				ROOT = { tag = COG }
 				FROM = { tag = MLC }
 			}
 			AND = {
-				ROOT = { tag = DRC }
+				ROOT = { tag = COG }
 				FROM = { tag = RCD }
 			}
 			AND = {
 				ROOT = { tag = RCD }
-				FROM = { tag = DRC }
+				FROM = { tag = COG }
 			}
 			AND = {
 				ROOT = { tag = MLC }
-				FROM = { tag = DRC }
+				FROM = { tag = COG }
 			}
 			AND = {
 				ROOT = { tag = MLC }
